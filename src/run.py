@@ -1,7 +1,7 @@
 # imports
 import sys
 import os
-from PyQt5.QtWidgets import QApplication, QMessageBox
+from PyQt5.QtWidgets import QApplication
 from pathlib import Path
 import socket
 from random import randrange

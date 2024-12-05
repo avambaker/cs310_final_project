@@ -2,92 +2,79 @@
 # imports
 import os, sys, traceback
 
-from PyQt5.QtCore import Qt, QSortFilterProxyModel
-from PyQt5.QtWidgets import QMainWindow, QToolButton, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QToolBar, QMessageBox, QHeaderView, QAction, QMenu, QTableView, QLineEdit
-from PyQt5.QtGui import QCursor, QIcon
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMainWindow, QStackedWidget, QTabWidget, QToolButton, QWidget, QInputDialog, QHBoxLayout, QVBoxLayout, QLabel, QToolBar, QMessageBox, QAction, QMenu, QLineEdit
+from PyQt5.QtGui import QIcon
 import pandas as pd
 from datetime import date, datetime
 from pathlib import Path
 import json
+import pymysql
+import mysql.connector as connector
 
-from src.classes.pandas_model import PandasModel
+from src.classes.tab import TabWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
         """Build window with task table"""
         super().__init__()
         # set up window
-        self.setWindowTitle("Task Tracker")
+        self.setWindowTitle("Movie Database")
         from src.run import resource_path
         self.setWindowIcon(QIcon(resource_path(Path('data/computer.ico'))))
 
-        # create data model and save column names
-        task_data = pd.read_json(resource_path(Path('data/task_data.json')))
-        self.model = PandasModel(task_data)
-        self.columns = self.model.getColumnNames()
-
-        # create proxy models (used for filtering)
-        self.status_proxy = QSortFilterProxyModel()
-        self.status_proxy.setSourceModel(self.model)
-        self.status_proxy.setFilterKeyColumn(self.columns.index('Status'))
-        self.status_proxy.setFilterFixedString('Active')
-        self.proxy = QSortFilterProxyModel()
-        self.proxy.setSourceModel(self.status_proxy)
-        self.proxy.setFilterKeyColumn(-1) # set the column to filter by as all
-        self.proxy.setFilterCaseSensitivity(False)
-
-        # create view model
-        self.view = QTableView()
-        self.view.setModel(self.proxy)
-        self.view.installEventFilter(self)
-        self.view.verticalHeader().hide() # don't show indexes
-        self.view.setSortingEnabled(True)
-        self.view.setTextElideMode(Qt.ElideRight)
-        self.view.setWordWrap(True)
-
-        # resize columns and hide certain columns
-        for i in range(self.view.horizontalHeader().count()):
-            self.view.horizontalHeader().setSectionResizeMode(i, QHeaderView.Stretch)
-            if self.columns[i] in ['Details']:
-                self.view.setColumnHidden(i, True)
-
         # create menu bar widgets
         new_action = QAction("New Watchlist", self)
-        hide_columns_button = QToolButton()
-        hide_columns_button.setText("Hide Columns")
-        visible_columns_menu = QMenu()
+        self.hide_columns_button = QToolButton()
+        self.hide_columns_button.setText("Hide Columns")
+        filter_button = QToolButton()
+        filter_button.setText("Set Filter")
 
         # create search bar
         search_label = QLabel("Search: ")
         self.search_bar = QLineEdit()
 
-        # get data validation columns
-        with open(resource_path(Path('data/type_data.json')), 'r') as f:
-            options = json.load(f)
+        # create tabs
+        self.tabs = QTabWidget()
+        with open("data/main_tables.txt") as file:
+            for s in file.readlines():
+                (query, name) = s.strip().split(",,,")
+                self.tabs.addTab(TabWidget(self, self.fetch_data_from_db(query), name), name)
+        self.tabs.widget(0).actor_menu.triggered.connect(self.goToActor)
 
-        # dynamically add actions to visible_columns_menu
-        for i, column in enumerate(self.columns): # add a qaction to menu per column
-            temp = QAction(column, self)
-            temp.setCheckable(True)
-            if self.view.isColumnHidden(i) == True:
-                temp.setChecked(False)
-            else:
-                temp.setChecked(True)
-            visible_columns_menu.addAction(temp)
+        # create stacked widget
+        self.stacked_widget = QStackedWidget(self)
+        self.stacked_widget.addWidget(self.tabs)
+        self.stacked_widget.setCurrentIndex(0)
 
-        # attach menus to qtoolbuttons
-        hide_columns_button.setMenu(visible_columns_menu)
-        hide_columns_button.setPopupMode(QToolButton.InstantPopup)
+        # create side bar
+        self.side_bar = QToolBar(self)
+        self.database_button = QAction("Database")
+        self.database_button.setWhatsThis("0")
+        self.side_bar.addAction(self.database_button)
+        self.side_bar.addSeparator()
+        # dummy get watchlists
+        self.watchlists = [p[:-5] for p in os.listdir("data/watchlists")]
+        for i, name in enumerate(self.watchlists):
+            temp = QAction(name.replace('_', ' '), self)
+            temp.setWhatsThis(str(i+1))
+            self.side_bar.addAction(temp)
+            self.stacked_widget.addWidget(TabWidget(self, "data/watchlists/"+name+".json", name)) # dummy value
+
+
+        self.setColumnsMenu()
+        self.hide_columns_button.setPopupMode(QToolButton.InstantPopup)
 
         # connect actions
-        #new_action.triggered.connect()
-        self.search_bar.textChanged.connect(self.proxy.setFilterFixedString)
-        visible_columns_menu.triggered.connect(self.columnsChange)
+        new_action.triggered.connect(self.newWatchlist)
+        self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
+        self.tabs.currentChanged.connect(self.changeCurrentTab)
+        self.side_bar.actionTriggered.connect(self.sideBarClicked)
 
         # add actions and widgets to a menu bar
         menubar = QToolBar()
         menu_actions = [new_action]
-        menu_widgets = [hide_columns_button]
+        menu_widgets = [self.hide_columns_button, filter_button]
         for action in menu_actions:
             menubar.addAction(action)
         for widget in menu_widgets:
@@ -104,14 +91,16 @@ class MainWindow(QMainWindow):
         vbox = QVBoxLayout()
         vbox.addWidget(menubar)
         vbox.addLayout(search_layout)
-        vbox.addWidget(self.view)
+        vbox.addWidget(self.stacked_widget)
         vbox.setContentsMargins(0,0,0,0)
 
         # put layout in widget and place widget on window
         container = QWidget()
         container.setLayout(vbox)
         self.setCentralWidget(container)
-        self.model.layoutChanged.emit()
+        self.tabs.currentWidget().model.layoutChanged.emit()
+        self.addToolBar(Qt.LeftToolBarArea, self.side_bar)
+
         self.showMaximized()
 
         # locate user's download folder
@@ -152,52 +141,27 @@ class MainWindow(QMainWindow):
                     event.ignore()
                 else: event.accept()
     
-    def regMenu(self, row):
-        """Context menu allows you to clone a task or mark it as completed"""
-        # create menu
-        menu = QMenu()
-        # add actions
-        example_action = menu.addAction("Example Option")
-        # show menu
-        action = menu.exec_(QCursor.pos())
-            
-        # if user selects mark completed
-        if action == example_action:
-            print("example")
-    
-    def contextMenuEvent(self, event):
-        """Handles right click events"""
-        # get row clicked on
-        view_index = self.view.selectionModel().currentIndex()
-        # map row to proxy
-        proxy_index = self.proxy.index(view_index.row(), view_index.column())
-        # check validity of proxy index
-        if not proxy_index.isValid():
-            QMessageBox.critical(None, 'Error', 'The index clicked was invalid.')
-            return
-        # map row to status_proxy
-        status_qindex = self.proxy.mapToSource(proxy_index)
-        # check validity of status_qindex
-        if not status_qindex.isValid():
-            QMessageBox.critical(None, 'Error', 'The index clicked was invalid.')
-            return
-        # map row to model
-        model_qindex = self.status_proxy.mapToSource(status_qindex)
-        # check validity of model index
-        if not model_qindex.isValid():
-            QMessageBox.critical(None, 'Error', 'The index clicked was invalid.')
-            return
-
-        # get row index and column name
-        row = model_qindex.row()
-        col_name = self.columns[model_qindex.column()]
-
-        self.regMenu(row)
-    
     def columnsChange(self, checkbox):
         """Toggle if a column is hidden or shown"""
-        index = self.columns.index(checkbox.text())
-        self.view.setColumnHidden(index, checkbox.isChecked()==False)
+        index = self.tabs.currentWidget().columns.index(checkbox.text()) ############### needs fixing
+        self.tabs.currentWidget().view.setColumnHidden(index, checkbox.isChecked()==False)
+
+    def changeCurrentTab(self):
+        self.search_bar.clear()
+        self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
+        self.setColumnsMenu()
+    
+    def sideBarClicked(self, action):
+        try:
+            index = int(action.whatsThis())
+            self.stacked_widget.setCurrentIndex(index)
+            self.search_bar.clear()
+            if index == 0:
+                self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
+            else:
+                self.search_bar.textChanged.connect(self.stacked_widget.currentWidget().proxy.setFilterFixedString)
+        except Exception as e:
+            self.showError(action, e)
 
     def showError(self, action, e):
         """Print an error message"""
@@ -216,3 +180,83 @@ class MainWindow(QMainWindow):
             message = template.format(fname, 'Error: \n' + str(e))
 
         QMessageBox.critical(None, 'Error ' + action, message)
+    
+    def newWatchlist(self):
+        new_name, success = QInputDialog.getText(self, "New Watchlist", "Enter watchlist name:")
+        if success and new_name in self.watchlists:
+            QMessageBox.critical(None, 'Name Taken', "There is already a watchlist with the name " + new_name + ".")
+        elif success:
+            self.watchlists.append(new_name)
+            temp = QAction(new_name, self)
+            temp.setWhatsThis(str(len(self.watchlists)))
+            self.side_bar.addAction(temp)
+            # add watchlist table to the database
+
+            # Data to be written
+            dictionary = {
+                "Movie": [],
+                "Comment": [],
+                "Rating": []
+            }
+            
+            # Serializing json
+            json_object = json.dumps(dictionary, indent=4)
+            
+            # Writing to sample.json
+            new_file_path = "data/watchlists/"+new_name.replace(' ', '_')+".json"
+            with open(new_file_path, "w") as outfile:
+                outfile.write(json_object)
+
+
+
+
+            self.stacked_widget.addWidget(TabWidget(self, new_file_path)) # dummy value
+
+    def connect_to_database(self):
+        try:
+            connection = pymysql.connect(
+                host='localhost',
+                user='root',
+                password='r00tPassword#',
+                database='testmoviedb',
+                cursorclass=pymysql.cursors.DictCursor
+            )
+            if connection:
+                return connection
+        except connector.Error as err:
+            print(f"Error: {err}")
+            return None
+
+    def fetch_data_from_db(self, query):
+        connection = self.connect_to_database()
+        try:
+            with connection.cursor() as cursor:
+                cursor.execute(query)
+                data = cursor.fetchall()
+                if data:
+                    headers = data[0].keys()  # Extract column names
+                    return data, list(headers)
+        finally:
+            connection.close()
+    
+    def setColumnsMenu(self):
+    # dynamically add actions to visible_columns_menu
+        visible_columns_menu = QMenu()
+        for i, column in enumerate(self.tabs.currentWidget().columns): # add a qaction to menu per column
+            temp = QAction(column, self)
+            temp.setCheckable(True)
+            if self.tabs.currentWidget().view.isColumnHidden(i) == True:
+                temp.setChecked(False)
+            else:
+                temp.setChecked(True)
+            visible_columns_menu.addAction(temp)
+
+        visible_columns_menu.triggered.connect(self.columnsChange)
+
+        # attach menus to qtoolbuttons
+        self.hide_columns_button.setMenu(visible_columns_menu)
+
+    def goToActor(self, action):
+        print(action.whatsThis())
+        return
+

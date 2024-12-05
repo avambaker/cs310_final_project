@@ -1,0 +1,5 @@
+SELECT * FROM movie_view,,,Movie
+SELECT * FROM actor_view,,,Actor
+SELECT * FROM director_view,,,Directors
+SELECT * FROM production_view,,,Production Companies
+SELECT * FROM awards_view,,,Awards

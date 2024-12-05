@@ -82,12 +82,6 @@ class PandasModel(QAbstractTableModel):
     def getColumnNames(self):
         """Return the column names as a list"""
         return self._data.columns.values.tolist()
-    
-    def saveToJson(self):
-        """Save current model data to json"""
-        from src.run import resource_path
-        self._data.to_json(resource_path(Path('data/task_data.json')))
-        self.dirty = False
 
     def makeViewable(self):
         """Change editable to False"""
