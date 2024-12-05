@@ -5,14 +5,11 @@ import os, sys, traceback
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QStackedWidget, QTabWidget, QToolButton, QWidget, QInputDialog, QHBoxLayout, QVBoxLayout, QLabel, QToolBar, QMessageBox, QAction, QMenu, QLineEdit
 from PyQt5.QtGui import QIcon
-import pandas as pd
-from datetime import date, datetime
 from pathlib import Path
 import json
-import pymysql
-import mysql.connector as connector
 
 from src.classes.tab import TabWidget
+from src.classes.sql_controller import query_data
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -39,7 +36,8 @@ class MainWindow(QMainWindow):
         with open("data/main_tables.txt") as file:
             for s in file.readlines():
                 (query, name) = s.strip().split(",,,")
-                self.tabs.addTab(TabWidget(self, self.fetch_data_from_db(query), name), name)
+                info = query_data(query)
+                self.tabs.addTab(TabWidget(self, info, name), name)
         self.tabs.widget(0).actor_menu.triggered.connect(self.goToActor)
 
         # create stacked widget
@@ -53,14 +51,15 @@ class MainWindow(QMainWindow):
         self.database_button.setWhatsThis("0")
         self.side_bar.addAction(self.database_button)
         self.side_bar.addSeparator()
-        # dummy get watchlists
-        self.watchlists = [p[:-5] for p in os.listdir("data/watchlists")]
-        for i, name in enumerate(self.watchlists):
-            temp = QAction(name.replace('_', ' '), self)
+
+        # set up watchlists
+        watchlists, headers = query_data("SELECT watchlist_id, name FROM watchlists")
+        for i, info in enumerate(watchlists):
+            temp = QAction(info['name'], self)
             temp.setWhatsThis(str(i+1))
             self.side_bar.addAction(temp)
-            self.stacked_widget.addWidget(TabWidget(self, "data/watchlists/"+name+".json", name)) # dummy value
-
+            entries_info = query_data("SELECT * FROM watchlist_entries WHERE watchlist_id = "+str(info["watchlist_id"]))
+            self.stacked_widget.addWidget(TabWidget(self, entries_info, name))
 
         self.setColumnsMenu()
         self.hide_columns_button.setPopupMode(QToolButton.InstantPopup)
@@ -207,37 +206,7 @@ class MainWindow(QMainWindow):
             with open(new_file_path, "w") as outfile:
                 outfile.write(json_object)
 
-
-
-
             self.stacked_widget.addWidget(TabWidget(self, new_file_path)) # dummy value
-
-    def connect_to_database(self):
-        try:
-            connection = pymysql.connect(
-                host='localhost',
-                user='root',
-                password='r00tPassword#',
-                database='testmoviedb',
-                cursorclass=pymysql.cursors.DictCursor
-            )
-            if connection:
-                return connection
-        except connector.Error as err:
-            print(f"Error: {err}")
-            return None
-
-    def fetch_data_from_db(self, query):
-        connection = self.connect_to_database()
-        try:
-            with connection.cursor() as cursor:
-                cursor.execute(query)
-                data = cursor.fetchall()
-                if data:
-                    headers = data[0].keys()  # Extract column names
-                    return data, list(headers)
-        finally:
-            connection.close()
     
     def setColumnsMenu(self):
     # dynamically add actions to visible_columns_menu

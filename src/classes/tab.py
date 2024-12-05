@@ -1,12 +1,12 @@
 from PyQt5.QtCore import Qt, QSortFilterProxyModel
-from PyQt5.QtWidgets import QMainWindow, QToolButton, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QToolBar, QMessageBox, QHeaderView, QAction, QMenu, QTableView, QLineEdit
-from PyQt5.QtGui import QCursor, QIcon
-from pathlib import Path
-import json
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHeaderView, QAction, QMenu, QTableView
+from PyQt5.QtGui import QCursor
+from src.classes.mysql_model import MySQLModel
+
 import pandas as pd
-from src.classes.pandas_model import PandasModel
 from src.classes.mysql_model import MySQLModel
 from src.run import resource_path
+from pathlib import Path
 
 class TabWidget(QWidget): 
     def __init__(self, parent, file_path, name): 
@@ -15,12 +15,14 @@ class TabWidget(QWidget):
 
         if type(file_path) == str:
             data = pd.read_json(resource_path(Path(file_path)))
-            self.model = PandasModel(data)
+            #self.model = PandasModel(data)
         else:
             if file_path:
                 self.model = MySQLModel(file_path[0], file_path[1])
             else:
-                self.model = PandasModel(pd.DataFrame(data={}))
+                print("else else")
+                # self.model = PandasModel(pd.DataFrame(data={}))
+                self.model = MySQLModel(data = {})
         self.columns = self.model.getColumnNames()
 
         # create proxy models (used for filtering)
