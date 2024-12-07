@@ -21,7 +21,8 @@ def query_data(query):
                 cursor.execute(query)
                 data = cursor.fetchall()
                 if data:
-                    headers = data[0].keys()  # Extract column names
-                    return data, list(headers)
+                    return data
         finally:
             connection.close()
+
+attributes_and_datatypes = "SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';"

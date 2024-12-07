@@ -9,7 +9,7 @@ from pathlib import Path
 import json
 
 from src.classes.tab import TabWidget
-from src.classes.sql_controller import query_data
+from src.classes.sql_controller import query_data, attributes_and_datatypes
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -38,7 +38,8 @@ class MainWindow(QMainWindow):
                 (query, name) = s.strip().split(",,,")
                 info = query_data(query)
                 self.tabs.addTab(TabWidget(self, info, name), name)
-        self.tabs.widget(0).actor_menu.triggered.connect(self.goToID)
+        self.tabs.widget(0).person_menu.triggered.connect(self.goToID)
+        self.tabs.setCurrentIndex(0)
 
         # create stacked widget
         self.stacked_widget = QStackedWidget(self)
@@ -53,7 +54,7 @@ class MainWindow(QMainWindow):
         self.side_bar.addSeparator()
 
         # set up watchlists
-        watchlists, headers = query_data("SELECT watchlist_id, name FROM watchlists")
+        watchlists = query_data("SELECT watchlist_id, name FROM watchlists")
         for i, info in enumerate(watchlists):
             temp = QAction(info['name'], self)
             temp.setWhatsThis(str(i+1))
@@ -226,5 +227,8 @@ class MainWindow(QMainWindow):
         self.hide_columns_button.setMenu(visible_columns_menu)
 
     def goToID(self, action):
-        print(action.whatsThis())
+        (person_id, tab_index, col_name) = action.whatsThis().split(",")
+        self.tabs.setCurrentIndex(int(tab_index))
+        self.tabs.currentWidget().findPerson(int(person_id), col_name)
+
 

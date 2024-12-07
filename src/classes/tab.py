@@ -9,16 +9,17 @@ from src.run import resource_path
 from pathlib import Path
 
 class TabWidget(QWidget): 
-    def __init__(self, parent, file_path, name): 
+    def __init__(self, parent, data, name): 
         super(QWidget, self).__init__(parent)
+        self.default_data = data
         self.name = name
 
-        if type(file_path) == str:
-            data = pd.read_json(resource_path(Path(file_path)))
+        if type(data) == str:
+            data = pd.read_json(resource_path(Path(data)))
             #self.model = PandasModel(data)
         else:
-            if file_path:
-                self.model = MySQLModel(file_path[0], file_path[1])
+            if data:
+                self.model = MySQLModel(data)
             else:
                 print("else else")
                 # self.model = PandasModel(pd.DataFrame(data={}))
@@ -48,7 +49,12 @@ class TabWidget(QWidget):
         self.layout.addWidget(self.view)
         self.setLayout(self.layout)
 
-        self.actor_menu = QMenu()
+        self.person_menu = QMenu()
+
+        # hide columns
+        for i, val in enumerate(self.columns):
+            if '_id' in val:
+                self.view.setColumnHidden(i, True)
 
     
     def contextMenuEvent(self, event):
@@ -76,8 +82,8 @@ class TabWidget(QWidget):
         if col_name == 'title' and data is not None:
             self.watchlistMenu(row, col_name, data)
         
-        if col_name == 'star' and data is not None:
-            self.actorMenu(row, model_qindex.column(), data)
+        if 'name' in col_name and data is not None:
+            self.personMenu(row, model_qindex.column(), col_name, data)
     
     def watchlistMenu(self, row, col_name, data):
         menu = QMenu()
@@ -86,11 +92,31 @@ class TabWidget(QWidget):
         # show menu
         action = menu.exec_(QCursor.pos())
     
-    def actorMenu(self, row, col, data):
-        self.actor_menu.clear()
+    def personMenu(self, row, col, col_name, data):
+        tab_names = {'star_name': ('Actors', 1, 'actor_id'), 'director_name': ('Directors', 2, 'director_id'), 'producer_name': ('Production Companies', 3, 'company_id')}
+        (tab_name, tab_index, new_col_name) = tab_names[col_name]
+        self.person_menu.clear()
         # add actions
-        option = QAction("Go To " + data + " in Actor Tab")
-        option.setWhatsThis(str(self.model.index(row, col-1).data()))
-        self.actor_menu.addAction(option)
+        option = QAction("Go To " + data + " in " + tab_name + " Tab")
+        option.setWhatsThis(str(self.model.index(row, col-1).data()) + "," + str(tab_index) + "," + new_col_name)
+        self.person_menu.addAction(option)
         # show menu
-        action = self.actor_menu.exec_(QCursor.pos())
+        action = self.person_menu.exec_(QCursor.pos())
+
+    def findPerson(self, person_id, col_name):
+        self.setFilter()
+        (row_index, col_index) = self.model.getRowIndexFromVal(person_id, col_name)
+        qindex = self.getRowFromModel(row_index, col_index)
+        self.view.selectRow(qindex.row())
+    
+    def getRowFromModel(self, row, col):
+        qindex = self.model.index(row, col)
+        proxy_index = self.proxy.mapFromSource(qindex)
+        return proxy_index
+    
+    def setFilter(self, data=None):
+        if data:
+            self.model.resetModel(self.data)
+        else:
+            self.model.resetModel(self.default_data)
+
