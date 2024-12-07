@@ -38,7 +38,7 @@ class MainWindow(QMainWindow):
                 (query, name) = s.strip().split(",,,")
                 info = query_data(query)
                 self.tabs.addTab(TabWidget(self, info, name), name)
-        self.tabs.widget(0).actor_menu.triggered.connect(self.goToActor)
+        self.tabs.widget(0).actor_menu.triggered.connect(self.goToID)
 
         # create stacked widget
         self.stacked_widget = QStackedWidget(self)
@@ -225,7 +225,6 @@ class MainWindow(QMainWindow):
         # attach menus to qtoolbuttons
         self.hide_columns_button.setMenu(visible_columns_menu)
 
-    def goToActor(self, action):
+    def goToID(self, action):
         print(action.whatsThis())
-        return
 

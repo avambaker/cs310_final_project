@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt, QSortFilterProxyModel
+from PyQt5.QtCore import Qt, QSortFilterProxyModel, QModelIndex
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHeaderView, QAction, QMenu, QTableView
 from PyQt5.QtGui import QCursor
 from src.classes.mysql_model import MySQLModel
@@ -49,6 +49,7 @@ class TabWidget(QWidget):
         self.setLayout(self.layout)
 
         self.actor_menu = QMenu()
+
     
     def contextMenuEvent(self, event):
         """Handles right click events"""
@@ -76,7 +77,7 @@ class TabWidget(QWidget):
             self.watchlistMenu(row, col_name, data)
         
         if col_name == 'star' and data is not None:
-            self.actorMenu(row, col_name, data)
+            self.actorMenu(row, model_qindex.column(), data)
     
     def watchlistMenu(self, row, col_name, data):
         menu = QMenu()
@@ -85,11 +86,11 @@ class TabWidget(QWidget):
         # show menu
         action = menu.exec_(QCursor.pos())
     
-    def actorMenu(self, row, col_name, data):
+    def actorMenu(self, row, col, data):
         self.actor_menu.clear()
         # add actions
-        temp = QAction("Go To " + data + " in Actor Tab")
-        temp.setWhatsThis(data)
-        self.actor_menu.addAction(temp)
+        option = QAction("Go To " + data + " in Actor Tab")
+        option.setWhatsThis(str(self.model.index(row, col-1).data()))
+        self.actor_menu.addAction(option)
         # show menu
         action = self.actor_menu.exec_(QCursor.pos())
