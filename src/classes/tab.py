@@ -22,8 +22,6 @@ class TabWidget(QWidget):
             if data:
                 self.model = MySQLModel(data)
             else:
-                print("else else")
-                # self.model = PandasModel(pd.DataFrame(data={}))
                 self.model = MySQLModel(data = {})
         self.columns = self.model.getColumnNames()
 
@@ -124,7 +122,7 @@ class TabWidget(QWidget):
     
     def setFilter(self, data=None):
         if data:
-            self.model.resetModel(self.data)
+            self.model.resetModel(data)
         else:
             self.model.resetModel(self.default_data)
 

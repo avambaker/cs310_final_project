@@ -28,18 +28,30 @@ def tuple_connect_to_database():
         print(f"Error: {err}")
         return None
     
-def query_data(query, get_tuples=False):
+def query_data(query, get_tuples=False, params=None):
         if get_tuples is False:
             connection = connect_to_database()
         else:
             connection = tuple_connect_to_database()
         try:
             with connection.cursor() as cursor:
-                cursor.execute(query)
+                if params:
+                    cursor.execute(query, params)
+                else:
+                    cursor.execute(query)
                 data = cursor.fetchall()
-                if data:
+                if data and len(data[0]) == 1:
+                    return [row[0] for row in data]
+                elif data:
                     return data
+                elif get_tuples:
+                    return []
+                else:
+                    return {}
         finally:
+            if query.strip().upper().startswith(("INSERT", "UPDATE", "DELETE")):
+                connection.commit()
             connection.close()
 
 attributes_and_datatypes = "SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';"
+attributes = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';"

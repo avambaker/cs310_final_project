@@ -3,7 +3,7 @@
 import os, sys, traceback
 
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QStackedWidget, QTabWidget, QToolButton, QWidget, QInputDialog, QHBoxLayout, QVBoxLayout, QLabel, QToolBar, QMessageBox, QAction, QMenu, QLineEdit
+from PyQt5.QtWidgets import QMainWindow, QStackedWidget, QDialog, QSpinBox, QTextEdit, QTabWidget, QToolButton, QWidget, QInputDialog, QHBoxLayout, QVBoxLayout, QLabel, QToolBar, QMessageBox, QAction, QMenu, QLineEdit
 from PyQt5.QtGui import QIcon
 from pathlib import Path
 import json
@@ -56,20 +56,11 @@ class MainWindow(QMainWindow):
         self.side_bar.addSeparator()
 
         # set up watchlists
-        watchlists = query_data("SELECT watchlist_id, name FROM watchlists")
-        for i, info in enumerate(watchlists):
-            temp = QAction(info['name'], self)
-            temp.setWhatsThis(str(i+1))
-            self.side_bar.addAction(temp)
-            entries_info = query_data("SELECT * FROM watchlist_entries WHERE watchlist_id = "+str(info["watchlist_id"]))
-            watchlist_widget = QWidget()
-            layout = QVBoxLayout()
-            layout.addWidget(QLabel(info['name']))
-            watchlist_widget.tab = TabWidget(watchlist_widget, entries_info, name)
-            layout.addWidget(watchlist_widget.tab)
-            watchlist_widget.setLayout(layout)
-            self.stacked_widget.addWidget(watchlist_widget)
+        self.watchlists = query_data("SELECT watchlist_id, name, description FROM watchlists")
+        for i, info in enumerate(self.watchlists, start=1):
+            self.createWatchlistWidget(info['watchlist_id'], info['name'], info['description'], i)
 
+        # set up hide columns button
         self.setColumnsMenu()
         self.hide_columns_button.setPopupMode(QToolButton.InstantPopup)
 
@@ -78,7 +69,7 @@ class MainWindow(QMainWindow):
         self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
         self.tabs.currentChanged.connect(self.changeCurrentTab)
         self.side_bar.actionTriggered.connect(self.sideBarClicked)
-        self.filter_button.clicked.connect(self.openFilterDialog)
+        self.filter_button.clicked.connect(self.setFilter)
 
         # add actions and widgets to a menu bar
         menubar = QToolBar()
@@ -196,32 +187,18 @@ class MainWindow(QMainWindow):
         QMessageBox.critical(None, 'Error ' + action, message)
     
     def newWatchlist(self):
-        new_name, success = QInputDialog.getText(self, "New Watchlist", "Enter watchlist name:")
-        if success and new_name in self.watchlists:
-            QMessageBox.critical(None, 'Name Taken', "There is already a watchlist with the name " + new_name + ".")
+        success, (name, description) = self.get_text_values("Create a new watchlist.", ["Name", "Description"], [QLineEdit(), QTextEdit()], self, "New Watchlist")
+        if success and name in self.watchlists:
+            QMessageBox.critical(None, 'Name Taken', "There is already a watchlist with the name " + name + ".")
         elif success:
-            self.watchlists.append(new_name)
-            temp = QAction(new_name, self)
-            temp.setWhatsThis(str(len(self.watchlists)))
-            self.side_bar.addAction(temp)
-            # add watchlist table to the database
-
-            # Data to be written
-            dictionary = {
-                "Movie": [],
-                "Comment": [],
-                "Rating": []
-            }
-            
-            # Serializing json
-            json_object = json.dumps(dictionary, indent=4)
-            
-            # Writing to sample.json
-            new_file_path = "data/watchlists/"+new_name.replace(' ', '_')+".json"
-            with open(new_file_path, "w") as outfile:
-                outfile.write(json_object)
-
-            self.stacked_widget.addWidget(TabWidget(self, new_file_path)) # dummy value
+            # add to watchlists info list
+            self.watchlists.append((len(self.watchlists)+1, name))
+            # create id
+            # add watchlist to watchlist table in database
+            query = "INSERT INTO watchlists (name, description) VALUES (%s, %s);"
+            query_data(query, params=(name, description))
+            # add watchlist to sidebar
+            self.createWatchlistWidget(len(self.watchlists), name, description, len(self.watchlists))
     
     def setColumnsMenu(self):
     # dynamically add actions to visible_columns_menu
@@ -253,33 +230,68 @@ class MainWindow(QMainWindow):
         self.tabs.setCurrentIndex(int(tab_index))
         self.tabs.currentWidget().findPerson(int(person_id), col_name)
 
-    def openFilterDialog(self):   
-        from src.classes.filter_window import FilterDialog
-        data = query_data(attributes_and_datatypes % self.tabs.currentWidget().name, get_tuples=True)
-        data = [x for x in data if '_id' not in x[0]]
-        self.dialog = FilterDialog(data)
-        # adding action when form is accepted
-        self.dialog.buttonBox.accepted.connect(self.setFilter)
-        self.dialog.show()
-    
     def setFilter(self):
-        self.dialog.hide()
-        filter_data = {title: line_edit.text() for title, line_edit in self.dialog.inputs.items()}
-        for title, data in filter_data.items():
-            print(title + ": \t\t", data)
+        columns = query_data("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';" % self.tabs.currentWidget().name, get_tuples = True)
+        columns = [x for x in columns if '_id' not in x]
+        success, values = self.get_text_values("Set Filter", columns, [QLineEdit() for _ in range(len(columns))], self, title = "Set Filter")
+        if success:
+            procedure_name = "call_" + self.tabs.currentWidget().name
+            new_data = query_data()
+        
     
     def addToWatchlist(self, action):
         (watchlist_id, movie_id, watchlist_name, movie_name) = action.data()
-        from src.classes.new_watchlist import NewWatchlistEntry
-        self.watchlist_dialog = NewWatchlistEntry(watchlist_id, movie_id, watchlist_name, movie_name)
-        self.watchlist_dialog.buttonBox.accepted.connect(self.insertEntry)
-        self.watchlist_dialog.show()
+        rating_box = QSpinBox()
+        rating_box.setMinimum(0)
+        rating_box.setMaximum(5)
+        success, (rating, comment) = self.get_text_values("Write a comment and rating!", ["Rating", "Comment"], [rating_box, QTextEdit()], self, f"Add {movie_name} to {watchlist_name}")
+        if success:
+            # check if they added a comment
+            if comment == "": comment = "NA"
+            # add entry to sql table
+            query = "INSERT INTO watchlist_entries (movie_id, watchlist_id, rating, comment) VALUES (%s, %s, %s, %s);"
+            query_data(query, params=(movie_id, watchlist_id, rating, comment))
+            # locate watchlist in stacked_widget and update
+            for i in range(1, self.stacked_widget.count()):
+                if self.stacked_widget.widget(i).tab.name == watchlist_name:
+                    entries_info = query_data("CALL get_watchlist_entries(%s);", params=watchlist_id)
+                    self.stacked_widget.widget(i).tab.setFilter(entries_info)
     
-    def insertEntry(self):
-        self.watchlist_dialog.hide()
-        watchlist_id = self.watchlist_dialog.watchlist_id
-        movie_id = self.watchlist_dialog.movie_id
-        rating = self.watchlist_dialog.rating
-        comment = self.watchlist_dialog.comment
-        query = "INSERT INTO watchlist_entries (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);"
+    def get_text_values(self, label, arg_names, editors, parent=None, title=""):
+        dialog = QInputDialog()
+        dialog.setWindowTitle(title)
+        dialog.setLabelText(label)
+        dialog.show()
+        # hide default QLineEdit
+        dialog.findChild(QLineEdit).hide()
 
+        count = 1
+        for i, text in enumerate(arg_names):
+            label = QLabel(text+":")
+            dialog.layout().insertWidget(count, label)
+            dialog.layout().insertWidget(count + 1, editors[i])
+            count += 2
+
+        ret = dialog.exec_() == QDialog.Accepted
+        vals = []
+        for editor in editors:
+            if type(editor) is QSpinBox:
+                vals.append(editor.value())
+            elif type(editor) is QTextEdit:
+                vals.append(editor.toPlainText())
+            elif type(editor) is QLineEdit:
+                vals.append(editor.text())
+        return ret, vals
+    
+    def createWatchlistWidget(self, watchlist_id, name, description, index):
+        temp = QAction(name, self)
+        temp.setWhatsThis(str(index))
+        self.side_bar.addAction(temp)
+        entries_info = query_data("CALL get_watchlist_entries(%s);", params=watchlist_id)
+        watchlist_widget = QWidget()
+        layout = QVBoxLayout()
+        layout.addWidget(QLabel(name + ": " + description))
+        watchlist_widget.tab = TabWidget(watchlist_widget, entries_info, name)
+        layout.addWidget(watchlist_widget.tab)
+        watchlist_widget.setLayout(layout)
+        self.stacked_widget.addWidget(watchlist_widget)
