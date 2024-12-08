@@ -94,7 +94,7 @@ def fetchPassword():
     with open('data/sql_password.txt') as f:
         lines = f.readlines()
     if lines:
-        return lines[0].strip()
+        return lines[0].strip("/n").strip()
     else:
         return ""
 
@@ -109,7 +109,7 @@ def create_database(file_path):
         connection_args = {
             "host": "localhost",
             "user": "root",
-            "database": "moviedb",
+            "database": "mysql",
             "cursorclass": pymysql.cursors.DictCursor
         }
         password = fetchPassword()

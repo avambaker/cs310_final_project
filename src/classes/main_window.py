@@ -18,7 +18,7 @@ class MainWindow(QMainWindow):
         attempt = connect_to_database()
         if attempt is None:
             loaded = self.loadSQLData()
-            print("LOADED:", loaded)
+            print("Return of method loadSQLData:", loaded)
             if not loaded:
                 print("Loading ddl failed...")
                 sys.exit(1)
