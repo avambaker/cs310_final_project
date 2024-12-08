@@ -1,5 +1,5 @@
-from PyQt5.QtCore import Qt, QSortFilterProxyModel, QModelIndex
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHeaderView, QAction, QMenu, QTableView
+from PyQt5.QtCore import Qt, QSortFilterProxyModel
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHeaderView, QDialog, QMessageBox, QLineEdit, QLabel, QTextEdit, QSpinBox, QInputDialog, QAction, QMenu, QTableView
 from PyQt5.QtGui import QCursor
 from src.classes.mysql_model import MySQLModel
 
@@ -14,6 +14,7 @@ class TabWidget(QWidget):
         self.default_data = data
         self.name = name
         self.watchlist_menu = QMenu()
+        self.person_menu = QMenu()
 
         if type(data) == str:
             data = pd.read_json(resource_path(Path(data)))
@@ -48,8 +49,6 @@ class TabWidget(QWidget):
         self.layout.addWidget(self.view)
         self.setLayout(self.layout)
 
-        self.person_menu = QMenu()
-
         # hide columns
         for i, val in enumerate(self.columns):
             if '_id' in val:
@@ -83,6 +82,9 @@ class TabWidget(QWidget):
         
         if self.name == 'movie_view' and 'name' in col_name and data is not None:
             self.personMenu(row, model_qindex.column(), col_name, data)
+        
+        if '_view' not in self.name and col_name == 'movie_name':
+            self.editMenu(row, model_qindex.column())
     
     def watchlistMenu(self, row, col, data):
         self.watchlist_menu.clear()
@@ -96,7 +98,68 @@ class TabWidget(QWidget):
             self.watchlist_menu.addAction(watchlist_option)
         # show menu
         action = self.watchlist_menu.exec_(QCursor.pos())
+    
+    def editMenu(self, row, col):
+        temp = self.model.index(row, col-1)
+        movie_id = str(temp.data())
+        watchlist_id = str(self.model.index(row, col-2).data())
+        edit_menu = QMenu()
+        edit = QAction("Edit")
+        edit.setData((watchlist_id, movie_id, row))
+        delete = QAction("Delete")
+        delete.setData((watchlist_id, movie_id, row))
+        edit_menu.addAction(edit)
+        edit_menu.addAction(delete)
+        edit_menu.triggered.connect(self.deleteOrEditEntry)
+        edit_menu.exec_(QCursor.pos())
+    
+    def deleteOrEditEntry(self, action):
+        (watchlist_id, movie_id, row) = action.data()
+        if action.text() == "Delete":
+            self.deleteEntry(watchlist_id, movie_id, row)
+        else:
+            self.editEntry(watchlist_id, movie_id, row)
 
+    def deleteEntry(self, watchlist_id, movie_id, row):
+        from src.classes.sql_controller import query_data
+        query = "DELETE FROM watchlist_entries WHERE watchlist_id = %s AND movie_id = %s"
+        query_data(query, params=(watchlist_id, movie_id))
+        self.model.removeRow(row)
+        row_count = self.model.rowCount()
+        self.view.rowCountChanged(row_count - 1, row_count)
+    
+    def editEntry(self, watchlist_id, movie_id, row_index):
+        row = self.model.getRow(row_index)
+        dialog = QInputDialog()
+        dialog.setWindowTitle(f"Edit {row['movie_name']} Entry")
+        dialog.show()
+        # hide default QLineEdit
+        dialog.findChild(QLineEdit).hide()
+        dialog.findChild(QLabel).hide()
+        # adjust layout
+        dialog.layout().insertWidget(1, QLabel("Rating:"))
+        rating_box = QSpinBox()
+        rating_box.setMinimum(0)
+        rating_box.setMaximum(5)
+        rating_box.setValue(row['rating'])
+        dialog.layout().insertWidget(2, rating_box)
+        dialog.layout().insertWidget(3, QLabel("Comment:"))
+        comment_text = QTextEdit()
+        comment_text.insertPlainText(row["comment"])
+        dialog.layout().insertWidget(4, comment_text)
+        ret = dialog.exec_() == QDialog.Accepted
+        if ret:
+            from src.classes.sql_controller import query_data
+            query = "UPDATE watchlist_entries SET rating = %s, comment = %s WHERE watchlist_id = %s AND movie_id = %s"
+            new_rating = rating_box.value()
+            new_comment = comment_text.toPlainText()
+            try:
+                query_data(query, params=(new_rating, new_comment, watchlist_id, movie_id))
+                self.model.setData(self.model.index(row_index, self.model.getColIndex("rating")), new_rating)
+                self.model.setData(self.model.index(row_index, self.model.getColIndex("comment")), new_comment)
+            except Exception as e:
+                QMessageBox.critical(self, "Error", "Uh oh! Looks like your formatting was off. Try again.")
+                print(e)
     
     def personMenu(self, row, col, col_name, data):
         tab_names = {'star_name': ('Actors', 1, 'actor_id'), 'director_name': ('Directors', 2, 'director_id'), 'producer_name': ('Production Companies', 3, 'company_id')}

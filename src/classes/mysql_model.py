@@ -37,6 +37,9 @@ class MySQLModel(QAbstractTableModel):
             if row[col] == val:
                 return (i, list(row.keys()).index(col))
     
+    def removeRow(self, index):
+        del self._data[index]
+    
     def resetModel(self, data):
         self.beginResetModel()
         self._data = data
@@ -44,3 +47,17 @@ class MySQLModel(QAbstractTableModel):
     
     def getColIndex(self, col_name):
         return self._headers.index(col_name)
+    
+    def getRow(self, index):
+        return self._data[index]
+    
+    def updateCell(self, row_index, col_name, new_value):
+        self._data[row_index][col_name] = new_value
+    
+    def setData(self, index, value, role = Qt.EditRole):
+        if index.isValid() and role == Qt.EditRole:
+            self._data[index.row()][self._headers[index.column()]] = value
+            # Emit dataChanged signal
+            self.dataChanged.emit(index, index, [Qt.DisplayRole])
+            return True
+        return False

@@ -66,19 +66,20 @@ class MainWindow(QMainWindow):
 
         # connect actions
         new_action.triggered.connect(self.newWatchlist)
-        self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
+        #self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
+        self.search_bar.textChanged.connect(self.setSearch)
         self.tabs.currentChanged.connect(self.changeCurrentTab)
         self.side_bar.actionTriggered.connect(self.sideBarClicked)
         self.filter_button.clicked.connect(self.setFilter)
 
         # add actions and widgets to a menu bar
-        menubar = QToolBar()
+        self.menubar = QToolBar()
         menu_actions = [new_action]
         menu_widgets = [self.hide_columns_button, self.filter_button]
         for action in menu_actions:
-            menubar.addAction(action)
+            self.menubar.addAction(action)
         for widget in menu_widgets:
-            menubar.addWidget(widget)
+            self.menubar.addWidget(widget)
 
         # create horizontal search bar layout
         search_layout = QHBoxLayout()
@@ -89,7 +90,7 @@ class MainWindow(QMainWindow):
 
         # vertically stack search bar with menubar and view
         vbox = QVBoxLayout()
-        vbox.addWidget(menubar)
+        vbox.addWidget(self.menubar)
         vbox.addLayout(search_layout)
         vbox.addWidget(self.stacked_widget)
         vbox.setContentsMargins(0,0,0,0)
@@ -162,8 +163,10 @@ class MainWindow(QMainWindow):
             self.search_bar.clear()
             if index == 0:
                 self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
+                self.menubar.actions()[2].setVisible(True)
             else:
                 self.search_bar.textChanged.connect(self.stacked_widget.currentWidget().tab.proxy.setFilterFixedString)
+                self.menubar.actions()[2].setVisible(False)
             self.setColumnsMenu()
         except Exception as e:
             self.showError("side bar clicked", e)
@@ -232,11 +235,18 @@ class MainWindow(QMainWindow):
 
     def setFilter(self):
         columns = query_data("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';" % self.tabs.currentWidget().name, get_tuples = True)
-        columns = [x for x in columns if '_id' not in x]
+        columns = [column for column in columns if '_id' not in column]
         success, values = self.get_text_values("Set Filter", columns, [QLineEdit() for _ in range(len(columns))], self, title = "Set Filter")
         if success:
-            procedure_name = "call_" + self.tabs.currentWidget().name
-            new_data = query_data()
+            values = [None if v == "" else v for v in values]
+            procedure_name = "filter_" + self.tabs.currentWidget().name
+            from src.classes.sql_controller import callProcedure
+            try:
+                new_data = callProcedure(procedure_name, values)
+                self.tabs.currentWidget().setFilter(new_data)
+            except Exception as e:
+                QMessageBox.critical(self, "Error", "Uh oh! Looks like your formatting was off. Try again.")
+                print(e)
         
     
     def addToWatchlist(self, action):
@@ -295,3 +305,9 @@ class MainWindow(QMainWindow):
         layout.addWidget(watchlist_widget.tab)
         watchlist_widget.setLayout(layout)
         self.stacked_widget.addWidget(watchlist_widget)
+    
+    def setSearch(self, s):
+        if self.stacked_widget.currentIndex() == 0:
+            return 0
+        else:
+            return 0

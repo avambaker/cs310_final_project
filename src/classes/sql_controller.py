@@ -53,5 +53,24 @@ def query_data(query, get_tuples=False, params=None):
                 connection.commit()
             connection.close()
 
+def callProcedure(procedure_name, params=None):
+    connection = connect_to_database()
+    try:
+        with connection.cursor() as cursor:
+            if params:
+                cursor.callproc(procedure_name, params)
+            else:
+                cursor.callproc(procedure_name)
+            data = cursor.fetchall()
+            if data and len(data[0]) == 1:
+                return [row[0] for row in data]
+            elif data:
+                return data
+            else:
+                return {}
+    finally:
+        connection.close()
+
+
 attributes_and_datatypes = "SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';"
 attributes = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';"
