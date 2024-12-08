@@ -292,7 +292,6 @@ class MainWindow(QMainWindow):
             find_entry.setText(f"{movie_name} is already in {watchlist_name}. Would you like to go to it?")
             find_entry.setWindowTitle("Already exists")
             find_entry.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-            #find_entry.buttonClicked.connect(self.openEntry)
             ret_val = find_entry.exec()
             if ret_val == QMessageBox.Ok:
                 self.stacked_widget.setCurrentIndex(widget_index)
@@ -353,7 +352,7 @@ class MainWindow(QMainWindow):
             self.getPassword()
     
     def loadSQLData(self):
-        with open('data/sql_password.txt') as f:
+        with open('data/sql_password.txt', 'r') as f:
             n = len(f.readlines())
         if n <= 1:
             new_password = self.getPassword()

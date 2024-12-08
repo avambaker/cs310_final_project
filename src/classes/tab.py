@@ -79,7 +79,7 @@ class TabWidget(QWidget):
         if col_name == 'title' and data is not None:
             self.watchlistMenu(row, model_qindex.column(), data)
         
-        if self.name == 'movie_view' and 'name' in col_name and data is not None:
+        if self.name == 'movie_view' and col_name in ['star', 'director_name', 'production_company'] and data is not None:
             self.personMenu(row, model_qindex.column(), col_name, data)
         
         if '_view' not in self.name and col_name == 'movie_name':
@@ -161,7 +161,7 @@ class TabWidget(QWidget):
                 print(e)
     
     def personMenu(self, row, col, col_name, data):
-        tab_names = {'star_name': ('Actors', 1, 'actor_id'), 'director_name': ('Directors', 2, 'director_id'), 'producer_name': ('Production Companies', 3, 'company_id')}
+        tab_names = {'star': ('Actors', 1, 'actor_id'), 'director_name': ('Directors', 2, 'director_id'), 'production_company': ('Production Companies', 3, 'company_id')}
         (tab_name, tab_index, new_col_name) = tab_names[col_name]
         self.person_menu.clear()
         # add actions

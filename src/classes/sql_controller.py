@@ -91,7 +91,7 @@ def callProcedure(procedure_name, params=None):
         connection.close()
 
 def fetchPassword():
-    with open('data/sql_password.txt') as f:
+    with open('data/sql_password.txt', 'r') as f:
         lines = f.readlines()
     if lines:
         return lines[0].strip("/n").strip()
