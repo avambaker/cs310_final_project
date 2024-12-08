@@ -33,6 +33,11 @@ The Movie Database Desktop Application leverages the following technologies:
 
 Before setting up the application, ensure the following tools and dependencies are installed:
 
+pandas==2.2.3
+PyMySQL==1.1.1
+PyQt5==5.15.11
+PyQt5_sip==12.13.0
+
 ### Verify Python
 Make sure Python 3.7 or higher is installed:
 
@@ -52,13 +57,14 @@ mysql --version
 git clone https://github.com/avambaker/cs310_final_project.git
 ```
 
-## 2. Set up MySQL Database:
-Import the provided database schema into MySQL?????
-
-## 3. Install the Required Python Dependencies:
+## 2. Install the Required Python Dependencies:
 ```bash
-pip install PyQt5 mysql-connector-python
+pip install PyQt5
+pip install pandas
+pip install pymysql
 ```
 
-## 4. Configure Database Credentials
+## 3. Run the project as a module
+At the first run, you will be prompted for your SQL password. If you do not have a password, just press "ok."
 
+Note: The default hostname is 'localhost'. If you need to change it, you can edit the code in src/classes/sql_controller.py. There are three instances of connections, so you will need to change it three times.
