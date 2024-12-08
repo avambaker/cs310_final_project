@@ -1,0 +1,2386 @@
+company_id,company_name,total_movies_produced,date_established
+1,"""DIA"" Productions GmbH & Co. KG",1,1921-12-10
+2,"""Weathering With You"" Film Partners",1,1990-06-21
+3,.406 Production,1,1956-03-24
+4,1+2 Seisaku Iinkai,1,1959-06-17
+5,10 West Studios,1,1981-02-21
+6,120 Films,1,1923-03-23
+7,120dB Films,2,1986-12-25
+8,13 Productions,1,1991-05-29
+9,1492 Pictures,2,1960-06-08
+10,1818 Productions,1,1982-06-04
+11,19 Entertainment,1,1958-09-28
+12,1978 Films,1,1960-06-07
+13,1984 Private Defense Contractors,1,1944-07-29
+14,1992 Number Four Limited Partnership,1,1951-06-24
+15,2 Loop Films,1,1991-08-20
+16,2.0 Entertainment,1,1948-04-05
+17,2.4.7. Films,1,1967-01-26
+18,2003 Productions,1,1930-06-22
+19,20th Century Studios,1,1986-11-14
+20,21 Laps Entertainment,2,1951-11-28
+21,21st Century Film Corporation,3,1976-03-22
+22,21st Century Films,1,1995-03-01
+23,25th Hour Productions,1,1982-01-02
+24,26 Films,1,1970-03-25
+25,2929 Productions,5,1977-08-28
+26,2DUX²,2,1971-12-07
+27,3 Arts Entertainment,9,1948-10-14
+28,3 Miles Apart Productions Ltd.,1,1994-04-29
+29,3311 Productions,2,1922-04-09
+30,360 Pictures,1,1963-07-18
+31,391 Productions,2,1962-12-22
+32,3B Productions,2,1942-03-20
+33,3Mark Entertainment,1,1980-10-20
+34,4 1/2 Film,1,1977-06-22
+35,4 Kids Entertainment,1,1923-12-04
+36,40 Acres & A Mule Filmworks,7,1953-04-19
+37,49th Parallel Productions,1,1949-08-30
+38,4Kids Entertainment,1,1933-03-20
+39,4k Films,1,1941-06-04
+40,7 Arts International,1,1985-08-16
+41,7 Films Cinéma,2,1981-12-13
+42,7DM Studios,1,1988-03-29
+43,8383 Productions,1,1944-10-27
+44,88 Productions,1,1968-10-20
+45,888 Productions,1,1983-12-10
+46,900 Films,1,1961-09-26
+47,98 MPH Productions,1,1961-08-19
+48,A Band Apart,3,1988-02-11
+49,A Bigger Boat,1,1946-07-26
+50,A Hot Dog,1,1937-08-04
+51,A Lucky Old Sun Production,1,1961-11-16
+52,A&M Films,10,1935-07-08
+53,A.M.A. Film,1,1958-12-07
+54,A24,8,1986-09-19
+55,ABC Animation,1,1990-07-11
+56,ABC Entertainment,1,1929-02-21
+57,ABC Motion Pictures,7,1958-01-30
+58,ABC Productions,1,1938-06-26
+59,ABS-CBN Film Productions,2,1987-05-08
+60,ACCENT Films,1,1982-07-09
+61,ADC Films,1,1971-12-19
+62,ADHM Films,1,1954-09-18
+63,AI-Film,2,1959-06-20
+64,AITD Productions,1,1941-05-15
+65,AM/PM Entertainment,1,1974-09-30
+66,AMLF,3,1922-01-07
+67,AOI Promotion,1,1936-05-18
+68,AR Films,1,1960-09-27
+69,ARD Degeto Film,2,1974-01-31
+70,ARP Sélection,3,1990-12-23
+71,ARTE,5,1928-12-01
+72,ASIG Productions,1,1948-12-26
+73,ATO Pictures,1,1945-11-24
+74,AVA Films & Entertainment,1,1982-02-16
+75,AVCO Embassy Pictures,3,1934-01-08
+76,Aamir Khan Productions,4,1928-01-27
+77,Aardman Animations,3,1957-03-15
+78,Aaron Russo Entertainment,1,1959-05-18
+79,Aaron Spelling Productions,2,1946-08-11
+80,Abandon Entertainment,1,1985-09-02
+81,Abandon Pictures,1,1981-07-29
+82,Abbas Kiarostami Productions,2,1978-06-26
+83,Abbolita Productions,1,1920-09-30
+84,Abominable Pictures,1,1957-12-13
+85,About Film,1,1967-11-12
+86,Above All Things Inc.,1,1981-05-07
+87,Abraham Productions,1,1971-02-18
+88,Abramoff Production,1,1931-04-22
+89,Acacia Filmed Entertainment,2,1968-02-26
+90,Accent Films B.V.,1,1934-11-29
+91,Access Entertainment,1,1992-12-12
+92,Ace Maker Movie Works,1,1936-10-03
+93,Acorn Pictures,1,1943-04-04
+94,Act III Communications,2,1979-06-25
+95,Action Communications,1,1956-10-08
+96,Action Features,1,1988-01-11
+97,AdScott Pictures,1,1975-04-29
+98,Ada Films,1,1968-07-11
+99,Adam Packer Film Productions,1,1920-04-03
+100,Adams Apple Film Company,2,1988-05-15
+101,Addis Wechsler Pictures,2,1976-09-23
+102,Admire Productions Ltd.,1,1945-09-07
+103,Adventure Pictures,2,1974-11-11
+104,Affirm Films,1,1982-07-10
+105,After Dark Films,1,1927-08-04
+106,Agenda,1,1973-09-23
+107,Aggregate Films,2,1958-05-11
+108,Agile Films,1,1962-06-02
+109,Aim,1,1974-07-02
+110,Ajay Devgn Ffilms,1,1942-08-16
+111,Akira Committee Company Ltd.,1,1930-07-27
+112,Alacran Pictures,1,1939-01-05
+113,Alameda Films,1,1937-05-09
+114,Alan Enterprises,1,1992-06-12
+115,Albacore Productions Inc.,1,1974-03-23
+116,Albert Band International Productions Inc.,1,1954-10-22
+117,Alcatraz Films,1,1952-05-13
+118,Alcon Entertainment,26,1933-07-27
+119,Alcor Films,7,1933-06-12
+120,Alcove Entertainment,1,1944-06-20
+121,Aldamisa Entertainment,2,1946-08-25
+122,Aleph Producciones S.A.,1,1972-06-15
+123,Alexandre Films,2,1965-12-14
+124,Alfama Films,1,1943-02-08
+125,Alibaba Pictures,2,1934-06-02
+126,Alicia Produce,1,1955-07-08
+127,Alicéléo,2,1939-07-28
+128,Alive Enterprises,2,1930-03-07
+129,Alive Films,5,1963-01-27
+130,Aljosha,1,1992-12-05
+131,All Girl Productions,4,1954-01-14
+132,All Net Productions,1,1936-08-09
+133,Allan Zeman Productions,1,1942-05-20
+134,Allarts,2,1973-04-24
+135,Alleged Productions,1,1937-01-31
+136,Allegro Films,1,1953-08-14
+137,Allen Smithee Classic Films,1,1985-06-04
+138,Alliance,1,1947-07-28
+139,Alliance Atlantis Communications,6,1941-02-23
+140,Alliance Atlantis Motion Picture Production,1,1980-02-19
+141,Alliance Communications Corporation,9,1925-05-05
+142,Alliance Entertainment,2,1952-05-03
+143,Alliance Films,1,1957-09-18
+144,Alliance Films Corporation,1,1967-06-20
+145,Allied Filmmakers,4,1944-02-24
+146,Allied Stars Ltd.,1,1978-04-19
+147,Allied Vision,3,1966-05-03
+148,Allison Shearmur Productions,1,1970-07-19
+149,Alloy Entertainment,2,1956-11-27
+150,Allspark Pictures,1,1924-03-19
+151,Almena Films,1,1953-09-20
+152,Almost You,1,1987-12-16
+153,Alphaville Films,1,1921-10-29
+154,Alpilles Productions,1,1993-09-07
+155,Also Known As Pictures,1,1991-01-01
+156,Alta Films,1,1969-08-09
+157,Altar Identity Studios,1,1960-06-16
+158,Altavista Films,1,1920-03-30
+159,Alter Ego Entertainment,1,1953-07-15
+160,Alternate Current,1,1973-11-27
+161,Am Psycho Productions,1,1938-01-10
+162,Amasia Entertainment,2,1948-02-19
+163,Amazon Studios,11,1961-02-16
+164,Amber Entertainment,1,1926-07-24
+165,Ambience Entertainment,1,1969-05-20
+166,Amblimation,1,1931-08-06
+167,Amblin Entertainment,11,1921-03-12
+168,Ambridge Film Partnership,1,1975-02-09
+169,Amen Ra Films,1,1924-04-13
+170,Amercent Films,4,1935-04-12
+171,American Cinema Productions,3,1988-03-07
+172,American Eagle Films,1,1939-07-10
+173,American Empirical Pictures,1,1949-07-28
+174,American Entertainment Investors,1,1984-06-12
+175,American Entertainment Partners II L.P.,2,1938-09-21
+176,American Filmworks,1,1993-01-24
+177,American Playhouse,8,1963-12-12
+178,American Playhouse Theatrical Films,2,1928-05-31
+179,American Zoetrope,7,1945-06-23
+180,Amuse,1,1921-01-27
+181,Amuse Soft,1,1983-03-20
+182,Amusement Park Films,1,1970-09-13
+183,An Impulsive Production,1,1932-07-01
+184,Anabasis N.V.,1,1960-02-18
+185,Anarchist's Convention Films,1,1981-06-09
+186,Anchor Bay Films,3,1968-06-14
+187,Andrea Sperling Productions,2,1986-07-19
+188,Andrew Lauren Productions,1,1949-08-19
+189,Ang Lee Productions,2,1925-12-26
+190,Angeles,1,1926-05-23
+191,Angeles Cinema Investors,1,1930-03-05
+192,Angry Films,2,1964-02-29
+193,Anhelo Producciones,1,1970-11-29
+194,Animal Kingdom,2,1961-02-20
+195,Animal Logic,2,1981-02-17
+196,Animal Productions LLC,1,1942-04-28
+197,Animatógrafo,1,1935-08-28
+198,Anna Biller Productions,1,1930-07-14
+199,Annapurna Pictures,12,1990-11-25
+200,Annapurna Productions,1,1972-04-15
+201,Annhall,1,1984-03-09
+202,Anonymous Content,5,1961-03-14
+203,Antena 3 Films,1,1973-09-29
+204,Antibes Inc.,1,1973-08-16
+205,Antidote Films (I),1,1980-10-25
+206,Antonine Films,1,1955-12-24
+207,Antron Media Production,1,1989-03-14
+208,Apartment Story,1,1937-03-15
+209,Apartment Two,1,1924-09-10
+210,Apatow Productions,3,1926-04-27
+211,Apeitda,1,1989-01-11
+212,Apocalypso Pictures,1,1968-12-06
+213,ApolloMedia Distribution,2,1972-10-05
+214,Apostle,1,1947-12-19
+215,Appian Way,2,1977-07-29
+216,Applause Bhansali Productions,1,1952-05-28
+217,Applause Pictures,1,1956-07-05
+218,Appledown Films Inc.,1,1950-07-23
+219,Applied Action,2,1923-05-27
+220,Aquarius Films,1,1965-07-13
+221,Aramid Entertainment Fund,1,1942-11-09
+222,Arc Productions,1,1948-03-17
+223,Arcade Pictures,1,1925-05-02
+224,Arcafin B.V.,1,1937-09-01
+225,Archer Gray,1,1981-02-27
+226,Archer Street Productions,1,1938-01-26
+227,Archerwest,1,1974-01-06
+228,Archimede,1,1944-11-04
+229,Ardican Films,1,1948-05-05
+230,Arena,1,1973-05-24
+231,Arenafilm,2,1931-08-13
+232,Argos Films,1,1969-07-07
+233,ArieScope Pictures,2,1976-07-30
+234,Aries Cinematográfica Argentina,2,1955-09-15
+235,Aristar Entertainment,1,1924-10-07
+236,Arka Mediaworks,2,1943-12-31
+237,Armian Pictures,1,1957-01-13
+238,Armory Films,3,1991-02-14
+239,Arnold Kopelson Productions,1,1954-02-28
+240,Art Linson Productions,3,1964-08-14
+241,Artbees,1,1994-06-23
+242,Arte France Cinéma,5,1957-08-12
+243,Artfire Films,2,1992-08-23
+244,Artic Productions LLC,1,1930-11-20
+245,Artimm,1,1966-03-09
+246,Artisan Entertainment,12,1956-08-02
+247,Artista Management,1,1951-04-05
+248,Artistry Limited,1,1931-02-08
+249,Artists First,1,1973-04-27
+250,Artists Public Domain,1,1954-04-06
+251,Arts Council of England,4,1987-12-13
+252,Artémis Productions,1,1976-11-18
+253,Asahi National Broadcasting Company,1,1970-07-15
+254,Ascendant Pictures,1,1991-06-13
+255,Ascot Film,1,1989-04-09
+256,Asghar Farhadi Productions,1,1983-01-08
+257,Asher-Grodin Productions,1,1934-10-13
+258,Ashutosh Gowariker Productions,1,1944-03-10
+259,Asia Union Film & Entertainment Ltd.,1,1965-02-26
+260,Asmik Ace Entertainment,1,1967-05-26
+261,Aspen Film Society,4,1990-09-07
+262,Aspen Productions (I),1,1961-10-23
+263,Astoria Films,1,1933-06-04
+264,Astrakan Films,1,1970-10-07
+265,Astral Bellevue Pathé,2,1959-12-19
+266,Astralwerks,1,1976-04-24
+267,Astute Films,3,1976-12-03
+268,Asymmetrical Productions,1,1934-04-22
+269,Atchafalaya,1,1956-04-24
+270,Atlantic,1,1923-02-09
+271,Atlantic Entertainment Group,11,1934-11-21
+272,Atlantic Pictures (II),1,1980-10-29
+273,Atlantic Records,1,1967-11-25
+274,Atlas,1,1983-01-17
+275,Atlas Entertainment,6,1946-12-29
+276,Atlas Productions,1,1944-11-29
+277,Atman Entertainment,1,1935-11-01
+278,Atomic Monster,1,1944-05-17
+279,Audax Films,1,1986-05-17
+280,Audifilm,1,1922-03-19
+281,Audiovisual Aval SGR,1,1941-05-01
+282,"Audiovisual Development Bureau, Ministerio da Cultura",1,1964-01-20
+283,August Entertainment,2,1950-03-02
+284,Aurora,5,1959-03-10
+285,Aurora Alliance Films,1,1964-09-21
+286,Aurora Productions LLC,2,1973-03-15
+287,Australian Film Finance Corporation (AFFC),8,1949-04-02
+288,Automatik Entertainment,3,1969-11-22
+289,Autonomous Films,1,1975-04-23
+290,Available Light Productions,1,1975-03-06
+291,Avenging Venture,1,1951-08-17
+292,Avenue Pictures,8,1929-06-18
+293,Avery Pix,2,1954-07-23
+294,Avi Arad & Associates,1,1928-12-17
+295,Avi Arad Productions,1,1986-01-09
+296,Aviron Pictures,1,1984-11-29
+297,Avnet/Kerner Productions,2,1974-12-06
+298,Avrora Media,1,1955-02-01
+299,Award Entertainment,1,1936-10-05
+300,Awesomeness Films,1,1959-01-23
+301,Azoff Entertainment,1,1953-03-05
+302,B Story,1,1943-02-20
+303,B.A. Produktion,1,1980-10-10
+304,B.O.M. Film Productions Co.,1,1920-04-17
+305,B24,1,1980-02-22
+306,BBC Films,32,1980-12-12
+307,BBC Scotland,1,1946-10-21
+308,BBE,1,1922-06-14
+309,BBL Motion Picture Studios,1,1990-03-16
+310,BCDF Pictures,2,1925-02-21
+311,BET Films,2,1926-09-12
+312,BET Pictures,1,1980-01-15
+313,BFI Film Fund,3,1965-12-24
+314,BIM Distribuzione,1,1976-05-05
+315,"BKM, kulturelle Filmförderung des Bundes",1,1972-05-21
+316,BMG Independents,1,1995-04-24
+317,BN Films,1,1966-02-19
+318,BR Petrobrás,1,1953-08-02
+319,BRON Studios,12,1993-03-04
+320,BZ Entertainment,1,1960-06-25
+321,Babieka,1,1961-02-25
+322,Baby Cow Productions,1,1982-06-12
+323,Baby Way Productions,1,1937-07-24
+324,Babylon,1,1994-07-10
+325,Bac Films,1,1957-11-17
+326,Bachelor Party Productions,1,1924-04-05
+327,Backup Media,1,1932-05-31
+328,Bad Bird Productions,1,1968-09-06
+329,Bad Cop Bad Cop Film Productions,1,1984-05-28
+330,Bad Lt. Productions,1,1957-02-11
+331,Bad Robot,2,1951-04-09
+332,Bagdasarian Productions,1,1958-03-08
+333,Bake My Cake Films,1,1960-06-13
+334,Baker Street,1,1951-06-07
+335,Bakshi Animation,1,1950-10-02
+336,Bakshi Productions,1,1967-06-14
+337,Balboa Entertainment,1,1966-04-07
+338,Balcor Film Investors,6,1920-12-06
+339,Baldwin/Cohen Productions,1,1927-10-05
+340,Balkan Productions,1,1988-04-22
+341,Ball & Chain Productions,1,1934-11-14
+342,Balthazar Productions,1,1952-06-28
+343,Baltic Industrial Finance,1,1941-07-06
+344,Baltimore Pictures,8,1993-04-04
+345,Bandai Media Department,1,1991-05-05
+346,Bandai Visual Company,11,1950-06-29
+347,Bandeira Entertainment,3,1928-04-12
+348,Bank Street Films,1,1965-01-22
+349,Banner Entertainment,1,1990-08-06
+350,Barbarian Films,1,1938-09-13
+351,Barcelona Films,1,1949-02-01
+352,Barclays Mercantile Industrial Finance,2,1936-09-13
+353,Barry & Enright Productions,2,1993-05-24
+354,Barunson E&A,2,1959-05-24
+355,Basilisk Communications,1,1981-11-30
+356,Bates Entertainment,1,1936-09-03
+357,Baughn/Freed Productions,1,1942-01-23
+358,Baumgarten-Prophet Entertainment,1,1980-11-10
+359,Bavaria Film,3,1940-10-20
+360,Bayerischer Rundfunk (BR),2,1951-10-11
+361,Bayview Films,1,1951-01-06
+362,Bazelevs Production,4,1955-09-13
+363,Bazmark Films,1,1992-03-23
+364,Beachside Films,1,1931-02-05
+365,Beacon Communications,9,1925-04-07
+366,Becker Films,1,1963-01-10
+367,Beckner/Gorman Productions,1,1944-06-09
+368,Beco Films,3,1980-02-17
+369,Before The Door Pictures,2,1952-03-10
+370,Behaviour Worldwide,1,1945-02-09
+371,Beijing Dengfeng International Culture Communications Company,1,1974-01-28
+372,Beijing Diqi Yinxiang Entertainment,1,1980-05-01
+373,Beijing Enlight Pictures,1,1967-04-20
+374,Beijing Film Studio,1,1986-06-12
+375,Beijing New Picture Film,2,1928-07-29
+376,Beijing Skywheel Entertainment Co.,1,1983-10-12
+377,Bel Air Entertainment,2,1939-01-14
+378,Belbo Films,2,1947-08-19
+379,Belladonna Productions,2,1971-05-01
+380,Bellanova Films,1,1940-12-07
+381,Bellboy Films Limited,1,1967-08-08
+382,Bellwether Pictures,1,1995-11-24
+383,Ben-Ami/Leeds Productions,1,1988-07-26
+384,BenderSpink,3,1937-01-02
+385,Bergen,1,1970-11-16
+386,Bergman Lustig Productions,1,1986-11-06
+387,Berk/Lane Entertainment,1,1938-05-12
+388,Bestboy Pictures,1,1940-08-07
+389,Beverly Detroit,1,1934-04-29
+390,Beyond Films,3,1963-08-09
+391,Bhansali Productions,2,1934-04-27
+392,BiBi Film,1,1981-03-20
+393,Big Beach Films,4,1936-04-27
+394,Big Cat Productions,1,1928-10-02
+395,Big City Pictures,1,1921-08-20
+396,Big Dog Films,1,1982-10-16
+397,Big Easy Pictures,1,1940-07-18
+398,Big Indie Pictures,1,1995-07-29
+399,Big Red Dog Productions,1,1975-04-26
+400,Big Screen Entertainment Group,1,1966-02-01
+401,Big Screen Productions,1,1921-09-26
+402,Big Talk Productions,1,1964-12-19
+403,Bigel / Mailer Films,1,1942-04-19
+404,Bigelow Productions,1,1931-12-25
+405,Bill Graham Films,1,1975-04-07
+406,Bill Kenwright Films,1,1959-07-13
+407,Bioskop Film,2,1966-04-20
+408,Black Bear Pictures,4,1941-03-20
+409,Black Bicycle Entertainment,1,1959-12-10
+410,Black Entertainment Television (BET),1,1930-03-09
+411,Black Label Media,1,1989-01-12
+412,Black Rhino Productions,1,1964-02-06
+413,Black River Productions,1,1961-10-23
+414,BlackWhite,1,1938-03-14
+415,Blackhawk Productions,1,1940-08-05
+416,Blake Edwards,2,1939-04-03
+417,Blank of the Dead Productions,1,1921-08-05
+418,Bleecker Street Films,1,1938-09-28
+419,Bleiberg Entertainment,1,1931-02-08
+420,Blinding Edge Pictures,1,1956-12-08
+421,Block / Hanson,1,1975-05-21
+422,Block 2 Pictures,5,1955-11-09
+423,Blockbuster Films,1,1936-11-03
+424,Bloom,1,1927-06-08
+425,Blow Up Pictures,1,1986-06-07
+426,Blue Askew,1,1995-10-19
+427,Blue Budgie Films Limited,1,1992-08-31
+428,Blue Haze Entertainment,1,1942-08-21
+429,Blue Rider Pictures,1,1980-12-17
+430,Blue Sky Films,1,1989-05-02
+431,Blue Sky Studios,4,1928-03-17
+432,Blue Streak Films,1,1956-07-11
+433,Blue Train Productions,1,1979-09-17
+434,Blue Tulip Productions,1,1955-02-18
+435,Blue Yonder Films,1,1939-07-17
+436,Bluegrass Films,3,1972-02-04
+437,Blueline Productions,2,1941-09-09
+438,Blueprint Pictures,3,1944-06-17
+439,Blumhouse Productions,11,1984-08-24
+440,Blurco,2,1934-05-22
+441,Blustarr,1,1936-01-29
+442,Bob Industries,1,1951-07-28
+443,Bob Yari Productions,2,1947-01-10
+444,Bob-Bea Productions,1,1972-12-12
+445,Boies / Schiller Film Group,1,1963-09-02
+446,Bold Films,6,1927-12-01
+447,Boll Kino Beteiligungs GmbH & Co. KG,4,1936-09-21
+448,Bombshell Pictures,1,1932-08-19
+449,Bona Fide Productions,2,1956-02-11
+450,Bona Film Group,6,1967-03-05
+451,Bonded Filmworks,1,1991-05-04
+452,Bones,1,1942-10-21
+453,Boneyard Entertainment,1,1973-09-21
+454,Boneyard Film Company Inc.,1,1940-12-19
+455,Boo Productions,1,1930-12-26
+456,Borough Park Productions,1,1961-12-16
+457,Boundscript,1,1994-07-11
+458,Bountiful Film Partners,1,1923-02-21
+459,Bow and Arrow Entertainment,1,1958-09-04
+460,Brandenberg,1,1994-11-27
+461,Brandywine Productions,1,1935-12-08
+462,Brant-Allen,1,1991-08-02
+463,Branti Film Productions,1,1966-09-20
+464,Braun Entertainment Group,1,1960-05-30
+465,Braunstein and Hamady Productions,1,1949-03-09
+466,Braveart Films,1,1947-06-02
+467,Braven Films,1,1945-05-28
+468,BreakThru Productions,1,1971-01-28
+469,Breathless Associates,1,1994-04-12
+470,Bregman/Baer Productions,1,1959-08-27
+471,Breton Film Productions,2,1938-08-31
+472,Bridgit Folman Film Gang,2,1945-08-06
+473,Brigand Films,1,1963-07-09
+474,Brightlight Pictures,1,1956-02-18
+475,Brillstein-Grey Entertainment,2,1921-11-13
+476,Brio Films,1,1977-11-16
+477,Britannic,1,1925-04-09
+478,British Broadcasting Corporation (BBC),9,1941-07-29
+479,British Broadcasting Corporation (BBC) Television,1,1968-07-25
+480,British Columbia Film,1,1933-09-26
+481,British Columbia Television,1,1973-05-19
+482,British Film Institute (BFI),4,1950-11-18
+483,British Screen Finance Ltd.,1,1972-10-14
+484,British Screen Productions,10,1971-01-13
+485,Broad Green Pictures,3,1966-01-13
+486,Broadway Pictures,6,1938-03-27
+487,Broadway Productions,1,1986-08-03
+488,Broadway Video,4,1990-08-19
+489,BroadwayHD,1,1954-03-13
+490,Broken Lizard Industries,1,1981-11-09
+491,Broken Road Productions,2,1962-12-03
+492,Broken Twig Productions Inc.,1,1995-09-14
+493,Bronco Productions,1,1988-04-29
+494,Bronze Eye Productions,1,1955-09-20
+495,Brooksfilms,11,1965-01-11
+496,Brothers K Productions,1,1955-09-24
+497,Brothers McMullen Productions,1,1937-01-08
+498,Brownstone Entertainment (II),1,1940-05-20
+499,Brownstone Productions (II),2,1983-02-20
+500,Bruin Grip Services,1,1943-12-24
+501,Bryna Productions,1,1947-10-29
+502,Buckeye Films,1,1934-12-02
+503,Buckeye Pictures,1,1933-08-07
+504,Bud Yorkin Productions,1,1983-12-22
+505,Budapest Stúdió Vállalat,1,1945-08-21
+506,Buena Vista Home Entertainment,2,1937-08-18
+507,Buena Vista International,2,1961-04-08
+508,Buena Vista International Film Production (Germany),1,1936-11-18
+509,Buena Vista Negative Cutting,1,1987-02-16
+510,Bulbul Films,1,1994-11-12
+511,Bull's Eye Entertainment,1,1934-09-06
+512,Bullwinkle Studios,1,1981-06-06
+513,Bungalow Productions,1,1938-02-12
+514,Bunya Productions,1,1970-09-02
+515,Burk A Project,1,1923-02-04
+516,Burrowes Film Group,1,1993-10-22
+517,Butcher's Run Films,1,1970-10-18
+518,Butler Pictures,1,1948-05-27
+519,Byzantine Productions,1,1949-08-06
+520,Bórd Scannán na hÉireann,2,1954-04-06
+521,C & C Brown Production,2,1945-04-07
+522,C-2 Pictures,1,1966-10-20
+523,C.A.T. Films,1,1938-04-02
+524,C.H.U.D. Productions,1,1933-03-27
+525,C.L.G. Films,1,1941-09-27
+526,C.O.R.E. Feature Animation,1,1975-04-02
+527,CB Films,1,1992-11-10
+528,CBS Entertainment Production,1,1940-05-01
+529,CBS Films,19,1942-10-24
+530,CBS Theatrical Films,7,1951-03-25
+531,CFS Avala Film,1,1992-07-12
+532,CG Cinéma,3,1964-12-18
+533,CIP Filmproduktion GmbH,1,1981-12-02
+534,CJ Entertainment,8,1958-05-29
+535,CNCAIMC,1,1980-12-21
+536,CTB Film Company,1,1964-08-01
+537,CTV,1,1981-01-11
+538,Cabal Film,1,1920-07-23
+539,Cable and Wireless Finance,1,1965-02-14
+540,Cactus Blue Entertainment,2,1960-09-07
+541,Café Film,1,1967-07-29
+542,CalMaple,1,1926-06-12
+543,Caledonia Pictures,1,1936-12-17
+544,Calendar International Pictures,1,1994-02-20
+545,Calendar Productions,1,1944-01-10
+546,Califilm,1,1995-03-14
+547,Calimari Productions,1,1994-11-18
+548,Callahan Filmworks,1,1925-08-12
+549,Callender Company,1,1991-05-26
+550,Camberwell / Fly Films,1,1973-03-03
+551,Cambridge Productions,1,1936-11-14
+552,Camelot Pictures,1,1946-03-21
+553,Camp Hill,1,1967-03-21
+554,Caméra One,1,1939-07-07
+555,Caméras Continentales,1,1957-01-06
+556,Canadian Broadcasting Corporation (CBC),1,1971-12-20
+557,Canadian Film Development Corporation (CFDC),3,1957-11-14
+558,Canadian International Studios VIII,1,1921-06-04
+559,Canal+,18,1987-06-17
+560,Canal+ Droits Audiovisuels,1,1963-02-07
+561,Canal+ España,4,1976-11-21
+562,Canana Films,1,1935-01-13
+563,Candyman Films,1,1941-08-12
+564,Cannon Entertainment,2,1988-12-22
+565,Cannon Films,8,1968-08-26
+566,Cannon Films Inc.,1,1961-10-31
+567,Cannon Group,4,1990-08-01
+568,Cannon International,2,1923-01-30
+569,Cannon Pictures,4,1946-05-09
+570,Cannon Screen Entertainment,2,1946-01-17
+571,Cannon and Morley Productions,1,1988-11-30
+572,Canon Italia S.r.l.,1,1924-12-03
+573,Cantaloupe Production,1,1960-07-31
+574,Canyon Creek Films,1,1979-11-19
+575,Canyon Media,1,1951-08-15
+576,Capcom Entertainment,1,1937-07-13
+577,Cape of Good Films,1,1924-03-17
+578,Capella Films,1,1983-08-12
+579,Capella International,4,1929-09-27
+580,Capital Equipment Leasing,1,1933-08-05
+581,Capitol Films,2,1990-03-02
+582,Cappa Production,1,1975-08-19
+583,Capricorn,1,1937-01-13
+584,Captivity Productions,1,1994-03-26
+585,Caravan Pictures,15,1940-10-01
+586,Cargo Entertainment,1,1943-03-24
+587,Carnival Film & Television,3,1938-06-26
+588,Carolco Entertainment,1,1964-04-04
+589,Carolco International N.V.,1,1979-09-28
+590,Carolco Pictures,25,1973-03-23
+591,Caroline Productions,1,1992-10-07
+592,Carousel Productions (II),1,1933-10-10
+593,Carsey-Werner Company,2,1967-07-09
+594,Carson Productions,1,1960-03-04
+595,Carthago Films S.a.r.l.,1,1976-09-18
+596,Carver Films,1,1938-05-29
+597,Cascade Films,1,1945-08-22
+598,Casey Silver Productions,1,1950-06-10
+599,Castelao Producciones,1,1928-09-26
+600,Castle Rock Entertainment,59,1929-03-13
+601,Casual Friday Productions,1,1970-02-14
+602,Cat In The Mill Studio,1,1964-02-06
+603,Catalyst Global Media,1,1925-06-11
+604,Cattle Annie Productions,1,1930-07-01
+605,Causeway Films,1,1995-10-25
+606,Cave 76,1,1968-05-29
+607,Caviar,2,1937-12-08
+608,Cecchi Gori Europa N.V.,1,1981-01-03
+609,Cecchi Gori Group Tiger Cinematografica,6,1982-08-21
+610,Cecchi Gori Pictures,1,1942-08-05
+611,Celador Films,2,1995-06-08
+612,Celandine Films,1,1949-11-03
+613,Celluloid Dreams,2,1974-10-16
+614,Cent Productions Inc.,1,1960-03-25
+615,Centar Film,1,1933-03-24
+616,Central Motion Pictures,1,1934-09-06
+617,Centre national du cinéma et de l'image animée (CNC),3,1934-06-13
+618,Centropolis Film Productions,1,1942-11-14
+619,Centurion,4,1973-12-28
+620,Century Video Corporation,1,1959-11-15
+621,Chai Productions,1,1969-06-09
+622,Chaiken Films,1,1972-04-23
+623,Challenge Film Corporation,1,1960-12-14
+624,Channel 4 Television Corporation,1,1936-01-29
+625,Channel Films,1,1941-08-11
+626,Channel Four Film,1,1988-03-15
+627,Channel Four Films,19,1972-10-14
+628,Chaos Productions,1,1981-02-07
+629,Charles Burnett Productions,1,1942-05-31
+630,Charles H. Schneer Productions,1,1972-07-12
+631,Charlie Mopic,1,1946-07-01
+632,Chartoff-Winkler Productions,3,1945-05-21
+633,Chase Films,1,1973-04-02
+634,Chaz Productions,1,1962-08-06
+635,Cheap Date,1,1964-05-18
+636,Cheerleader LLC,1,1976-05-13
+637,Chernin Entertainment,7,1930-01-10
+638,Cherry Alley Productions,1,1994-06-09
+639,Cherry Sky Films,1,1936-08-11
+640,Chester Films Inc.,1,1954-02-20
+641,Chestnut Hill Productions,2,1944-12-02
+642,Chestnut Ridge Productions,1,1938-01-31
+643,Cheyenne Enterprises,2,1926-03-17
+644,Chickie the Cop,1,1987-11-17
+645,China Film Co-Production Corporation,2,1981-07-31
+646,China Film Group Corporation (CFGC),2,1942-09-25
+647,Chinese Bookie Pictures,1,1920-12-24
+648,Chiodo Brothers Productions,1,1981-01-02
+649,Chockstone Pictures,1,1927-06-28
+650,Chongqing Film Group,1,1958-04-23
+651,Chris Lee Productions,1,1979-08-15
+652,Chris Morgan Productions,1,1969-04-20
+653,Christel Films,1,1941-05-07
+654,Christiano Film Group,1,1922-03-21
+655,Christopher Columbus Productions,1,1946-08-13
+656,Chroma III Productions,2,1981-05-09
+657,Chromewood Productions,1,1992-03-27
+658,Chuck Barris Productions,1,1977-06-04
+659,Chungeorahm Film,1,1947-05-03
+660,CiBy 2000,9,1989-11-04
+661,Cine Bazar,1,1976-06-03
+662,Cine Location Services,1,1949-08-06
+663,Cine Mosaic,1,1928-06-14
+664,Cine Plus,1,1921-11-17
+665,Cine-Source,1,1922-09-26
+666,Cine365 Films,1,1965-08-08
+667,CineSon Entertainment,1,1958-04-09
+668,CineWild,1,1986-03-07
+669,Cinecom Entertainment Group,2,1932-01-19
+670,Cinecom Pictures,1,1990-05-03
+671,Cinecorp SAC,1,1955-09-07
+672,Cinehaus,3,1944-08-04
+673,Cinelou Films,2,1948-02-18
+674,Cinema '84,6,1956-06-21
+675,Cinema City Films,1,1991-11-01
+676,Cinema Group,1,1947-01-16
+677,Cinema Group Ventures,7,1984-02-13
+678,Cinema Libre Studio,1,1978-06-01
+679,Cinema Line Film Corporation,1,1995-10-01
+680,Cinema Service,1,1938-07-01
+681,Cinema VII,1,1956-04-10
+682,Cinema Vehicle Services,2,1953-05-05
+683,CinemaNX,1,1952-12-11
+684,Cinemabrain,1,1955-10-27
+685,Cinemarque Entertainment,1,1983-07-16
+686,Cinematograph AB,1,1982-06-12
+687,Cinephile,1,1922-03-19
+688,Cineplex Odeon Films,8,1959-10-23
+689,Cinepro,1,1972-02-19
+690,Cinequanon,1,1927-09-05
+691,Cinereach,3,1952-05-26
+692,Cinerenta Medienbeteiligungs KG,2,1954-09-24
+693,Cinergi Pictures Entertainment,4,1966-02-20
+694,Cineritino S.r.L.,1,1947-08-24
+695,Cinesthesia Productions,1,1956-07-07
+696,Cinetel Films,8,1962-02-13
+697,Cineville,3,1950-04-07
+698,Ciné Valse,2,1955-06-28
+699,Cinéa,2,1939-12-12
+700,Cinépix Film Properties (CFP),1,1941-08-16
+701,Circle Films,3,1970-04-24
+702,Citizen Films,1,1977-01-11
+703,City Films,3,1963-09-24
+704,Cité-Amérique,1,1973-12-15
+705,Class 5 Films,1,1983-05-08
+706,Claudie Ossard Productions,1,1929-03-27
+707,Claussen & Wöbke Filmproduktion GmbH,1,1958-04-26
+708,Clavius Base,1,1935-01-14
+709,Clear Blue Sky Productions,1,1963-06-14
+710,Clear Type,1,1970-06-12
+711,Cliffjack Motion Pictures,1,1933-07-17
+712,Clinica Estetico,2,1929-06-03
+713,Clipsal Films,1,1930-05-29
+714,Closest to the Hole Productions,2,1938-04-11
+715,Cloud Atlas Productions,1,1920-04-21
+716,Cloud Eight Films,1,1928-03-27
+717,Cloud Ten Pictures,1,1944-09-04
+718,Clubhouse Pictures (II),1,1982-12-03
+719,Coach Carter,1,1927-02-07
+720,Cobalt Media Group,1,1981-06-16
+721,Cocktail Film,1,1933-04-23
+722,Coco Cartoon,1,1958-11-14
+723,Code Entertainment,1,1978-08-23
+724,Code Red,1,1995-08-22
+725,Codeblack Entertainment,1,1929-06-09
+726,Cohen Media Group,1,1927-02-22
+727,Col.Ima.Son,1,1981-07-26
+728,Cold Iron Pictures,1,1935-05-04
+729,Colgems Productions Ltd.,2,1973-06-07
+730,Color Force,2,1941-12-04
+731,Columbia Films,1,1950-09-21
+732,Columbia Pictures,332,1990-05-10
+733,Columbia Pictures Film Production Asia,2,1926-11-26
+734,Columbia Pictures Industries,2,1932-07-07
+735,Comme des Cinémas,1,1936-11-27
+736,Commies From Mars Corporation,1,1941-03-09
+737,Communicado Productions,1,1936-01-27
+738,Compact Yellowbill,1,1987-04-30
+739,Compagnie Eric Rohmer (CER),3,1980-03-07
+740,Company Films,2,1935-02-10
+741,Company Four,1,1966-05-09
+742,Compañía Iberoamericana de TV,1,1944-02-28
+743,Compulsion Inc.,1,1920-02-18
+744,Conacite Uno,1,1945-03-08
+745,Concorde Pictures,5,1948-06-24
+746,Concorde-New Horizons,2,1926-02-17
+747,Conglomerate Media,1,1941-09-18
+748,Connection III Entertainment,1,1965-12-22
+749,Conquering Unicorn,1,1974-09-11
+750,Consejo Nacional para la Cultura y las Artes (CONACULTA),1,1963-08-07
+751,Constantin Film,9,1926-01-13
+752,Constantin Film International,1,1985-08-25
+753,Constellation,2,1981-01-22
+754,Constellation Entertainment,3,1985-12-17
+755,ContentFilm,1,1937-11-05
+756,Continental Motion Pictures,1,1934-04-18
+757,Conundrum Entertainment,1,1984-10-31
+758,Copperheart Entertainment,1,1923-10-16
+759,Coproduction Office,2,1994-06-26
+760,Cornelius Productions,1,1955-01-24
+761,Corporation Image M & M,1,1948-02-26
+762,CorradoMooncoin,1,1953-11-02
+763,Corsair Pictures,1,1954-10-19
+764,Corsan,2,1982-09-22
+765,Cort/Madden Productions,1,1922-10-12
+766,Cosmo Films,1,1975-02-23
+767,Cottonwood Pictures,1,1925-08-03
+768,Coup d'Etat Films,1,1957-12-01
+769,Covert Media,2,1963-09-08
+770,Cradle Productions Inc.,1,1976-06-21
+771,Craven-Maddalena Films,2,1963-08-20
+772,Cre Film,1,1933-08-17
+773,Crescent Drive Pictures,1,1928-08-24
+774,Crescent Film Enterprises,1,1931-12-29
+775,Crescent Moon,1,1923-08-26
+776,Cristaldifilm,1,1973-02-28
+777,Cross City Sales,1,1970-04-15
+778,Cross Creek Pictures,5,1942-09-27
+779,Crossroads Films,1,1931-11-13
+780,Crowvision Inc.,1,1924-03-25
+781,Cruella Productions,1,1973-05-18
+782,Cruise/Wagner Productions,2,1966-04-24
+783,Crunk Pictures,1,1935-02-18
+784,Crystal Sky Worldwide,1,1968-02-16
+785,Crystalite Productions,1,1995-09-01
+786,Cuba Pictures,1,1952-04-19
+787,Cube Libre,1,1965-03-29
+788,Curmudgeon Films,1,1991-10-01
+789,Curzon Films,1,1934-07-14
+790,Cypress Grove,1,1992-01-28
+791,Czech Anglo Productions,1,1995-10-28
+792,D & P Productions,1,1941-12-30
+793,DC Entertainment,1,1984-02-10
+794,DD Productions,2,1934-06-03
+795,DDM Film Corporation,2,1938-03-19
+796,DEJ Productions,1,1987-01-29
+797,DENTSU Music And Entertainment,3,1935-12-17
+798,DIC Entertainment,2,1983-07-08
+799,DJ Films,3,1958-12-16
+800,DNA Films,4,1940-08-27
+801,Da.Ma. Cinematografica,1,1931-12-13
+802,Dacia Films,1,1973-04-28
+803,Daiei Eiga,1,1971-12-16
+804,Daiei Studios,1,1971-09-20
+805,Daly-Harris Productions,1,1929-03-21
+806,Daniel Grodnik Productions,1,1922-08-25
+807,Danjaq,2,1921-04-01
+808,Danmarks Radio (DR),1,1992-02-17
+809,Dark Castle Entertainment,3,1977-06-26
+810,Dark Horse Entertainment,1,1980-03-10
+811,Dash Films,1,1926-08-24
+812,Datari Turner Productions,1,1995-02-25
+813,Dave Bell Associates,1,1943-01-22
+814,David Blocker Productions,1,1924-02-13
+815,David Brown Productions,1,1994-06-14
+816,David Foster Productions,3,1976-04-14
+817,David Kirschner Productions,3,1943-02-22
+818,Davis Entertainment,9,1980-09-01
+819,Davis-Films,2,1969-02-14
+820,Davis-Panzer Productions,2,1942-07-24
+821,Davros Films,1,1980-09-28
+822,Daybreak,1,1933-09-15
+823,Dayday Films,1,1988-07-30
+824,De Fina-Cappa,2,1988-08-22
+825,De Laurentiis Entertainment Group (DEG),17,1988-05-08
+826,De Line Pictures,2,1966-10-03
+827,DeHaven/Shapiro Productions,1,1978-02-12
+828,Decibel Films,1,1983-12-12
+829,Deep River Productions,1,1936-01-27
+830,Deerjen Films,1,1986-02-02
+831,Def Pictures,2,1956-05-20
+832,Deliverance Productions,1,1973-04-16
+833,Delphi Films,2,1981-12-29
+834,Delphi II Productions,4,1982-03-10
+835,Delphi III Productions,3,1956-07-12
+836,Delphi IV Productions,1,1942-12-13
+837,Delphi V Productions,3,1946-09-24
+838,Demarest Films,1,1945-07-23
+839,Demi-Monde Productions,1,1980-02-10
+840,Dentsu,2,1968-09-03
+841,Depth of Field,2,1939-08-16
+842,Desert Hearts Productions,1,1987-04-02
+843,Desert Wolf Productions,1,1975-03-22
+844,Desperate Pictures,3,1937-02-16
+845,Destination Films,7,1979-12-16
+846,Destro Films,1,1946-07-10
+847,Det Danske Filminstitut,1,1949-01-20
+848,Detour Filmproduction,2,1935-02-06
+849,Devoted Productions,1,1948-05-15
+850,Dexter Studios,1,1940-05-22
+851,Dharma Productions,7,1988-07-20
+852,Di Bonaventura Pictures,3,1938-02-01
+853,DiNovi Pictures,4,1957-05-25
+854,Diablo Entertainment (II),1,1935-06-19
+855,Diagonal TV,1,1991-05-26
+856,Diamant Film,1,1965-08-15
+857,Dickhouse Productions,1,1959-01-20
+858,Digital Image Associates,1,1965-01-08
+859,Dimension Films,56,1938-10-30
+860,Dimitri Villard Productions,1,1966-02-26
+861,Dinamo Entertainment,1,1942-03-24
+862,Dino De Laurentiis Company,20,1965-04-20
+863,Dino de Laurentiis Communications,1,1978-11-27
+864,Disney Television Animation,5,1990-06-11
+865,Disneytoon Studios,1,1970-12-18
+866,Disruption Entertainment,1,1987-06-01
+867,Distant Horizon,1,1966-09-25
+868,Diversity Music,1,1987-04-13
+869,Dog Eat Dog Films,1,1991-12-16
+870,Dog Run Pictures,1,1943-06-21
+871,Dogstar Films,2,1920-01-15
+872,Dogwood Films,1,1937-06-09
+873,Dollface,1,1947-01-05
+874,Don Bluth,2,1991-03-06
+875,Don Simpson/Jerry Bruckheimer Films,3,1957-07-27
+876,Donner/Shuler-Donner Productions,1,1980-04-26
+877,Dorset Productions,1,1940-10-12
+878,Double Dare You (DDY),2,1969-07-01
+879,Double Feature Films,1,1923-10-11
+880,Double Helix Films,1,1985-07-22
+881,Double Nickel Entertainment,1,1970-08-05
+882,Double Play,2,1984-03-06
+883,Doug Liman Productions,1,1992-04-18
+884,Dovemead Films,2,1928-08-13
+885,Dow Jazz Films,1,1992-05-01
+886,Dream Factory Group,1,1940-06-03
+887,DreamWorks,7,1967-08-17
+888,DreamWorks Animation,28,1978-10-08
+889,Dreamlab,1,1964-01-24
+890,Dreamworks Pictures,76,1979-08-04
+891,Dreyfuss / James Productions,1,1947-11-13
+892,Dualstar Productions,1,1956-05-26
+893,Duffy Films,1,1943-01-08
+894,Dune Entertainment,1,1939-01-06
+895,Dune Entertainment III,1,1954-02-18
+896,Duplass Brothers Productions,5,1992-03-24
+897,EFTI,1,1981-07-28
+898,EM Media,1,1983-03-24
+899,EMA Films,1,1931-12-29
+900,EMI Films,8,1960-10-22
+901,ERA International,2,1968-05-15
+902,ERBP,1,1958-05-04
+903,ESX Entertainment,1,1921-05-11
+904,ETIC Films,1,1976-06-29
+905,Eagle Associates.,1,1993-04-25
+906,Ealing Studios,1,1948-11-08
+907,East Asia Film Company,1,1984-06-11
+908,Easy Company,1,1953-01-30
+909,Easy Money Associates,1,1987-08-05
+910,Eaves Movie Ranch,1,1971-05-11
+911,Echo Lake Entertainment,2,1972-06-25
+912,Eclectic Pictures,1,1983-12-19
+913,Ecosse Films,4,1929-03-13
+914,Eddie Murphy Productions,2,1936-07-18
+915,Eden Rock Media,1,1978-06-12
+916,Edgar J. Scherick Associates,2,1975-10-13
+917,Edge City Productions,1,1975-05-16
+918,Edie & Ely Landau Inc.,1,1952-07-25
+919,Edko Films,1,1968-12-13
+920,Edward R. Pressman Productions,1,1963-04-11
+921,Edward S. Feldman Productions,1,1989-08-23
+922,Efer Productions,1,1981-07-18
+923,Egg Pictures,1,1940-05-17
+924,Egoli Tossell KLK,1,1977-11-18
+925,Egoli Tossell Pictures,2,1976-02-12
+926,Eikon Film,1,1970-10-15
+927,El Camino Pictures,1,1974-05-22
+928,El Deseo,7,1942-01-25
+929,El Mar Pictures,1,1961-09-26
+930,Elara Pictures,1,1961-05-28
+931,Electric City Entertainment,1,1993-08-01
+932,Electric Entertainment,2,1942-10-27
+933,Electric Panda Entertainment,1,1920-05-25
+934,Element Pictures,3,1968-08-29
+935,Eleventh Street Production,1,1959-01-17
+936,Elle Driver,1,1979-07-17
+937,Ellinas Multimedia,1,1944-02-15
+938,Elrina Investment,1,1964-05-03
+939,Elysian Dreams,1,1975-02-16
+940,Embassy International Pictures,2,1920-02-08
+941,Embassy Pictures,6,1956-10-05
+942,Embi Productions,1,1922-10-31
+943,Emmett/Furla/Oasis Films (EFO Films),3,1960-08-07
+944,Emperor Multimedia Group (EMG),1,1966-10-04
+945,Emphatic Films,1,1986-10-29
+946,Empire Pictures,9,1994-04-11
+947,Emshell Producers,1,1937-05-28
+948,Enchanter Entertainment,1,1936-11-16
+949,Enchantment Films Inc.,1,1957-06-01
+950,Encino Man Productions,1,1935-01-23
+951,End Cue,2,1924-02-15
+952,Enderby Entertainment,1,1957-09-17
+953,Endgame Entertainment,5,1995-09-20
+954,Engelberg-Sumner-Cheikes,1,1960-01-14
+955,Engine Film,1,1945-09-29
+956,Englander Productions,1,1960-11-03
+957,Enigma Productions,7,1950-08-28
+958,Enlightenment Productions,1,1923-12-12
+959,Entertainment Events,1,1946-10-09
+960,Entertainment Film Distributors,1,1969-08-03
+961,Entertainment Manufacturing Company,1,1922-01-21
+962,Entertainment One,5,1949-03-29
+963,Entertainment Studios Motion Pictures,1,1987-01-06
+964,Enticing Entertainment,1,1947-06-20
+965,Envision Media Arts,1,1982-04-25
+966,Eon Productions,6,1989-08-21
+967,Epic Level Entertainment,1,1971-10-22
+968,Epic Productions,4,1924-03-14
+969,Epsilon Motion Pictures,1,1931-06-26
+970,Erato Films,1,1950-11-15
+971,Eros Worldwide,3,1937-05-12
+972,Erre Produzioni,2,1967-05-17
+973,Escalante Productions,1,1964-01-27
+974,Escape Artists,2,1992-04-30
+975,Esparza,1,1980-12-15
+976,Esperanto Filmoj,1,1962-12-15
+977,Esperanza Films Inc.,1,1965-07-22
+978,Estudios Churubusco Azteca S.A.,2,1963-12-10
+979,Estudios Picasso,1,1992-10-01
+980,Etalon Film,1,1952-10-24
+981,Euforia Film,1,1932-03-03
+982,Eulogy Productions LLC,1,1978-11-18
+983,Eurasia Investments,1,1991-12-21
+984,Eureka Pictures,1,1953-10-02
+985,EuropaCorp,24,1961-07-23
+986,Evenstar Films,2,1995-06-18
+987,Evergreen Film Company,1,1972-04-09
+988,Everyman Pictures,1,1952-07-15
+989,Everything Is Everything,1,1979-10-12
+990,Evolution Entertainment,1,1990-03-01
+991,Excel Entertainment,3,1951-02-21
+992,Excelsior Film-TV,1,1935-10-11
+993,Exclusive Films,1,1980-05-12
+994,Exclusive Media Group,7,1982-04-22
+995,Extra Large Pictures,1,1923-05-01
+996,F.F. Associates,1,1966-03-03
+997,F/M,1,1981-06-21
+998,F2,1,1954-05-05
+999,FAI Films,1,1956-02-08
+1000,FGM Entertainment,1,1965-01-19
+1001,FIT Productions,1,1968-04-22
+1002,FM Entertainment,1,1946-01-08
+1003,FM Entertainment International N.V.,1,1929-06-13
+1004,FTM Productions,1,1938-09-22
+1005,FX Sound,1,1928-06-11
+1006,Fabula,1,1927-09-19
+1007,Fade In Films,1,1983-09-07
+1008,Fade to Black Productions,1,1963-07-17
+1009,Fairview Entertainment,1,1945-10-03
+1010,Fairway Films,1,1929-02-24
+1011,FaithStep Films,1,1959-03-10
+1012,Falcon International Productions,1,1995-12-03
+1013,Faliro House Productions,1,1979-07-23
+1014,Fallingcloud,1,1963-10-25
+1015,Fandango,1,1947-10-06
+1016,Fantefilm,2,1933-08-07
+1017,Far West,1,1970-04-05
+1018,Farabi Cinema Foundation,1,1932-03-20
+1019,Fast Films,1,1942-01-04
+1020,Fear and Loathing LLC,1,1934-04-29
+1021,Fear of God Films,1,1930-02-13
+1022,Feature Film Enterprise II,1,1981-10-14
+1023,Fermion Films,1,1974-07-31
+1024,Ferndale Films,1,1958-06-25
+1025,Fewlas Entertainment,1,1938-05-16
+1026,Fickle Fish Films,1,1950-11-26
+1027,Fiction,2,1993-11-14
+1028,Fidélité Films,1,1970-12-19
+1029,Fidélité Productions,4,1973-10-19
+1030,Field Guide Films,1,1932-08-27
+1031,Fifteen,1,1945-05-31
+1032,Fifth Avenue Entertainment,2,1979-08-16
+1033,Figment Films,1,1995-02-08
+1034,Film 4,1,1978-01-24
+1035,Film 44,1,1995-11-25
+1036,Film Afrika Worldwide,1,1949-05-20
+1037,Film Andes S.A.,1,1949-11-13
+1038,Film Capital Stockholm,1,1963-11-07
+1039,Film Corporation of Kenya,1,1928-12-06
+1040,Film Finance,1,1967-03-13
+1041,Film Four International,3,1943-02-10
+1042,Film Kraft,1,1956-08-08
+1043,Film Par Film,3,1987-11-12
+1044,Film Partner International,1,1977-11-08
+1045,Film Poland Productions,1,1935-10-24
+1046,Film Science,1,1956-06-22
+1047,Film Victoria,1,1965-02-26
+1048,Film Workshop,1,1943-12-29
+1049,Film i Väst,1,1947-03-29
+1050,Film4,14,1955-01-09
+1051,FilmColony,2,1923-03-18
+1052,FilmDistrict,6,1955-12-15
+1053,FilmFour,5,1983-02-03
+1054,FilmNation Entertainment,1,1977-06-13
+1055,Filmation Associates,2,1951-05-08
+1056,Filmauro,3,1929-08-03
+1057,Filmax,1,1923-03-18
+1058,Filmax Entertainment,1,1990-03-25
+1059,Filmax Group,1,1962-08-14
+1060,Filmax International,1,1923-01-16
+1061,Filmgalerie 451,1,1983-12-28
+1062,Filmhaus,1,1937-10-10
+1063,Filmkameratene A/S,1,1990-08-18
+1064,Filmline Productions,2,1921-08-04
+1065,Filmmaker R&K,1,1977-05-15
+1066,Filmplan International,1,1983-02-11
+1067,Films & Casting Temple Pvt. Ltd. Sydney,1,1968-07-17
+1068,Films A2,3,1933-01-06
+1069,Films RSL,1,1947-03-12
+1070,Films de L'Alma,1,1931-05-10
+1071,Filmtown Entertainment,1,1936-12-13
+1072,Filmtre,1,1983-06-25
+1073,Filmtrex,1,1933-05-23
+1074,Filmverlag der Autoren,1,1959-06-21
+1075,Filmways Pictures,3,1921-04-26
+1076,Fine Line Features,11,1961-08-03
+1077,Fineworks,1,1952-06-25
+1078,Fingerprint Releasing,2,1944-10-13
+1079,Finnegan/Pinchuk Productions,1,1993-10-25
+1080,Fireworks Pictures,1,1985-01-02
+1081,First Light Production,1,1982-01-09
+1082,First Look International,4,1962-08-06
+1083,First Millenium Partnership,1,1933-05-26
+1084,First Sun,1,1984-01-24
+1085,Firsttake Entertainment,1,1992-12-26
+1086,Flach Film,2,1944-04-25
+1087,Flan de Coco Films,1,1970-04-09
+1088,Flashlight Films,2,1992-02-16
+1089,Fluidity Films,1,1937-11-13
+1090,Flying Heart Films,1,1995-03-27
+1091,Focus Features,45,1929-04-30
+1092,Focus Puller Inc.,1,1928-11-11
+1093,Focus World,1,1991-02-22
+1094,Fogwood Films,1,1942-04-12
+1095,Follow Through Productions,1,1927-04-02
+1096,Fons Rademakers Produktie,1,1979-02-22
+1097,Forager Films,1,1942-03-27
+1098,Force Productions,1,1946-11-13
+1099,Forecast Pictures,1,1973-12-31
+1100,Forensic Films,1,1956-04-18
+1101,Foresight Unlimited,1,1954-09-11
+1102,Forest Whitaker's Significant Productions,1,1973-03-05
+1103,Forge,1,1920-12-01
+1104,Fortis Films,1,1972-09-19
+1105,FortyFour Studios,2,1976-02-03
+1106,Forum Sarajevo,1,1961-03-15
+1107,Forward Pass,2,1956-12-29
+1108,Four Seasons Partnership,1,1945-06-21
+1109,Fourth Protocol,1,1943-08-30
+1110,Fox 2000 Pictures,63,1990-03-22
+1111,Fox Atomic,9,1925-10-15
+1112,Fox Run Productions Inc.,1,1936-09-23
+1113,Fox STAR Studios,4,1949-01-26
+1114,Fox Searchlight Pictures,57,1932-08-22
+1115,France 3 Cinéma,1,1967-10-09
+1116,Franchise Pictures,10,1979-01-22
+1117,Frank Yablans Presentations,1,1925-07-05
+1118,Freddie Fields Productions,1,1932-05-17
+1119,Freedom Media,1,1989-10-29
+1120,Frenesy Film Company,3,1959-03-15
+1121,Fringe Dwellers Productions,1,1968-07-01
+1122,Front Films,2,1961-08-30
+1123,Fu Works,1,1986-03-20
+1124,Fuego Films,1,1949-10-08
+1125,Fugitive TV Productions,1,1959-11-06
+1126,Fuji Television Network,1,1926-12-06
+1127,Full Crew/Say Yea,1,1983-10-27
+1128,Fuller Films,1,1966-03-12
+1129,Fulvia Film,2,1976-03-24
+1130,Funny Boy Films,1,1963-05-25
+1131,Fuzzy Bunny Films (I),1,1944-09-16
+1132,G-BASE,1,1992-04-17
+1133,G4 Productions,1,1921-01-15
+1134,GGG,1,1959-08-17
+1135,GH Pictures,1,1966-01-10
+1136,GK Films,4,1977-02-01
+1137,GMT Productions,1,1922-04-10
+1138,GP Pictures,1,1936-07-15
+1139,Gail Katz Productions,1,1986-10-20
+1140,Gainax,1,1992-05-08
+1141,Gallery Films,1,1951-04-21
+1142,Gamechanger Films,1,1959-01-09
+1143,Gary Kurfirst Pictures,1,1942-07-05
+1144,Gary Sanchez Productions,4,1939-08-28
+1145,Gary Sherman Productions,1,1973-03-07
+1146,Gato Negro Films,1,1920-05-08
+1147,Gaumont,15,1958-05-04
+1148,Gaumont International,1,1946-05-12
+1149,Gaylord Productions,1,1968-02-09
+1150,Geechee Girls,1,1957-08-15
+1151,Geetha Arts,1,1932-05-05
+1152,Geffen Pictures,5,1953-12-28
+1153,Gemini Films,2,1966-02-05
+1154,Genre Films,1,1920-06-09
+1155,George Films,1,1981-02-07
+1156,Georgetown Productions Inc.,3,1970-03-09
+1157,Georgian-Film,1,1986-07-01
+1158,Ghost House Pictures,1,1985-02-12
+1159,Ghoulardi Film Company,2,1959-12-17
+1160,Gibraltar Entertainment,1,1981-06-22
+1161,Gilbert Films,1,1948-08-03
+1162,Give Me Liberty,1,1920-07-18
+1163,Gladden Entertainment,8,1947-03-07
+1164,Glass Eye Pix,1,1987-12-30
+1165,Glen Echo Entertainment,1,1949-09-07
+1166,Gloria Sanchez Productions,1,1955-01-06
+1167,Go Films,1,1974-09-02
+1168,Goalpost Pictures,1,1986-11-16
+1169,Goddard Textiles,1,1990-10-24
+1170,Golan-Globus Productions,19,1968-07-24
+1171,Golar Productions,1,1993-02-25
+1172,Gold Circle Films,6,1995-12-15
+1173,Gold Pine Productions,1,1936-04-15
+1174,GoldDay,1,1938-02-02
+1175,Goldcrest Films International,9,1929-08-11
+1176,Goldcrest Pictures,1,1977-01-08
+1177,Golden Harvest Company,18,1987-12-21
+1178,Golden Way Films Ltd.,2,1934-12-01
+1179,Goldwyn Films,1,1973-12-22
+1180,Gomillion Studios,1,1980-03-04
+1181,Good Dog Productions LLC,1,1960-04-18
+1182,Good Film Company,1,1924-10-21
+1183,Good Machine,7,1985-06-11
+1184,Good Universe,3,1973-05-19
+1185,Goodspeed Productions,1,1951-05-09
+1186,Googly Films,1,1992-01-26
+1187,Gordon Company,2,1951-03-01
+1188,Gotham Group,2,1991-07-06
+1189,Grace,1,1955-04-11
+1190,Gracie Films,2,1936-12-10
+1191,Gramercy Pictures (I),6,1952-07-28
+1192,Gran Via Productions,1,1995-04-11
+1193,Granada Television,1,1989-07-19
+1194,Grand Highway Productions,1,1937-04-19
+1195,Grand Slam Productions,1,1983-11-11
+1196,Gravier Productions,4,1976-03-11
+1197,Gray City,1,1954-09-14
+1198,Gray Daisy Films,1,1922-02-24
+1199,Great American Films Limited Partnership,4,1927-05-19
+1200,Greater Productions,1,1927-03-16
+1201,Greek Film Center,1,1978-10-12
+1202,Green Fish Pictures,1,1923-01-29
+1203,Green Hat Films,2,1946-02-04
+1204,Green Parrot,1,1971-11-20
+1205,Green Umbrella Ltd.,1,1979-04-22
+1206,Green/Renzi,1,1926-03-15
+1207,GreeneStreet Films,2,1951-07-03
+1208,Greenleaf Productions,1,1926-08-23
+1209,Greentree,1,1980-06-24
+1210,Greenwich Film Productions,1,1966-04-05
+1211,Greisman Productions,1,1933-03-03
+1212,Griffon Productions,1,1993-03-30
+1213,"Grisbi Productions, Le",1,1942-12-05
+1214,Groundswell Productions,2,1986-08-22
+1215,Growing Tree Productions,1,1982-07-13
+1216,Gruskoff/Levy Company,1,1942-12-06
+1217,Guardian Trust Company,1,1969-11-29
+1218,Guber-Peters Company,1,1979-09-21
+1219,Guild,1,1973-07-29
+1220,Gulfstream Pictures,1,1948-01-05
+1221,Gullane Pictures,1,1958-10-17
+1222,Gurian Entertainment,1,1995-02-16
+1223,Guys Upstairs,1,1946-06-16
+1224,H.I.T. Films,1,1931-07-11
+1225,HB Filmes,1,1983-11-18
+1226,HBO Films,5,1977-03-16
+1227,HBO Pictures,5,1995-08-12
+1228,HDNet Films,1,1935-10-28
+1229,HK Film Corporation,1,1990-05-19
+1230,HSX Films,1,1986-10-24
+1231,Hachette Première,2,1936-02-28
+1232,Haft Entertainment,1,1945-05-20
+1233,Haishang Films,1,1927-02-26
+1234,Hal Roach Studios,1,1968-03-15
+1235,Halloween VI Productions,1,1983-07-06
+1236,Hammer & Tongs,1,1960-10-02
+1237,Hammerhead Productions,1,1926-04-04
+1238,HanWay Films,3,1941-07-02
+1239,HandMade Films,9,1923-01-25
+1240,Handful of Dust,1,1978-12-01
+1241,Handprint Entertainment,1,1967-09-03
+1242,Hanna-Barbera Productions,3,1964-12-03
+1243,Happy Madison Productions,2,1965-08-13
+1244,Harold Robbins International Company,1,1935-08-15
+1245,Harpo Films,2,1969-11-01
+1246,Hart Sharp Entertainment,1,1986-01-18
+1247,Hartbeat Productions,1,1929-04-29
+1248,Haruki Kadokawa Films,1,1922-08-11
+1249,Harvest Filmworks,1,1920-04-15
+1250,Hasbro,1,1994-12-27
+1251,Haut et Court,1,1978-10-04
+1252,Have No Fear Productions,1,1957-10-17
+1253,Havoc,1,1963-10-17
+1254,Hawn / Sylbert Movie Company,5,1953-08-11
+1255,Haxan Films,1,1940-09-05
+1256,Headline Pictures,1,1945-01-23
+1257,Heat GBR,1,1943-02-05
+1258,Hell's Kitchen Films,2,1933-01-01
+1259,Hemdale,13,1964-10-09
+1260,Henson Associates (HA),3,1993-07-23
+1261,Herb Jaffe,2,1942-07-20
+1262,Hermetof Pictures,1,1955-01-10
+1263,Hero Entertainment,1,1970-07-13
+1264,Heron Communications,1,1923-05-20
+1265,Heron Productions,1,1936-07-16
+1266,Herrick Entertainment,1,1990-09-19
+1267,Heyday Films,4,1940-08-27
+1268,Hibiscus Films,1,1979-04-05
+1269,Hickmar Productions,1,1964-08-11
+1270,Hicktown Entertainment,1,1966-06-25
+1271,Hidden Empire Film Group (HEFG),1,1940-04-30
+1272,High Bar Productions,1,1991-11-01
+1273,High School Sweethearts,1,1935-10-21
+1274,Hill/Rosenman,1,1951-02-06
+1275,Historias Cinematograficas Cinemania,1,1953-02-11
+1276,Hivemind,3,1956-04-19
+1277,Hollywood Licensing Group,1,1944-08-13
+1278,Hollywood Pictures,49,1966-01-31
+1279,Home Box Office (HBO),4,1977-04-18
+1280,Hoot Productions LLC,1,1942-04-16
+1281,Hopscotch Features,1,1990-09-10
+1282,House & Moorhouse Films,1,1981-05-08
+1283,House Row Productions,1,1949-03-09
+1284,Houston King Productions,1,1946-11-13
+1285,Huayi Brothers,2,1947-04-12
+1286,Huayi Brothers Media,2,1984-10-28
+1287,Huayi Brothers Pictures,1,1979-11-29
+1288,Hughes Entertainment,3,1982-10-26
+1289,Hugo Productions,1,1980-01-04
+1290,Huit et Demi Productions,1,1980-01-10
+1291,Human Stew Factory,1,1980-11-21
+1292,Hungarofilm,1,1924-09-20
+1293,Hunter Killer Productions,1,1973-03-29
+1294,Hunting Lane Films,1,1946-07-07
+1295,Hurwitz Creative,3,1977-11-24
+1296,Hyde Park Entertainment,1,1929-10-21
+1297,Hydraulx,1,1922-04-26
+1298,Hyperion Pictures,3,1952-08-29
+1299,IAC Films,3,1947-11-05
+1300,IFC Films,1,1929-06-14
+1301,IFC Productions,4,1940-04-26
+1302,IM Global,5,1963-06-14
+1303,IMF Internationale Medien und Film GmbH & Co. 2. Produktions KG,1,1984-01-21
+1304,IMF Internationale Medien und Film GmbH & Co. Produktions KG,1,1944-10-04
+1305,IPC Films,3,1949-05-30
+1306,IRS Media,2,1953-11-13
+1307,ITC Films,1,1942-12-11
+1308,ITM Productions,1,1929-11-17
+1309,Iberville Productions,1,1958-02-08
+1310,Ibid Filmworks,1,1950-06-14
+1311,Icon Entertainment International,10,1938-02-06
+1312,Icon Productions,5,1949-09-07
+1313,Iconoclast,2,1969-08-24
+1314,Illumination Entertainment,2,1984-05-15
+1315,Image Comics,1,1968-03-25
+1316,Image Organization,2,1948-11-04
+1317,Imagi Animation Studios,1,1981-09-10
+1318,Imagine Entertainment,19,1958-12-03
+1319,Imagine Films Entertainment,7,1984-07-24
+1320,Imperative Entertainment,1,1967-06-01
+1321,Imperial Entertainment,1,1963-09-16
+1322,Imperial Entertainment Corporation,1,1974-11-09
+1323,In The Bag Productions,1,1944-11-26
+1324,In-Cine Compañía Industrial Cinematográfica,1,1975-06-02
+1325,In-Gear Film,1,1952-09-28
+1326,In-Gear Film Production,1,1925-11-02
+1327,Incentive Filmed Entertainment,3,1994-06-01
+1328,Incorporated Television Company (ITC),14,1945-05-21
+1329,Independent Film Centre,1,1968-04-07
+1330,Independent Pictures (II),1,1938-03-01
+1331,India Take One Productions,2,1980-11-24
+1332,Indian Paintbrush,5,1963-06-30
+1333,Indiana Production,1,1987-04-16
+1334,IndieProd Company Productions,1,1981-03-17
+1335,Indigo Film,3,1987-03-20
+1336,Industry Entertainment,1,1981-01-22
+1337,Inferno Distribution,1,1939-07-04
+1338,Infinity Features Entertainment,1,1952-02-08
+1339,Infinity Films,1,1972-06-28
+1340,Informant Media,2,1989-02-09
+1341,Initial Entertainment Group (IEG),4,1947-07-06
+1342,Initial Film and Television,1,1956-10-09
+1343,Initial Films,1,1941-12-31
+1344,Initial Pictures,1,1936-07-18
+1345,Innovisions,1,1989-08-10
+1346,Insurge Pictures,2,1988-12-07
+1347,Intermedia,1,1937-06-21
+1348,Intermedia Films,2,1942-09-01
+1349,International Cinema,1,1992-12-26
+1350,International Cinema Corporation (ICC),2,1988-02-02
+1351,International Film Investors,1,1921-07-12
+1352,International West Pictures (IWP),1,1994-05-08
+1353,Interscope Communications,6,1925-10-01
+1354,Intrepid Pictures,2,1947-07-14
+1355,Intrinsic Value Films,1,1956-01-29
+1356,Ipso Facto Productions,1,1962-05-25
+1357,Irish Screen,1,1953-10-02
+1358,Iron Horse Entertainment (II),1,1930-04-02
+1359,Ironbark Films,1,1954-12-04
+1360,Island Pictures,5,1952-07-13
+1361,Island World,5,1929-12-10
+1362,It's a Laugh Productions,1,1995-12-09
+1363,Itami Productions,1,1937-08-27
+1364,Item 7,1,1970-01-16
+1365,Ivory Way Productions,1,1983-11-22
+1366,Ixtlan,3,1961-08-29
+1367,J & M,1,1944-05-10
+1368,J&M Entertainment,1,1964-10-20
+1369,JD Productions,1,1950-11-14
+1370,JDI Productions,1,1989-07-20
+1371,JF Productions,1,1934-07-15
+1372,JLT Productions,1,1923-07-16
+1373,JVC Entertainment Networks,3,1933-01-13
+1374,Jack Giarraputo Productions,1,1937-10-02
+1375,Jack Rollins & Charles H. Joffe Productions,11,1937-12-08
+1376,"Jackson/McHenry Company,The",5,1980-01-06
+1377,Jaffe-Lansing,1,1926-12-05
+1378,Jaffilms,1,1995-01-19
+1379,James Glickenhaus,1,1974-01-22
+1380,Jaquet,1,1987-02-08
+1381,Jascat,1,1986-10-21
+1382,Jasmine Productions Inc.,2,1971-11-21
+1383,Jay Weston Productions,1,1990-11-18
+1384,Jennie and Company,1,1959-09-26
+1385,Jensen Farley Pictures,1,1962-05-30
+1386,Jerry Bruckheimer Films,2,1995-10-11
+1387,Jersey Films,3,1952-02-23
+1388,Jet Tone Production,3,1929-07-08
+1389,Jethro Films Production,1,1988-12-29
+1390,Jhoom Jhoom Productions,1,1936-12-11
+1391,Jim Henson Pictures,2,1926-10-22
+1392,Joe Wizan/Todd Black,1,1989-11-26
+1393,Joe's Daughter,1,1979-10-13
+1394,Joel Castleberg Productions,1,1950-02-28
+1395,John Davis,1,1948-12-28
+1396,John Wells Productions,1,1975-07-19
+1397,Jolie Pas,1,1992-09-01
+1398,Jolly Russell Productions,1,1928-10-09
+1399,Jon Shestack Productions,1,1937-06-22
+1400,Jones Entertainment Group,1,1924-10-27
+1401,Joseph S. Vecchio Entertainment,1,1983-06-26
+1402,Josephson Entertainment,1,1927-12-07
+1403,Julian Marsh Pictures,1,1969-05-13
+1404,June Pictures,1,1924-07-07
+1405,Junebug Movie,1,1921-06-11
+1406,Junglee Pictures,1,1949-04-23
+1407,Juniper Films,1,1950-08-18
+1408,Juno Pix,2,1976-06-13
+1409,K.G. Productions,1,1939-12-06
+1410,K5 International,1,1960-06-09
+1411,KB Erik the Viking,1,1943-01-22
+1412,Kaltenbach Pictures,1,1920-09-06
+1413,Kang Je-Kyu Film Co. Ltd.,1,1929-04-17
+1414,Kanun parvaresh fekri,2,1973-04-08
+1415,Karbo Vantas Entertainment,1,1920-07-18
+1416,Kasdan Pictures,1,1953-03-04
+1417,Katzka,1,1992-04-08
+1418,Keep Your Head,1,1982-07-23
+1419,Kennedy Miller Productions,6,1967-05-04
+1420,Kevin Downes Productions,1,1971-02-23
+1421,KeyEast,1,1929-03-13
+1422,Kick the Machine,2,1929-06-23
+1423,Killer Films,6,1954-11-19
+1424,Kim Ki-Duk Film,1,1979-04-12
+1425,Kindred Limited Partnership,1,1928-04-03
+1426,Kings Road Entertainment,12,1979-03-25
+1427,Kingsgate Films,1,1952-09-15
+1428,Kingsmere Properties,1,1965-03-25
+1429,Kino Korsakoff,1,1920-07-27
+1430,Kintop Pictures,1,1995-05-05
+1431,Klasky-Csupo,1,1955-01-24
+1432,Knickerbocker Films,1,1990-09-23
+1433,Knock Films A.V.V.,1,1985-02-08
+1434,Koch Company,1,1952-06-15
+1435,Kodiak Films,1,1926-03-28
+1436,Kolipoki Pictures,1,1984-12-24
+1437,Komplizen Film,1,1988-06-06
+1438,Konrad Pictures,1,1988-06-10
+1439,Kopelson Entertainment,1,1973-11-01
+1440,Korea Pictures,1,1921-07-20
+1441,Kouf/Bigelow Productions,2,1941-07-11
+1442,Kramer & Sigman Films,2,1973-06-07
+1443,Krasnow Productions,1,1925-04-23
+1444,Krisjair,1,1978-07-30
+1445,Kudos Film and Television,1,1939-07-24
+1446,Kuzui Enterprises,1,1952-09-30
+1447,Kyta Productions,1,1963-09-04
+1448,Kôdansha,2,1969-10-16
+1449,L.A. Films,1,1933-09-01
+1450,L.P. Film,1,1980-03-05
+1451,LBI Productions,1,1965-10-29
+1452,LD Entertainment,8,1968-05-11
+1453,LStar Capital,3,1946-03-22
+1454,La Cecilia,1,1948-03-16
+1455,La Petite Reine,1,1977-11-12
+1456,La Sept-Arte,1,1920-11-16
+1457,Ladbroke,1,1981-06-26
+1458,Ladybugs,1,1923-06-26
+1459,Lagniappe Films,1,1945-09-23
+1460,Lago Film,1,1930-04-25
+1461,Lake (Comfort and Joy),1,1950-05-08
+1462,Lakeshore Entertainment,13,1950-02-15
+1463,Lakeshore International,1,1931-08-28
+1464,Lambart Productions,1,1925-05-27
+1465,Lancaster Gate,1,1978-11-19
+1466,Lantana,1,1979-10-17
+1467,Lantana Productions,1,1987-05-17
+1468,Laokoon Filmgroup,1,1973-03-21
+1469,Larco Productions,1,1958-09-18
+1470,Larger Than Life Productions,1,1947-03-11
+1471,Largo Entertainment,9,1982-04-26
+1472,Largo International N.V.,1,1925-04-14
+1473,Last Holiday Productions,1,1932-08-27
+1474,Laughing Kookaburra Productions,1,1924-01-12
+1475,Laurence Mark Productions,1,1972-05-20
+1476,Laurenfilm,1,1931-08-22
+1477,Lava Bear Films,1,1992-03-28
+1478,Lawrence Gordon Productions,2,1929-12-07
+1479,Le Studio Canal+,1,1973-04-24
+1480,Lee Daniels Entertainment,1,1926-02-21
+1481,Lee Mendelson Film Productions,1,1957-08-20
+1482,Lee Rich Productions,1,1979-07-11
+1483,Leeds/Ben-Ami Productions,1,1933-05-06
+1484,Left Turn Films,1,1988-04-30
+1485,Legend Production Company,1,1958-12-26
+1486,Legend3D,1,1969-11-04
+1487,Legendary East,1,1921-12-05
+1488,Legendary Entertainment,5,1925-05-01
+1489,Leisure Investment Company,1,1962-03-03
+1490,Les Armateurs,2,1925-03-29
+1491,Les Artistes Anonymes,1,1926-03-25
+1492,Les Compagnons du Cinéma,1,1966-10-05
+1493,Les Films 13,1,1953-12-22
+1494,Les Films 21,1,1984-09-23
+1495,Les Films Alain Sarde,5,1925-12-15
+1496,Les Films Christian Fechner,1,1959-01-26
+1497,Les Films Galaxie,1,1945-04-02
+1498,Les Films Paul Grimault,1,1927-12-12
+1499,Les Films Plain Chant,1,1959-08-27
+1500,Les Films Séville,1,1973-04-16
+1501,Les Films de Pierre,1,1963-08-28
+1502,Les Films de la Tour,1,1993-01-29
+1503,Les Films du Fleuve,1,1988-02-21
+1504,Les Films du Lendemain,1,1976-01-07
+1505,Les Films du Losange,5,1939-02-06
+1506,Les Films du Loup,1,1976-06-10
+1507,Les Productions Lazennec,1,1944-07-22
+1508,Les Productions Mutuelles Ltée,1,1963-08-06
+1509,Levins-Henenlotter,1,1966-10-15
+1510,Lewitt / Eberts Productions,1,1975-05-08
+1511,LightWave Entertainment,1,1955-09-05
+1512,Lightning Pictures,3,1957-08-16
+1513,Lightning Ridge,1,1941-01-08
+1514,Lightstorm Entertainment,1,1926-11-17
+1515,Lightyear Entertainment,3,1939-12-26
+1516,Lija Productions,1,1933-09-08
+1517,Likely Story,1,1953-05-15
+1518,Lilies Films,1,1920-10-04
+1519,Limelight Productions (II),1,1974-02-11
+1520,Lions Gate Entertainment,1,1941-07-23
+1521,Lions Gate Films,17,1990-12-07
+1522,Lionsgate,58,1935-12-02
+1523,Little Bear,1,1989-06-03
+1524,Little Stranger,1,1964-03-22
+1525,Little Tokyo Productions,1,1992-01-04
+1526,Live Entertainment,4,1990-11-20
+1527,LivePlanet,1,1944-11-01
+1528,Lleju Productions,1,1969-05-06
+1529,Lodestar Productions,1,1947-01-24
+1530,Lolafilms,1,1980-06-28
+1531,London Weekend Television (LWT),1,1974-11-09
+1532,Longview Entertainment,1,1933-05-13
+1533,Lorimar Film Entertainment,14,1995-03-04
+1534,Lorimar Film Partners,1,1983-03-29
+1535,Lorimar Motion Pictures,3,1959-11-08
+1536,Lorimar Productions,4,1952-05-31
+1537,Los Angeles Media Fund (LAMF),2,1985-12-01
+1538,Lost Soul Productions,1,1949-11-23
+1539,Louisiana Producers Film Source,1,1981-10-23
+1540,Lucamar Productions,1,1923-01-01
+1541,Lucasfilm,10,1935-05-11
+1542,Lucasfilm Animation,1,1949-04-21
+1543,Lucille Ball Productions,1,1951-08-14
+1544,Lucky Monkey Pictures,1,1932-06-01
+1545,Lumiere Pictures,1,1992-12-29
+1546,Lumière Pictures,1,1947-03-13
+1547,Luna Films,1,1972-02-04
+1548,Lupo-Anthony-Quintano Productions,1,1957-08-01
+1549,Lutzus-Brown,1,1993-09-03
+1550,Luv Films,1,1949-06-15
+1551,Lyla Films,1,1923-01-24
+1552,Lynda Obst Productions,1,1940-09-25
+1553,Lynn-Davis Productions,1,1982-07-01
+1554,Légende Films,2,1933-04-08
+1555,M&M Productions,3,1989-09-18
+1556,M.E.S. Productions,1,1963-07-07
+1557,M3 Alliance,1,1933-07-28
+1558,MBP (Germany),1,1974-07-23
+1559,MDP Worldwide,3,1966-08-01
+1560,MEDIA Programme of the European Union,1,1933-10-27
+1561,MFF Feature Film Productions,1,1988-07-26
+1562,MGM Family Entertainment,1,1993-02-11
+1563,MK2 Productions,8,1962-03-27
+1564,MPI Media Group,1,1931-07-13
+1565,MPL Communications,1,1984-02-29
+1566,MTM Enterprises,1,1923-02-28
+1567,MTV Films,2,1967-07-30
+1568,MWM Studios,1,1991-10-04
+1569,Mac and Me Joint Venture,1,1925-11-07
+1570,MacGuffin Pictures,1,1986-05-11
+1571,Macari/Edelstein,1,1921-01-24
+1572,Mace Neufeld Productions,2,1981-05-04
+1573,Maddock Films,1,1938-10-24
+1574,Madhouse,4,1942-01-05
+1575,Magic Light Pictures,1,1964-11-14
+1576,Magnet Releasing,1,1991-08-26
+1577,Magnolia Filmproduktion,1,1936-01-09
+1578,Magnolia Pictures,4,1972-04-02
+1579,Magnum Pictures Inc.,1,1935-12-22
+1580,Magnus Films,1,1974-07-06
+1581,Mainline Pictures,1,1925-09-19
+1582,Majestic Films International,3,1967-02-02
+1583,Major Studio Partners,4,1970-05-14
+1584,Maljack Productions,1,1941-02-07
+1585,Malofilm,1,1929-08-06
+1586,Malpaso Productions,3,1921-02-18
+1587,Management Company Entertainment Group (MCEG),2,1954-04-07
+1588,Mandalay Entertainment,8,1983-12-01
+1589,Mandalay Pictures,2,1950-07-31
+1590,Mandalay Vision,1,1972-10-09
+1591,Mandarin Films,4,1977-04-16
+1592,Mandate Pictures,3,1973-01-02
+1593,Mandeville Films,5,1979-05-27
+1594,Manfred Durniok Filmproduktion,1,1985-08-09
+1595,Manhattan Pictures International,1,1954-04-21
+1596,Manic LLC,1,1979-07-20
+1597,Mann/Caan Productions,1,1955-04-23
+1598,Mantarraya Producciones,1,1991-01-07
+1599,Marble Hall,1,1988-08-17
+1600,Marcy Media,1,1984-11-04
+1601,Marimark Productions,5,1948-06-05
+1602,Marked Entertainment,1,1945-09-28
+1603,Marquis,1,1988-08-30
+1604,Marv Films,2,1990-06-11
+1605,Marvel Enterprises,2,1963-01-16
+1606,Marvel Entertainment,1,1946-06-25
+1607,Marvel Studios,12,1949-10-19
+1608,Matchbox Pictures,1,1964-09-24
+1609,Material,1,1966-07-15
+1610,Material Pictures,1,1951-08-14
+1611,Matten Productions,1,1969-03-14
+1612,Maven Pictures,1,1929-04-07
+1613,Max Films Productions,3,1961-03-21
+1614,Maybach Film Productions,1,1993-02-07
+1615,Mayfair Entertainment International,1,1943-05-21
+1616,Mayhem Pictures,1,1981-04-12
+1617,McFarlane Films,1,1981-12-23
+1618,Media 8 Entertainment,1,1949-12-04
+1619,Media Asia Films,1,1925-04-03
+1620,Media Pro Pictures,1,1949-05-19
+1621,Media Rights Capital (MRC),1,1960-08-23
+1622,Media Ventures,1,1965-12-15
+1623,Mediapro,2,1936-01-24
+1624,Mediaset España,1,1922-08-10
+1625,Medusa Film,3,1993-01-07
+1626,Meir Teper,1,1937-02-18
+1627,Melampo Cinematografica,2,1935-09-19
+1628,Meltdown Productions,1,1981-08-25
+1629,Melvin Simon Productions,3,1931-01-28
+1630,Memento Films Production,2,1985-06-28
+1631,Memfis Film,4,1961-07-27
+1632,Menageatroz,1,1979-04-15
+1633,Menuet Producties,1,1952-09-29
+1634,Mepris Films,1,1954-03-13
+1635,Merchant Ivory Productions,8,1966-03-05
+1636,Meta Film Stockholm,1,1950-11-04
+1637,Metafilms,1,1930-05-04
+1638,Metro-Goldwyn-Mayer (MGM),125,1986-11-15
+1639,Metrocolor,1,1974-06-03
+1640,Metropolitan Filmexport,1,1987-01-02
+1641,Mid Day Multimedia Limited,1,1957-09-18
+1642,Midwinter Productions Inc.,1,1946-07-03
+1643,Mighty Engine,1,1939-09-14
+1644,Mike Lobell Productions,1,1939-10-25
+1645,Milk & Media,1,1947-08-15
+1646,Milkshake Films,1,1988-08-11
+1647,Millenium,2,1927-11-23
+1648,Millennium Films,15,1980-11-12
+1649,Millennium Media,1,1970-11-02
+1650,Mimran Schur Pictures,1,1977-07-06
+1651,Mindy Affrime,1,1937-01-15
+1652,Ministère de la Culture et de la Communication,1,1934-06-07
+1653,Mirabai Films,1,1943-11-21
+1654,Miracle Pictures,1,1951-06-19
+1655,Mirage Enterprises,5,1964-09-20
+1656,Mirage Entertainment,1,1965-12-09
+1657,Mirage Films,1,1959-05-11
+1658,Miramax,74,1934-06-15
+1659,Mobra Films,1,1930-01-21
+1660,Mockingbird Pictures,1,1977-10-16
+1661,Mod Producciones,2,1946-03-03
+1662,Modern Man Films,1,1929-01-21
+1663,Monarch Pictures,1,1979-01-20
+1664,Monarchy Enterprises B.V.,1,1995-08-04
+1665,Monkeypaw Productions,1,1992-12-08
+1666,Monogatari,1,1953-10-13
+1667,Monsterfoot Productions,1,1944-04-29
+1668,Moonlight Film,1,1936-07-01
+1669,Moonstone Entertainment,1,1986-08-29
+1670,Mooz Films,1,1977-06-16
+1671,Morgan Creek Entertainment,36,1975-09-06
+1672,Morison Film Group,1,1947-10-16
+1673,"Morra, Brezner, Steinberg and Tenenbaum Entertainment (MBST)",1,1983-03-04
+1674,Mosaic,2,1938-05-12
+1675,Mosfilm,1,1980-12-06
+1676,Motion Picture Corporation of America (MPCA),4,1961-08-24
+1677,Motlys,3,1994-11-11
+1678,Mott Street Pictures,1,1961-08-04
+1679,Movie Partners,1,1986-09-02
+1680,Moviola Film och Television AB,1,1967-02-09
+1681,Movision,2,1956-01-26
+1682,Mrs. White's Productions,1,1944-12-25
+1683,Mulberry Square Productions,1,1967-11-25
+1684,Mulholland Productions,1,1978-02-20
+1685,Mundy Lane Entertainment,1,1933-11-19
+1686,Muse Productions,3,1961-07-02
+1687,Mutual Film Company,2,1945-03-07
+1688,Myriad Pictures,1,1923-11-20
+1689,Mystery Clock Cinema,1,1923-10-28
+1690,Myung Film Company Ltd.,1,1975-10-22
+1691,NBC Film,2,1922-09-20
+1692,NBC Productions,1,1959-10-23
+1693,NDF International,1,1989-08-26
+1694,NEO Motion Pictures,1,1982-11-20
+1695,NFH Productions,1,1954-01-07
+1696,NH Studioz,1,1938-09-04
+1697,NPV Entertainment,1,1949-01-26
+1698,NVSH Productions,1,1937-06-06
+1699,Nasser Group,1,1962-12-18
+1700,Natant,1,1972-10-02
+1701,National Broadcasting Company (NBC),1,1957-06-11
+1702,National Film Board of Canada (NFB),1,1976-06-23
+1703,National Film Trustee Company,1,1942-08-08
+1704,National Lampoon,3,1969-06-11
+1705,Nelson Entertainment,5,1921-11-24
+1706,Nelvana,4,1945-04-29
+1707,Nest Family Entertainment,1,1968-10-17
+1708,Neverending Media,2,1989-04-09
+1709,New Amsterdam Entertainment,1,1972-08-01
+1710,New Artists Alliance,1,1959-04-26
+1711,New Century Entertainment,1,1971-04-23
+1712,New Century Entertainment Corporation,2,1946-12-12
+1713,New Horizons Picture,1,1956-01-05
+1714,New Line Cinema,174,1959-03-13
+1715,New Oz Productions,1,1979-11-22
+1716,New Regency Productions,40,1925-09-05
+1717,New Sky Communications Inc.,1,1989-06-15
+1718,New Visions,1,1927-09-01
+1719,New Visions Pictures,1,1941-05-04
+1720,New World Entertainment Films,2,1962-02-12
+1721,New World Pictures,20,1993-11-06
+1722,New Zealand Film Commission,2,1949-10-18
+1723,Newmarket Capital Group,2,1956-07-22
+1724,Next Entertainment,1,1947-11-23
+1725,Next Entertainment World,1,1924-12-12
+1726,Next Wave Films,1,1932-05-17
+1727,Nibariki,1,1980-06-11
+1728,Nicholas Sparks Productions,1,1968-05-02
+1729,Nicolas Entertainment,1,1995-08-10
+1730,Night Life Inc.,3,1951-01-18
+1731,Night and Day Pictures,2,1963-07-07
+1732,Nimbus Film Productions,2,1948-08-31
+1733,Nine Yards Two Productions,1,1969-04-08
+1734,Nippon Television Network (NTV),1,1983-08-21
+1735,No Frills Film Production,2,1927-02-23
+1736,No Matter Pictures,1,1975-01-07
+1737,No Trace Camping,2,1995-07-13
+1738,Non-Stop Productions,2,1931-08-20
+1739,Nord-Ouest Films,2,1948-01-14
+1740,Nordisk Film,1,1994-08-31
+1741,Nordisk Film / SPRING,1,1972-09-05
+1742,Nordisk Film Production Sverige AB,1,1988-11-29
+1743,Norman Twain Productions,1,1992-11-06
+1744,Norsk Film,1,1960-11-10
+1745,North Street Films,1,1947-10-28
+1746,Northern,1,1936-03-06
+1747,Northern Lights Entertainment,3,1947-01-25
+1748,Northern Lights Films,1,1936-06-26
+1749,Notis Studio,1,1964-04-14
+1750,Nouvelles Éditions de Films (NEF),3,1968-01-14
+1751,Nova International Films,2,1978-01-20
+1752,Novotny & Novotny Filmproduktion GmbH,1,1978-11-25
+1753,Noé Productions,1,1939-08-24
+1754,Number 9 Films,2,1941-02-20
+1755,Numero Uno International,1,1970-02-11
+1756,O Entertainment,2,1990-07-25
+1757,O2 Filmes,1,1951-01-10
+1758,OLC / Rights Entertainment,1,1949-09-02
+1759,Occupant Entertainment,1,1982-07-23
+1760,October Films,2,1927-09-05
+1761,Odeon Films,1,1976-08-10
+1762,Odyssey,1,1959-03-31
+1763,Olga Film,1,1979-05-09
+1764,Olympus Pictures,2,1939-02-10
+1765,Omega Entertainment,1,1946-12-06
+1766,Omega Project,1,1963-12-26
+1767,Omnilab Media,1,1930-12-29
+1768,One Way Productions,1,1992-10-10
+1769,Onyx Films,1,1985-03-16
+1770,Open City Films,1,1939-02-21
+1771,Open Road Films,2,1990-06-22
+1772,Open Road Films (II),7,1942-06-05
+1773,Opera Film (II),1,1947-05-24
+1774,Opera Film Produzione,1,1981-10-15
+1775,Opus Film,2,1948-08-15
+1776,Oriental Light and Magic (OLM),1,1946-10-26
+1777,Origin Pictures,1,1975-05-02
+1778,Orion Pictures,60,1979-01-26
+1779,Oscilloscope,1,1949-01-21
+1780,Osterman Weekend Associates,1,1949-07-11
+1781,Out of the Blue... Entertainment,1,1982-03-02
+1782,Outlaw Productions (I),2,1964-03-12
+1783,Overbrook Entertainment,1,1982-08-29
+1784,Overnight Films,1,1930-04-20
+1785,Overture Films,5,1980-04-19
+1786,Oxford Film Company,1,1984-10-21
+1787,P2 Productions,1,1969-09-24
+1788,PK 65 Films,1,1970-06-06
+1789,PVM Entertainment,1,1968-10-09
+1790,Pacific Western,3,1965-06-19
+1791,Paco Cinematografica,1,1951-02-09
+1792,Paisley Park Films,1,1954-12-20
+1793,Palace Pictures,5,1988-06-22
+1794,Palla,1,1932-10-13
+1795,PalmStar Media,3,1934-11-11
+1796,Palomar,1,1977-09-17
+1797,Pan Arts,1,1992-05-14
+1798,Pan Européenne,1,1956-08-14
+1799,Pandora Cinema,1,1928-09-15
+1800,Pandora Filmproduktion,2,1930-11-04
+1801,Panorama,1,1939-05-16
+1802,Panorama Film A/S,1,1930-10-21
+1803,Panorama Films,1,1978-01-28
+1804,Panorama Studios,1,1986-12-08
+1805,Pantelion Films,1,1988-05-30
+1806,Papazian-Hirsch Entertainment International,1,1979-02-07
+1807,Paper Street Films,1,1920-10-05
+1808,Paradis Films,2,1948-05-12
+1809,Paragon Arts International,1,1969-03-15
+1810,Parallax Pictures,1,1940-12-30
+1811,Paramount Animation,3,1981-11-12
+1812,Paramount Classics,2,1954-01-19
+1813,Paramount Pictures,320,1951-06-07
+1814,Paramount Players,1,1976-04-19
+1815,Paramount Vantage,10,1959-10-25
+1816,Paris Film,1,1991-02-10
+1817,Parkes/Lasker productions,1,1964-03-06
+1818,Parkway Productions,1,1960-03-14
+1819,Participant,5,1950-06-18
+1820,Partisan Productions,1,1967-12-28
+1821,Parts and Labor,2,1980-05-07
+1822,Party Productions,1,1930-09-26
+1823,Pathé,5,1933-04-30
+1824,Pathé Entertainment,5,1927-06-26
+1825,Pathé Pictures International,7,1976-01-21
+1826,Pathé Renn Productions,2,1945-09-11
+1827,Paulilu Productions,1,1944-01-10
+1828,Paulist Pictures,1,1946-06-11
+1829,Peace Arch Entertainment Group,1,1970-10-18
+1830,Pedro Costa Producciones Cinematográficas,1,1970-09-25
+1831,Pelemele Film,1,1951-09-30
+1832,Pelican Productions LLC (I),1,1962-10-20
+1833,Penta Entertainment,1,1983-12-22
+1834,Penta Films,1,1925-09-24
+1835,Penta Pictures,2,1950-06-15
+1836,Per Holst Filmproduktion,1,1969-05-26
+1837,Percy Main,1,1951-01-12
+1838,Perfect World Pictures,2,1980-07-28
+1839,Pergamon Film,1,1956-12-27
+1840,Permut Presentations,5,1973-02-01
+1841,Peters Entertainment,2,1951-04-22
+1842,Petit Film,1,1991-05-23
+1843,PfH Ltd.,1,1949-05-01
+1844,Pfeiffer/Blocker Production,1,1922-01-25
+1845,Phillips Whitehouse Productions,1,1964-05-31
+1846,Phoenix Pictures,7,1964-09-02
+1847,Picture Palace North,1,1976-01-22
+1848,Picture Securities,1,1933-01-29
+1849,Picturehouse,1,1964-05-28
+1850,Pierpoline Films,1,1952-07-01
+1851,Pierre Grise Productions,1,1983-11-05
+1852,Piki Films,1,1988-05-06
+1853,Pine District Pictures,1,1937-09-18
+1854,Pine House Film,1,1982-02-26
+1855,Pioneer LDC,1,1965-03-20
+1856,Pirromount Pictures,1,1956-04-07
+1857,Pixar Animation Studios,12,1947-01-20
+1858,Plan B Entertainment,1,1933-12-25
+1859,Planet Productions,1,1929-03-25
+1860,Plattform Produktion,2,1969-07-20
+1861,Play It Inc.,1,1955-06-07
+1862,Playhouse International Pictures,2,1950-09-25
+1863,Playtone,1,1935-05-31
+1864,Plump Fiction LLC,1,1969-03-13
+1865,Plunge Pictures LLC,1,1937-02-08
+1866,Poetic License Production,1,1963-11-26
+1867,Point Grey Pictures,1,1983-10-02
+1868,Polar Entertainment,1,1962-01-14
+1869,Police Academy Productions,1,1932-02-16
+1870,PolyGram Filmed Entertainment,17,1925-06-28
+1871,PolyGram Pictures,3,1992-07-25
+1872,Polyc International BV,1,1991-12-14
+1873,Polygram Filmed Entertainment,18,1964-04-26
+1874,Polygram Pictures,1,1980-08-02
+1875,Ponty Up Pictures,1,1993-04-09
+1876,Pop Pop Productions,1,1921-04-14
+1877,Pope Productions,1,1954-09-18
+1878,Populist Pictures,1,1985-11-16
+1879,Porchlight Films,3,1975-04-09
+1880,Portman Entertainment Group,1,1992-09-14
+1881,Portman Productions,1,1939-09-14
+1882,Portreeve,1,1962-01-01
+1883,Prana Studios,1,1946-06-11
+1884,Preferred Content,1,1970-10-31
+1885,Premiere Picture,1,1976-07-30
+1886,Pressman Film,4,1963-10-11
+1887,Pressman Productions,1,1951-07-19
+1888,Prettybird,1,1962-08-23
+1889,Price,1,1991-09-30
+1890,Price Entertainment,3,1961-11-30
+1891,Primate Pictures,1,1961-03-27
+1892,Prime Film Productions LLC,1,1935-10-27
+1893,Process Film,1,1975-08-27
+1894,Process Media,1,1925-10-26
+1895,Producers Representative Organization,1,1994-04-27
+1896,Producers Sales Organization (PSO),3,1961-11-07
+1897,Produzioni Europee Associate (PEA),1,1981-06-17
+1898,Prominent Features,2,1968-02-04
+1899,Propaganda Films,1,1958-06-08
+1900,Prospero Pictures,1,1929-08-28
+1901,Protagonist Pictures,1,1971-08-27
+1902,Proton Cinema,1,1943-11-29
+1903,Protostar Pictures,1,1972-01-21
+1904,Prowess Pictures,1,1992-01-27
+1905,Prufrock Pictures,1,1953-01-14
+1906,Pryor Entertainment,1,1951-10-03
+1907,Pt. Merantau Films,1,1946-04-25
+1908,Punch 21 Productions,1,1966-08-07
+1909,Pure Flix Productions,1,1954-07-02
+1910,Purple Pictures,1,1933-04-19
+1911,Pyramania,1,1932-01-03
+1912,Pyramide Productions,1,1920-12-27
+1913,Q Productions,1,1954-09-05
+1914,Quad Productions,3,1978-11-21
+1915,Quat'sous Films,1,1968-03-10
+1916,Quinta Communications,1,1954-01-04
+1917,Qwerty Films,1,1921-07-20
+1918,R&R Films,1,1984-03-20
+1919,R.P. Productions,3,1961-02-01
+1920,RADiUS-TWC,1,1976-09-06
+1921,RAI Radiotelevisione Italiana,1,1978-08-24
+1922,RKO Pictures,5,1933-06-30
+1923,ROMP,1,1984-02-29
+1924,Raajkamal Films International,1,1985-06-25
+1925,Racing Pictures,1,1933-04-15
+1926,Raffaella De Laurentiis Productions,1,1951-06-11
+1927,Raffaella Productions,1,1969-02-27
+1928,Rai 2,1,1968-06-04
+1929,Raindog Films,2,1994-02-13
+1930,Rainforest Films,1,1945-12-16
+1931,Rajkumar Hirani Films,1,1928-08-29
+1932,Rakeysh Omprakash Mehra Pictures,1,1950-06-29
+1933,Rakueisha,1,1974-03-25
+1934,Rankin/Bass Productions,1,1955-12-29
+1935,Rastar Films,6,1920-12-01
+1936,Rastar Pictures,4,1989-07-12
+1937,Rastar Productions,1,1933-06-19
+1938,RatPac-Dune Entertainment,2,1962-02-07
+1939,Realitism Films,1,1977-10-06
+1940,Recorded Picture Company (RPC),14,1989-03-13
+1941,Rectangle Productions,1,1967-05-21
+1942,Red Carpet Productions,1,1937-01-29
+1943,Red Chillies Entertainment,2,1961-04-18
+1944,Red Crown Productions,3,1962-05-27
+1945,Red Granite Pictures,2,1953-04-02
+1946,Red Hour Films,1,1960-02-24
+1947,Redwave Films,2,1973-09-18
+1948,Reel FX Creative Studios,1,1994-06-17
+1949,Regency International Pictures,1,1981-06-14
+1950,Regina Ziegler Filmproduktion,1,1943-10-26
+1951,Relativity Media,16,1964-01-10
+1952,Relevant Entertainment,1,1979-08-01
+1953,Reliance Big Pictures,1,1961-07-07
+1954,Religioso Primitiva,1,1933-02-25
+1955,Remember Films,1,1939-07-02
+1956,Remstar Productions,1,1954-03-29
+1957,Ren Film,1,1928-07-09
+1958,Renaissance Films,3,1927-12-20
+1959,Renaissance Pictures,3,1986-10-27
+1960,Renn Productions,2,1961-06-15
+1961,Rent Productions LLC,1,1971-03-23
+1962,Reprisal Films,1,1968-02-22
+1963,Republic Pictures (II),1,1972-03-19
+1964,Reteitalia,1,1980-01-09
+1965,Revelations Entertainment,1,1982-07-10
+1966,Revolution Films,2,1989-11-30
+1967,Revolution Studios,32,1922-11-15
+1968,Rex Entertainment,1,1956-04-07
+1969,Rhino Films,1,1980-08-24
+1970,Rhombus Media,5,1968-03-18
+1971,Richard Williams Productions,1,1946-06-30
+1972,Richmond Light Horse Productions,1,1956-05-17
+1973,Riddick Canada Productions,1,1935-12-04
+1974,Rifkin-Eberts,1,1975-12-17
+1975,Rimfire Films,1,1991-07-12
+1976,River Road Entertainment,3,1946-03-28
+1977,River Road Productions,1,1948-11-18
+1978,Riverside Pictures,1,1962-05-08
+1979,Road Movies Filmproduktion,3,1944-04-04
+1980,Roadside Attractions,1,1976-06-21
+1981,Robert Simonds Productions,4,1923-02-28
+1982,Rogue,3,1942-08-21
+1983,Rogue Pictures,12,1977-06-07
+1984,Rohfilm,1,1992-04-23
+1985,Rollercoaster Films,1,1990-08-25
+1986,Romulus Entertainment,1,1922-01-30
+1987,Rondo Productions,1,1980-01-21
+1988,Rook Films,1,1921-08-11
+1989,Room 9 Entertainment,1,1935-03-08
+1990,Rosa Filmes,1,1979-12-21
+1991,Roth Films,1,1978-05-06
+1992,Route One Entertainment,2,1995-07-30
+1993,Roxwell Films,2,1943-04-24
+1994,Ruby Films,2,1947-08-13
+1995,Rumbalara Films,1,1975-01-28
+1996,Rustic Films,1,1970-08-06
+1997,Rysher Entertainment,8,1924-01-27
+1998,S.F.P.C.,1,1994-11-05
+1999,SBS Films,1,1961-01-14
+2000,SBS Productions,2,1971-02-28
+2001,SF Studios Production AB,1,1951-10-08
+2002,SLM Production Group,6,1925-06-26
+2003,SModcast Pictures,1,1972-03-03
+2004,STX Entertainment,6,1984-10-25
+2005,STX Films,2,1953-08-30
+2006,SVS Films,1,1922-01-08
+2007,SVT Drama,1,1944-03-14
+2008,Saban Entertainment,1,1959-06-09
+2009,Sacher Film,2,1995-11-01
+2010,Saga Productions Inc.,1,1925-12-10
+2011,Sahamongkol Film International,1,1929-06-13
+2012,Sahamongkolfilm Co.,1,1924-12-12
+2013,Sailor Bear,2,1938-03-19
+2014,Salon Pictures,1,1961-08-30
+2015,Samson Productions Pty. Ltd.,1,1938-01-06
+2016,Samuel Goldwyn Films,5,1931-10-23
+2017,Samuels Media,1,1963-08-24
+2018,Samuelson Productions,2,1985-10-17
+2019,Sanai Pictures,1,1971-08-04
+2020,Sandcastle 5 Productions,1,1989-07-30
+2021,Sandollar Productions,1,1929-04-26
+2022,Sands,1,1962-07-25
+2023,Santa Fe International,1,1927-10-25
+2024,Santa Monica Holdings,1,1992-01-30
+2025,Santo Domingo Film & Music Video,1,1943-07-03
+2026,Sarlui / Diamant,1,1992-04-20
+2027,Sascha-Verleih,1,1935-12-23
+2028,Saturn Films,1,1995-07-01
+2029,Savage Productions,1,1925-08-18
+2030,Savoy Pictures,3,1986-09-19
+2031,Scary Stuff,1,1971-08-24
+2032,Sciarlò,1,1922-03-31
+2033,Scion Films,2,1937-01-27
+2034,Scott Free Productions,1,1980-06-05
+2035,Scott Rudin Productions,5,1933-05-02
+2036,Scotti Brothers Pictures (I),1,1990-02-23
+2037,Scottish Screen,1,1944-11-26
+2038,Screen Australia,5,1953-11-18
+2039,Screen Gems,56,1948-09-19
+2040,Screen NSW,1,1950-01-15
+2041,Seagal/Nasso Productions,1,1924-06-26
+2042,Seagoat Films,1,1964-10-31
+2043,Sean S. Cunningham Films,1,1927-11-09
+2044,Seasonal Film Corporation,2,1988-02-08
+2045,Sedic International,1,1970-07-19
+2046,See-Saw Films,3,1954-03-29
+2047,Semtex Films,1,1957-07-05
+2048,SenArt Films,1,1971-10-07
+2049,Senator Entertainment Co,1,1923-05-28
+2050,Senator Film Produktion,1,1937-09-08
+2051,Seraphim Films,1,1956-10-19
+2052,Serendipity Point Films,3,1995-09-07
+2053,Seven Arts Pictures,1,1970-04-01
+2054,Seventh Avenue Films,1,1945-09-19
+2055,ShadowCatcher Entertainment,1,1966-03-01
+2056,Shangri-La Entertainment,2,1924-05-08
+2057,Shapiro-Glickenhaus Entertainment,2,1939-07-17
+2058,SharpSword Films,1,1967-08-24
+2059,Sheen Productions,1,1948-04-17
+2060,Sheinberg Productions,1,1974-08-17
+2061,Sherwood Productions,3,1984-08-19
+2062,ShivHans Pictures,1,1925-01-04
+2063,Shocking Bottle,1,1942-08-24
+2064,Shooting Gallery,2,1935-04-15
+2065,Show East,1,1993-08-31
+2066,Shree Ashtavinayak Cine Vision,1,1921-05-18
+2067,Sidney Kimmel Entertainment,5,1964-09-02
+2068,Sidus FNH-Benex Cinema Fund 1,1,1975-01-11
+2069,Sidéral Productions,1,1944-07-21
+2070,Sierra / Affinity,1,1963-09-13
+2071,Sigma Film Productions,1,1936-02-26
+2072,Sikhya Entertainment,1,1958-10-12
+2073,Silent Night Releasing Corporation,1,1994-11-15
+2074,Silver Pictures,1,1959-04-10
+2075,Silver Reel,2,1966-07-15
+2076,Silver Screen Partners II,1,1956-01-25
+2077,Silver Screen Partners III,2,1967-01-20
+2078,Silver Screen Partners IV,3,1945-10-24
+2079,Silver Sphere Corporation,1,1973-09-09
+2080,Silverman Entertainment,1,1953-01-14
+2081,Simcom Limited,1,1957-01-21
+2082,Siriol Productions,1,1955-10-17
+2083,Six Entertainment,1,1993-04-30
+2084,Six Entertainment Company,1,1923-06-11
+2085,Sixteen Films,2,1974-06-19
+2086,Sixty-Six Pictures,1,1952-08-25
+2087,Skydance Media,1,1938-01-07
+2088,Skyewiay,1,1924-05-16
+2089,Skypass Entertainment,1,1928-01-03
+2090,Skyscraper Films,1,1935-06-07
+2091,Slot Machine,1,1959-01-25
+2092,Slough Pond,1,1984-09-08
+2093,Snoot Entertainment,2,1971-01-31
+2094,SnowPiercer,1,1994-09-11
+2095,Snowfort Pictures,1,1965-05-22
+2096,Soapbox Films,2,1989-03-22
+2097,Softbank Ventures,1,1966-08-30
+2098,Sogepaq,1,1975-04-29
+2099,Solana Films,1,1969-10-07
+2100,Solution Entertainment Group,1,1974-02-07
+2101,Some Film,1,1947-07-04
+2102,Sonet Film AB,1,1959-07-19
+2103,Sony Pictures Animation,4,1989-06-01
+2104,Sony Pictures Classics,8,1980-03-15
+2105,Sony Pictures Entertainment (SPE),2,1970-05-14
+2106,Sorcerer Productions,1,1985-02-12
+2107,South Pacific Pictures,1,1984-05-24
+2108,Sovereign Films (II),1,1929-05-24
+2109,Sovereign Pictures,3,1931-08-17
+2110,Space Rocket Nation,2,1961-03-31
+2111,Spacegate Productions,1,1945-03-13
+2112,Sparkle Roll Media,1,1978-05-19
+2113,Spectacle Entertainment Group,1,1931-10-25
+2114,SpectreVision,2,1994-07-24
+2115,Spectrum Cinema Productions,1,1930-03-24
+2116,Spinal Tap Prod.,1,1920-06-27
+2117,Spring Creek Productions,2,1958-04-03
+2118,Spyglass Entertainment,3,1973-01-03
+2119,Square Visual Works Co. Ltd.,1,1946-02-23
+2120,Stacey Testro International,1,1939-05-21
+2121,Stage 6 Films,2,1965-10-11
+2122,Star Cinema,1,1934-05-28
+2123,Star Overseas,1,1934-07-11
+2124,Star Thrower Entertainment,1,1988-04-20
+2125,State Street Pictures,1,1957-06-29
+2126,Steel Mill Pictures,2,1993-07-01
+2127,Stephen Friedman/Kings Road Productions,1,1995-05-22
+2128,Steve White Productions,1,1958-08-04
+2129,Stone Group Pictures,2,1995-03-18
+2130,Stoney Lake Entertainment,1,1986-10-25
+2131,Storm Vision Entertainment,1,1953-04-01
+2132,Stratus Film Co.,1,1966-11-14
+2133,Strike Entertainment,2,1988-02-24
+2134,Strong Heart/Demme Production,1,1920-05-01
+2135,Strongman,1,1978-02-16
+2136,Studio 37,1,1981-10-27
+2137,Studio 4°C,1,1950-12-07
+2138,Studio 8,1,1956-08-28
+2139,Studio Ghibli,5,1991-06-01
+2140,Studio Hamburg Filmproduktion,1,1950-07-29
+2141,Studio NuT,1,1944-11-06
+2142,Studio Trite,1,1987-04-23
+2143,StudioCanal,17,1962-02-14
+2144,Stéphan Films,1,1933-08-31
+2145,Suburban Pictures,1,1963-10-16
+2146,Subzero Film Entertainment,1,1963-06-15
+2147,Sumerian Films,1,1952-03-11
+2148,Summit Entertainment,60,1965-01-13
+2149,Summit Premiere,1,1942-01-12
+2150,Sunbow Productions,2,1973-09-07
+2151,Sunn Classic Pictures,2,1928-06-16
+2152,Sunrise,1,1980-10-20
+2153,Sunshine,1,1945-12-18
+2154,Superlative Films,1,1971-02-22
+2155,Svensk Filmindustri (SF),1,1949-08-18
+2156,Svenska Filminstitutet (SFI),1,1920-05-07
+2157,Sweet Tea Pictures LLC,1,1964-06-07
+2158,Sweetland Films,4,1925-08-18
+2159,Sycamore Pictures,3,1979-06-20
+2160,Symbolic Exchange,1,1985-03-03
+2161,Syncopy,1,1994-08-11
+2162,TAFT Entertainment Pictures,3,1963-11-11
+2163,THINKFilm,1,1971-01-05
+2164,TMS Entertainment,1,1951-05-21
+2165,TMS Pictures,1,1932-06-04
+2166,TS Productions,1,1946-04-26
+2167,TSG Entertainment,1,1921-09-29
+2168,Tag Entertainment,1,1960-04-11
+2169,TaliaFilm II Productions,2,1936-03-18
+2170,Tapestry Films,2,1966-06-20
+2171,Tartan Films,1,1952-11-02
+2172,Tartan Productions,1,1995-11-12
+2173,Temple Hill Entertainment,2,1935-05-18
+2174,Ternion Pictures,1,1928-04-27
+2175,The American Film Company,1,1937-05-24
+2176,The Booking Office,1,1932-11-24
+2177,The Cannon Group,16,1930-12-17
+2178,The Collective Studios,1,1987-01-12
+2179,The Family Stone,1,1956-07-08
+2180,The Film Consortium,1,1966-03-09
+2181,The Geffen Company,7,1954-01-09
+2182,The Guber-Peters Company,2,1983-03-31
+2183,The Halcyon Company,1,1939-11-30
+2184,The Ink Factory,1,1926-10-25
+2185,The Jerry Gross Organization,1,1971-08-30
+2186,The Kushner-Locke Company,1,1957-05-08
+2187,The Lab of Madness,1,1976-03-14
+2188,The Ladd Company,11,1947-02-26
+2189,The Lamp,1,1926-06-12
+2190,The Last Picture Company,1,1978-09-06
+2191,The Malpaso Company,5,1948-08-31
+2192,The Mark Gordon Company,1,1985-08-13
+2193,The Mount Company,3,1971-06-29
+2194,The Mount Company (II),1,1977-11-09
+2195,The Movie Group,3,1933-10-25
+2196,The National Hellenic Society,1,1983-07-10
+2197,The Rank Organisation,3,1978-03-21
+2198,The Rejoycing Company,1,1964-12-17
+2199,The Romantic Venture,1,1984-03-05
+2200,The Safran Company,1,1960-10-30
+2201,The Samuel Goldwyn Company,5,1964-11-24
+2202,The Saul Zaentz Company,3,1959-10-21
+2203,The South Australian Film Corporation,1,1965-02-10
+2204,The State Hermitage Museum,1,1937-02-03
+2205,The Tyler Perry Company,3,1968-03-02
+2206,The Ultimate Gift LLC,1,1977-02-01
+2207,The Vista Organisation,1,1943-06-14
+2208,The Weinstein Company,30,1959-06-16
+2209,The Zanuck Company,2,1942-07-06
+2210,Thelma Film AG,1,1942-01-20
+2211,They Are Going to Kill Us Productions,1,1960-03-09
+2212,Thin Man Films,1,1994-04-12
+2213,This Is That Productions,3,1967-04-07
+2214,Thorn EMI Screen Entertainment,3,1957-02-15
+2215,Three Rivers Production,1,1937-11-18
+2216,Tiberius Film Productions,1,1966-01-18
+2217,Tig Productions,3,1942-12-13
+2218,Tim Burton Productions,1,1921-12-07
+2219,Time Life Films,2,1931-11-30
+2220,Titan Productions,1,1989-12-10
+2221,Toei Company,1,1986-03-29
+2222,Toho Company,2,1988-03-08
+2223,Toho Pictures,1,1959-05-18
+2224,Tokuma Japan Communications,1,1976-08-03
+2225,Tokuma Shoten,1,1929-01-05
+2226,Tomboy Films,1,1992-06-07
+2227,Tomson Films,1,1941-04-07
+2228,Tonic Films,1,1978-12-31
+2229,Tonik Productions,1,1924-04-02
+2230,Too Askew Prod. Inc.,1,1958-07-27
+2231,Tornasol Films,1,1945-08-19
+2232,Total Recall,1,1970-10-16
+2233,Touchstone Pictures,132,1945-08-04
+2234,Touchwood Pacific Partners 1,3,1929-11-02
+2235,Toy Fight Productions,1,1925-06-23
+2236,Trademark Films,1,1947-05-09
+2237,Trancas International Films,1,1920-06-21
+2238,Trans World Entertainment (TWE),5,1950-03-20
+2239,Translux,1,1980-08-13
+2240,Tre Vänner Produktion AB,2,1951-04-09
+2241,Treehouse Pictures,1,1941-12-17
+2242,Tri Star Productions,1,1995-05-20
+2243,TriStar Pictures,94,1982-12-09
+2244,TriStar Television,1,1938-06-26
+2245,Tribeca Productions,2,1970-05-03
+2246,Trimark Pictures,6,1942-08-15
+2247,Tristes Tropiques,1,1928-09-21
+2248,Triumph Films,3,1970-01-14
+2249,Troma Entertainment,1,1960-10-28
+2250,True West Films,1,1942-06-07
+2251,Truth Entertainment (II),1,1966-03-29
+2252,Trésor Films,3,1936-05-17
+2253,Turner Pictures (I),5,1927-08-05
+2254,Twentieth Century Fox,240,1972-04-14
+2255,Twentieth Century Fox Animation,7,1979-01-09
+2256,Twisted Pictures,7,1970-08-01
+2257,Two Flints,1,1935-12-10
+2258,Two Prong Lesson,1,1954-11-05
+2259,Two Ton Films,1,1924-04-25
+2260,Typhoon,1,1989-08-15
+2261,Téléma,1,1938-04-20
+2262,UAA Films,1,1947-07-07
+2263,UK Film Council,3,1994-08-23
+2264,USA Films,2,1994-07-16
+2265,UTV Motion Pictures,1,1920-12-15
+2266,UTV Spotboy,1,1966-05-20
+2267,UV Creations,1,1978-11-08
+2268,Ulrich Seidl Film Produktion GmbH,1,1947-06-24
+2269,Ultra Muchos Productions,1,1921-03-13
+2270,Underdog Productions,1,1958-09-26
+2271,Union Générale Cinématographique (UGC),2,1952-06-17
+2272,Unison Films,1,1990-08-07
+2273,United Artists,41,1976-07-26
+2274,United Artists Film Corporation,1,1943-08-09
+2275,United Artists Pictures,1,1922-06-17
+2276,United British Artists (UBA),1,1959-01-26
+2277,United Channel Movies,1,1976-11-08
+2278,United Film Distribution Company (UFDC),2,1948-08-04
+2279,Unity Pictures,1,1947-01-06
+2280,Unity Productions,1,1990-01-05
+2281,Universal City Studios,1,1930-08-03
+2282,Universal Pictures,377,1940-04-17
+2283,Universal Pictures International (UPI),1,1925-08-09
+2284,Unplanned Movie,1,1968-08-29
+2285,Upside Down Films,1,1958-07-19
+2286,VAE Productions,1,1952-10-19
+2287,Vanguard Films and Animation,1,1986-01-26
+2288,Varahonar Company,1,1947-07-23
+2289,Vega Film,1,1948-04-16
+2290,Vegahom Europe,1,1981-09-28
+2291,Vendian Entertainment,1,1936-12-11
+2292,Verdi Productions,1,1956-08-12
+2293,Verisimilitude,1,1988-05-31
+2294,Vertigo Films,2,1951-07-20
+2295,Vestron Pictures,4,1964-04-30
+2296,Viacom Enterprises,1,1968-10-07
+2297,Victoires International,1,1992-06-28
+2298,Victor & Grais,1,1934-04-20
+2299,Victor Company of Japan (JVC),1,1980-03-31
+2300,View Askew Productions,2,1925-02-24
+2301,Village Roadshow Pictures,3,1983-06-13
+2302,Vinod Chopra Productions,1,1970-02-13
+2303,Virgin,2,1939-12-23
+2304,Virgin Vision,2,1963-03-05
+2305,Vision International,1,1982-10-13
+2306,Vision PDG,5,1937-08-11
+2307,Visiona Romantica,1,1964-12-23
+2308,Vista Organization,4,1972-02-26
+2309,Visual Arts Entertainment,1,1977-10-08
+2310,Vivendi Entertainment,1,1984-12-04
+2311,Voltage Pictures,5,1938-02-22
+2312,Votiv Films,2,1990-12-09
+2313,WIP,1,1939-06-21
+2314,WW Production,1,1990-04-10
+2315,Walden Media,2,1922-05-23
+2316,Walt Disney Animation Studios,17,1945-08-08
+2317,Walt Disney Pictures,123,1936-03-18
+2318,Walt Disney Productions,9,1928-08-03
+2319,Warner Animation Group,1,1976-05-01
+2320,Warner Bros.,334,1945-04-03
+2321,Warner Bros. Animation,3,1947-07-25
+2322,Warner Bros. Digital Distribution,1,1970-04-04
+2323,Warner Bros. Family Entertainment,4,1955-03-07
+2324,Warner Bros. Pictures,1,1973-12-08
+2325,Warner Independent Pictures (WIP),6,1925-01-26
+2326,Warp Films,3,1954-01-28
+2327,Warp X,3,1949-04-28
+2328,Waverly Films,1,1972-03-25
+2329,Wayfare Entertainment,2,1923-06-25
+2330,Ways & Means,1,1953-05-01
+2331,Weintraub Entertainment Group,5,1984-03-04
+2332,Westerly Films,2,1974-03-03
+2333,Westwind,1,1951-03-26
+2334,Whenua Films,1,1979-09-13
+2335,White Eagle,1,1951-01-08
+2336,White Lair,1,1949-01-29
+2337,WhiteFlame Productions,1,1924-01-17
+2338,Whitewater Films,2,1942-07-13
+2339,Why Not Productions,5,1924-09-08
+2340,Wiedemann & Berg Filmproduktion,1,1923-06-18
+2341,Wigwam Films,1,1952-05-06
+2342,Wild Bunch,2,1928-03-29
+2343,Wildgaze Films,2,1966-01-02
+2344,Wildwood Enterprises,1,1943-06-17
+2345,Window III Productions,1,1932-02-17
+2346,WingNut Films,2,1962-02-17
+2347,Winkler Films,1,1968-12-06
+2348,Winslow Partners Ltd.,1,1959-11-22
+2349,Winwood Productions,1,1986-01-02
+2350,Wiseau-Films,1,1981-05-03
+2351,Wong Jing's Workshop Ltd.,1,1963-12-16
+2352,Woodline Productions,1,1982-07-09
+2353,Working Dog,2,1982-05-10
+2354,Working Title Films,6,1963-05-09
+2355,World Film Services,1,1968-12-02
+2356,World Wrestling Entertainment (WWE),1,1945-03-30
+2357,World of Wonder Productions,1,1929-07-26
+2358,Worldview Entertainment,6,1921-03-18
+2359,Wytwórnia Filmów Dokumentalnych i Fabularnych (WFDiF),1,1988-09-19
+2360,X-Filme Creative Pool,4,1944-06-28
+2361,Yale Productions,1,1935-08-22
+2362,Yari Film Group (YFG),1,1971-11-13
+2363,Yari Film Group Releasing,1,1923-05-29
+2364,Yash Raj Films,2,1946-12-10
+2365,Yellow Bird,3,1937-02-19
+2366,Young Hannibal Productions,1,1981-07-09
+2367,Young Sung Production Co.,1,1970-06-13
+2368,Zacharias-Buhai Productions,1,1993-12-26
+2369,Zanuck/Brown Productions,1,1987-03-02
+2370,ZapPictures,1,1967-01-08
+2371,Zazen Produções,1,1966-08-22
+2372,Zenith Entertainment,3,1921-11-20
+2373,Zentropa Entertainments,12,1937-11-30
+2374,Zentropa International Norway,1,1943-07-23
+2375,Zeta Entertainment,1,1937-12-22
+2376,Zoetrope Studios,7,1954-06-14
+2377,Zucker Brothers Productions,1,1949-01-26
+2378,Zupnik-Curtis Enterprises,1,1950-08-03
+2379,double A Films,1,1950-03-20
+2380,erbp,1,1955-08-16
+2381,i am OTHER,1,1995-12-09
+2382,i5 Films,1,1948-09-19
+2383,iDeal Partners Film Fund,1,1980-10-09
+2384,micro_scope,1,1942-07-17
+2385,thefyzz,1,1983-08-04
