@@ -40,6 +40,7 @@ class TabWidget(QWidget):
         self.view.setSortingEnabled(True)
         self.view.setTextElideMode(Qt.ElideRight)
         self.view.setWordWrap(True)
+        self.view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         # resize columns and hide certain columns
         for i in range(self.view.horizontalHeader().count()):
@@ -50,9 +51,7 @@ class TabWidget(QWidget):
         self.setLayout(self.layout)
 
         # hide columns
-        for i, val in enumerate(self.columns):
-            if '_id' in val:
-                self.view.setColumnHidden(i, True)
+        self.formatColumns()
 
     
     def contextMenuEvent(self, event):
@@ -188,4 +187,10 @@ class TabWidget(QWidget):
             self.model.resetModel(data)
         else:
             self.model.resetModel(self.default_data)
-
+        self.columns = self.model.getColumnNames()
+        self.formatColumns()
+    
+    def formatColumns(self):
+        for i, val in enumerate(self.columns):
+            if '_id' in val:
+                self.view.setColumnHidden(i, True)

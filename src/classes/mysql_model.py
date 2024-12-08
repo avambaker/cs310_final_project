@@ -43,6 +43,7 @@ class MySQLModel(QAbstractTableModel):
     def resetModel(self, data):
         self.beginResetModel()
         self._data = data
+        self._headers = list(data[0].keys()) if data else []
         self.endResetModel()
     
     def getColIndex(self, col_name):

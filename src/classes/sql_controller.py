@@ -41,6 +41,7 @@ def query_data(query, get_tuples=False, params=None):
                     cursor.execute(query)
                 data = cursor.fetchall()
                 if data and len(data[0]) == 1:
+                    print(data)
                     return [row[0] for row in data]
                 elif data:
                     return data

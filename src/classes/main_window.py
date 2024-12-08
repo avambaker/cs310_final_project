@@ -66,8 +66,7 @@ class MainWindow(QMainWindow):
 
         # connect actions
         new_action.triggered.connect(self.newWatchlist)
-        #self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
-        self.search_bar.textChanged.connect(self.setSearch)
+        self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
         self.tabs.currentChanged.connect(self.changeCurrentTab)
         self.side_bar.actionTriggered.connect(self.sideBarClicked)
         self.filter_button.clicked.connect(self.setFilter)
@@ -305,9 +304,3 @@ class MainWindow(QMainWindow):
         layout.addWidget(watchlist_widget.tab)
         watchlist_widget.setLayout(layout)
         self.stacked_widget.addWidget(watchlist_widget)
-    
-    def setSearch(self, s):
-        if self.stacked_widget.currentIndex() == 0:
-            return 0
-        else:
-            return 0
