@@ -13,9 +13,26 @@ def connect_to_database():
     except Exception as err:
         print(f"Error: {err}")
         return None
+
+def tuple_connect_to_database():
+    try:
+        connection = pymysql.connect(
+            host='localhost',
+            user='root',
+            password='r00tPassword#',
+            database='testmoviedb',
+        )
+        if connection:
+            return connection
+    except Exception as err:
+        print(f"Error: {err}")
+        return None
     
-def query_data(query):
-        connection = connect_to_database()
+def query_data(query, get_tuples=False):
+        if get_tuples is False:
+            connection = connect_to_database()
+        else:
+            connection = tuple_connect_to_database()
         try:
             with connection.cursor() as cursor:
                 cursor.execute(query)

@@ -41,3 +41,6 @@ class MySQLModel(QAbstractTableModel):
         self.beginResetModel()
         self._data = data
         self.endResetModel()
+    
+    def getColIndex(self, col_name):
+        return self._headers.index(col_name)

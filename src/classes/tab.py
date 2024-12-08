@@ -13,6 +13,7 @@ class TabWidget(QWidget):
         super(QWidget, self).__init__(parent)
         self.default_data = data
         self.name = name
+        self.watchlist_menu = QMenu()
 
         if type(data) == str:
             data = pd.read_json(resource_path(Path(data)))
@@ -80,17 +81,24 @@ class TabWidget(QWidget):
         data = model_qindex.data()
 
         if col_name == 'title' and data is not None:
-            self.watchlistMenu(row, col_name, data)
+            self.watchlistMenu(row, model_qindex.column(), data)
         
-        if 'name' in col_name and data is not None:
+        if self.name == 'movie_view' and 'name' in col_name and data is not None:
             self.personMenu(row, model_qindex.column(), col_name, data)
     
-    def watchlistMenu(self, row, col_name, data):
-        menu = QMenu()
+    def watchlistMenu(self, row, col, data):
+        self.watchlist_menu.clear()
         # add actions
-        example_action = menu.addAction("Add to... [insert watchlist names]")
+        from src.classes.sql_controller import query_data
+        watchlists = query_data("Select watchlist_id, name from watchlists;", get_tuples=True)
+        movie_id = str(self.model.index(row, col-1).data())
+        for (id, name) in watchlists:
+            watchlist_option = QAction(f"Add to {name}", self.watchlist_menu)
+            watchlist_option.setData((id, movie_id, name, data))
+            self.watchlist_menu.addAction(watchlist_option)
         # show menu
-        action = menu.exec_(QCursor.pos())
+        action = self.watchlist_menu.exec_(QCursor.pos())
+
     
     def personMenu(self, row, col, col_name, data):
         tab_names = {'star_name': ('Actors', 1, 'actor_id'), 'director_name': ('Directors', 2, 'director_id'), 'producer_name': ('Production Companies', 3, 'company_id')}

@@ -24,8 +24,8 @@ class MainWindow(QMainWindow):
         new_action = QAction("New Watchlist", self)
         self.hide_columns_button = QToolButton()
         self.hide_columns_button.setText("Hide Columns")
-        filter_button = QToolButton()
-        filter_button.setText("Set Filter")
+        self.filter_button = QToolButton()
+        self.filter_button.setText("Set Filter")
 
         # create search bar
         search_label = QLabel("Search: ")
@@ -36,9 +36,11 @@ class MainWindow(QMainWindow):
         with open("data/main_tables.txt") as file:
             for s in file.readlines():
                 (query, name) = s.strip().split(",,,")
+                table_name = query.split(" ")[-1]
                 info = query_data(query)
-                self.tabs.addTab(TabWidget(self, info, name), name)
+                self.tabs.addTab(TabWidget(self, info, table_name), name)
         self.tabs.widget(0).person_menu.triggered.connect(self.goToID)
+        self.tabs.widget(0).watchlist_menu.triggered.connect(self.addToWatchlist)
         self.tabs.setCurrentIndex(0)
 
         # create stacked widget
@@ -60,7 +62,13 @@ class MainWindow(QMainWindow):
             temp.setWhatsThis(str(i+1))
             self.side_bar.addAction(temp)
             entries_info = query_data("SELECT * FROM watchlist_entries WHERE watchlist_id = "+str(info["watchlist_id"]))
-            self.stacked_widget.addWidget(TabWidget(self, entries_info, name))
+            watchlist_widget = QWidget()
+            layout = QVBoxLayout()
+            layout.addWidget(QLabel(info['name']))
+            watchlist_widget.tab = TabWidget(watchlist_widget, entries_info, name)
+            layout.addWidget(watchlist_widget.tab)
+            watchlist_widget.setLayout(layout)
+            self.stacked_widget.addWidget(watchlist_widget)
 
         self.setColumnsMenu()
         self.hide_columns_button.setPopupMode(QToolButton.InstantPopup)
@@ -70,11 +78,12 @@ class MainWindow(QMainWindow):
         self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
         self.tabs.currentChanged.connect(self.changeCurrentTab)
         self.side_bar.actionTriggered.connect(self.sideBarClicked)
+        self.filter_button.clicked.connect(self.openFilterDialog)
 
         # add actions and widgets to a menu bar
         menubar = QToolBar()
         menu_actions = [new_action]
-        menu_widgets = [self.hide_columns_button, filter_button]
+        menu_widgets = [self.hide_columns_button, self.filter_button]
         for action in menu_actions:
             menubar.addAction(action)
         for widget in menu_widgets:
@@ -143,8 +152,12 @@ class MainWindow(QMainWindow):
     
     def columnsChange(self, checkbox):
         """Toggle if a column is hidden or shown"""
-        index = self.tabs.currentWidget().columns.index(checkbox.text()) ############### needs fixing
-        self.tabs.currentWidget().view.setColumnHidden(index, checkbox.isChecked()==False)
+        if self.stacked_widget.currentIndex() == 0:
+            index = self.tabs.currentWidget().columns.index(checkbox.text())
+            self.tabs.currentWidget().view.setColumnHidden(index, checkbox.isChecked()==False)
+        else:
+            index = self.stacked_widget.currentWidget().tab.columns.index(checkbox.text())
+            self.stacked_widget.currentWidget().tab.view.setColumnHidden(index, checkbox.isChecked()==False)
 
     def changeCurrentTab(self):
         self.search_bar.clear()
@@ -159,9 +172,10 @@ class MainWindow(QMainWindow):
             if index == 0:
                 self.search_bar.textChanged.connect(self.tabs.currentWidget().proxy.setFilterFixedString)
             else:
-                self.search_bar.textChanged.connect(self.stacked_widget.currentWidget().proxy.setFilterFixedString)
+                self.search_bar.textChanged.connect(self.stacked_widget.currentWidget().tab.proxy.setFilterFixedString)
+            self.setColumnsMenu()
         except Exception as e:
-            self.showError(action, e)
+            self.showError("side bar clicked", e)
 
     def showError(self, action, e):
         """Print an error message"""
@@ -212,16 +226,24 @@ class MainWindow(QMainWindow):
     def setColumnsMenu(self):
     # dynamically add actions to visible_columns_menu
         visible_columns_menu = QMenu()
-        for i, column in enumerate(self.tabs.currentWidget().columns): # add a qaction to menu per column
-            temp = QAction(column, self)
-            temp.setCheckable(True)
-            if self.tabs.currentWidget().view.isColumnHidden(i) == True:
-                temp.setChecked(False)
-            else:
-                temp.setChecked(True)
-            visible_columns_menu.addAction(temp)
+        if self.stacked_widget.currentIndex() == 0:
+            columns = self.tabs.currentWidget().columns
+        else:
+            columns = self.stacked_widget.currentWidget().tab.columns
+        for i, column in enumerate(columns): # add a qaction to menu per column
+            if "_id" not in column:
+                temp = QAction(column, self)
+                temp.setCheckable(True)
+                if self.tabs.currentWidget().view.isColumnHidden(i) == True:
+                    temp.setChecked(False)
+                else:
+                    temp.setChecked(True)
+                visible_columns_menu.addAction(temp)
 
         visible_columns_menu.triggered.connect(self.columnsChange)
+
+        filter_menu = QMenu()
+        filter_menu.addAction(QAction("test"))
 
         # attach menus to qtoolbuttons
         self.hide_columns_button.setMenu(visible_columns_menu)
@@ -231,4 +253,33 @@ class MainWindow(QMainWindow):
         self.tabs.setCurrentIndex(int(tab_index))
         self.tabs.currentWidget().findPerson(int(person_id), col_name)
 
+    def openFilterDialog(self):   
+        from src.classes.filter_window import FilterDialog
+        data = query_data(attributes_and_datatypes % self.tabs.currentWidget().name, get_tuples=True)
+        data = [x for x in data if '_id' not in x[0]]
+        self.dialog = FilterDialog(data)
+        # adding action when form is accepted
+        self.dialog.buttonBox.accepted.connect(self.setFilter)
+        self.dialog.show()
+    
+    def setFilter(self):
+        self.dialog.hide()
+        filter_data = {title: line_edit.text() for title, line_edit in self.dialog.inputs.items()}
+        for title, data in filter_data.items():
+            print(title + ": \t\t", data)
+    
+    def addToWatchlist(self, action):
+        (watchlist_id, movie_id, watchlist_name, movie_name) = action.data()
+        from src.classes.new_watchlist import NewWatchlistEntry
+        self.watchlist_dialog = NewWatchlistEntry(watchlist_id, movie_id, watchlist_name, movie_name)
+        self.watchlist_dialog.buttonBox.accepted.connect(self.insertEntry)
+        self.watchlist_dialog.show()
+    
+    def insertEntry(self):
+        self.watchlist_dialog.hide()
+        watchlist_id = self.watchlist_dialog.watchlist_id
+        movie_id = self.watchlist_dialog.movie_id
+        rating = self.watchlist_dialog.rating
+        comment = self.watchlist_dialog.comment
+        query = "INSERT INTO watchlist_entries (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);"
 
