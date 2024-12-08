@@ -41,22 +41,27 @@ def loadSQLData():
     if fetchPassword() == "":
         new_password = getPassword()
         setPassword(new_password)
-
-    else:
-        print(fetchPassword())
+    success = create_database('database_files/movie_ddl.sql')
+    print("create database:", success)
+    try:
+        loop_csv("database_files/parent_tables")
+        loop_csv("database_files/dependent_tables")
+        return True
+    except Exception as e:
+        print(e)
+        return False
 
 
 if __name__ == '__main__':
     # run the app
     try:
         app = QApplication(sys.argv)
-        attempt = connect_to_database()
+        """attempt = connect_to_database()
         if attempt is None:
-            loadSQLData()
+            loaded = loadSQLData()
         else:
-            attempt.close()
+            attempt.close()"""
     except Exception as e:
         print(e)
     finally:
-        print('finally')
-        #sys.exit(runApp())
+        sys.exit(runApp())

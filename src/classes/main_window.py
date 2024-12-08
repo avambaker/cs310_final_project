@@ -9,12 +9,21 @@ from pathlib import Path
 import json
 
 from src.classes.tab import TabWidget
-from src.classes.sql_controller import query_data
+from src.classes.sql_controller import *
 
 class MainWindow(QMainWindow):
     def __init__(self):
         """Build window with task table"""
         super().__init__()
+        attempt = connect_to_database()
+        if attempt is None:
+            loaded = self.loadSQLData()
+            print("LOADED:", loaded)
+            if not loaded:
+                print("Loading ddl failed...")
+                sys.exit(1)
+        else:
+            attempt.close()
         # set up window
         self.setWindowTitle("Movie Database")
         from src.run import resource_path
@@ -57,6 +66,8 @@ class MainWindow(QMainWindow):
 
         # set up watchlists
         self.watchlists = query_data("SELECT watchlist_id, name, description FROM watchlists")
+        if type(self.watchlists) is dict:
+            self.watchlists = []
         for i, info in enumerate(self.watchlists, start=1):
             self.createWatchlistWidget(info['watchlist_id'], info['name'], info['description'], i)
 
@@ -194,7 +205,8 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(None, 'Name Taken', "There is already a watchlist with the name " + name + ".")
         elif success:
             # add to watchlists info list
-            self.watchlists.append((len(self.watchlists)+1, name))
+            new_dict = {"watchlist_id": len(self.watchlists)+1, "name": name, "description": description}
+            self.watchlists.append(new_dict)
             # create id
             # add watchlist to watchlist table in database
             query = "INSERT INTO watchlists (name, description) VALUES (%s, %s);"
@@ -238,6 +250,7 @@ class MainWindow(QMainWindow):
         success, values = self.get_text_values("Set Filter", columns, [QLineEdit() for _ in range(len(columns))], self, title = "Set Filter")
         if success:
             values = [None if v == "" else v for v in values]
+            print(columns)
             procedure_name = "filter_" + self.tabs.currentWidget().name
             from src.classes.sql_controller import callProcedure
             try:
@@ -252,9 +265,10 @@ class MainWindow(QMainWindow):
         (watchlist_id, movie_id, watchlist_name, movie_name) = action.data()
         row_index = -1
         widget_index = -1
+        col_index = -1
         for i in range(1, self.stacked_widget.count()):
             if self.stacked_widget.widget(i).id == watchlist_id:
-                row_index, col_index = self.stacked_widget.widget(i).tab.model.getRowIndexFromVal(movie_id, "movie_id")
+                row_index, col_index = self.stacked_widget.widget(i).tab.model.getRowIndexFromVal(int(movie_id), "movie_id")
                 widget_index = i
         if row_index == -1:
             rating_box = QSpinBox()
@@ -328,3 +342,26 @@ class MainWindow(QMainWindow):
         layout.addWidget(watchlist_widget.tab)
         watchlist_widget.setLayout(layout)
         self.stacked_widget.addWidget(watchlist_widget)
+    
+    def getPassword(self):
+        text, ret = QInputDialog.getText(None, "SQL Password","Please enter your SQL password below. Double check it, as you cannot change it later.", QLineEdit.Normal, "")
+        if text and ret:
+            return text
+        else:
+            self.getPassword()
+    
+    def loadSQLData(self):
+        if fetchPassword() == "":
+            new_password = self.getPassword()
+            setPassword(new_password)
+        success = create_database('database_files/movie_ddl.sql')
+        print("create database:", success)
+        try:
+            loop_csv("database_files/parent_tables")
+            loop_csv("database_files/dependent_tables")
+            return True
+        except Exception as e:
+            print(e)
+            return False
+    
+

@@ -36,7 +36,7 @@ class MySQLModel(QAbstractTableModel):
         for i, row in enumerate(self._data):
             if row[col_name] == val:
                 return (i, list(row.keys()).index(col_name))
-        return (i, list(row.keys()).index(col_name))
+        return (-1, -1)
     
     def removeRow(self, index):
         del self._data[index]

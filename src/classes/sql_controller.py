@@ -1,13 +1,15 @@
 import pymysql
 import sys
 import pandas as pd
+import os
+import re
 
 def connect_to_database():
     try:
         connection = pymysql.connect(
             host='localhost',
             user='root',
-            password=user_password,
+            password=fetchPassword(),
             database='moviedb',
             cursorclass=pymysql.cursors.DictCursor
         )
@@ -22,7 +24,7 @@ def tuple_connect_to_database():
         connection = pymysql.connect(
             host='localhost',
             user='root',
-            password=user_password,
+            password=fetchPassword(),
             database='moviedb',
         )
         if connection:
@@ -34,8 +36,16 @@ def tuple_connect_to_database():
 def query_data(query, get_tuples=False, params=None):
         if get_tuples is False:
             connection = connect_to_database()
+            if not connection:
+                print("CONNECTION FAILED")
+                print(query)
+                return
         else:
             connection = tuple_connect_to_database()
+            if not connection:
+                print("CONNECTION FAILED")
+                print(query)
+                return
         try:
             with connection.cursor() as cursor:
                 if params:
@@ -44,7 +54,6 @@ def query_data(query, get_tuples=False, params=None):
                     cursor.execute(query)
                 data = cursor.fetchall()
                 if data and len(data[0]) == 1:
-                    print(data)
                     return [row[0] for row in data]
                 elif data:
                     return data
@@ -55,7 +64,7 @@ def query_data(query, get_tuples=False, params=None):
         finally:
             if query.strip().upper().startswith(("INSERT", "UPDATE", "DELETE")):
                 connection.commit()
-            connection.close()
+            if connection: connection.close()
 
 def callProcedure(procedure_name, params=None):
     connection = connect_to_database()
@@ -86,16 +95,55 @@ def setPassword(s):
     user_password = s
 
 def create_database(file_path):
-    connection = connect_to_database()
+    with open(file_path, "r") as file:
+        sql_script = file.read()
     try:
-        with connection.cursor() as cursor:
-            for line in open(file_path):
-                cursor.execute(line)
-        connection.commit()
+        connection = pymysql.connect(
+            host='localhost',
+            user='root',
+            password=fetchPassword(),
+            database='mysql',
+            cursorclass=pymysql.cursors.DictCursor
+        )
+    except Exception as err:
+        print(f"Error: {err}")
+        return False
+    try:
+        # Connect to the database
+        cursor = connection.cursor()
 
-    except Warning as warn:
-        print(warn)
-        sys.exit()
+        # Split the script by `DELIMITER` statements
+        statements = re.split(r"DELIMITER\s+(\S+)", sql_script)
+
+        # Default delimiter
+        current_delimiter = ";"
+
+        # Execute each part of the script
+        for i, statement in enumerate(statements):
+            if i % 2 == 0:  # Normal SQL commands
+                commands = statement.split(current_delimiter)
+                for command in commands:
+                    command = command.strip()
+                    if command:  # Skip empty commands
+                        cursor.execute(command)
+                        print(f"Executed: {command[:30]}...")  # Log part of the statement
+            else:  # Change delimiter
+                current_delimiter = statement.strip()
+                print(f"Changed delimiter to: {current_delimiter}")
+
+        # Commit changes
+        connection.commit()
+        print("DDL schema successfully uploaded!")
+        return True
+
+    except pymysql.MySQLError as err:
+        print(f"Error: {err}")
+        return False
+
+    finally:
+        if connection:
+            cursor.close()
+            connection.close()
 
 # Function to insert data from CSV into MySQL table
 def insert_data(csv_file, table_name):
@@ -103,7 +151,7 @@ def insert_data(csv_file, table_name):
     
     if connection is None:
         print("Failed to connect to the database.")
-        return
+        return False
     
     cursor = connection.cursor()
 
@@ -131,25 +179,29 @@ def insert_data(csv_file, table_name):
         # Commit the changes
         connection.commit()
         print('Success! Data inserted.')
+        return True
 
     except Exception as e:
         print(f"Error inserting data: {e}")
+        return False
     finally:
         # Close the cursor and connection
         cursor.close()
         connection.close()
 
-def loop_csv(list_of_csv):
-    for csv_file in list_of_csv:
-        table_name = csv_file.rsplit('.', 1)[0]
-
+def loop_csv(csv_dir):
+    for file_name in os.listdir(csv_dir):
+        if file_name.endswith(".csv"):
+            csv_path = os.path.join(csv_dir, file_name)
+            table_name = os.path.splitext(os.path.basename(csv_path))[0]
         try:
-            print(f"Processing file: {csv_file} into table: {table_name}")
-            insert_data(csv_file, table_name)
-            print(f"Successfully inserted data from {csv_file} into table {table_name}")
+            print(f"Processing file: {csv_path} into table: {table_name}")
+            result = insert_data(csv_path, table_name)
+            if result: print(f"Successfully inserted data from {csv_path} into table {table_name}")
+            else: print("failed")
         except Exception as e:
-            print(f"Failed to process {csv_file}: {e}")
+            print(f"Failed to process {csv_path}: {e}")
 
 user_password = fetchPassword()
-order = ['Database Setup/actor.csv', 'Database Setup/production_company.csv', 'Database Setup/awards.csv', 'Database Setup/genre.csv', 'Database Setup/country.csv', 'Database Setup/director.csv', 'Database Setup/language.csv', 'Database Setup/movie.csv', 
-         'Database Setup/movie_genre.csv', 'Database Setup/movie_awards.csv', 'Database Setup/movie_audio.csv', 'Database Setup/movie_cast.csv', 'Database Setup/movie_company.csv', 'Database Setup/movie_country.csv', 'Database Setup/movie_subtitle.csv']
+order = ['actor.csv', 'production_company.csv', 'awards.csv', 'genre.csv', 'country.csv', 'director.csv', 'language.csv', 'movie.csv', 
+         'movie_genre.csv', 'movie_awards.csv', 'movie_audio.csv', 'movie_cast.csv', 'movie_company.csv', 'movie_country.csv', 'movie_subtitle.csv']
