@@ -1,7 +1,7 @@
 # imports
 import sys
 import os
-from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QApplication, QInputDialog, QDialog, QLineEdit
 from pathlib import Path
 import socket
 from random import randrange
@@ -30,16 +30,33 @@ def runApp():
         window = MainWindow()
         app.exec_()
 
+def getPassword():
+    text, ret = QInputDialog.getText(None, "SQL Password","Please enter your SQL password below. Double check it, as you cannot change it later.", QLineEdit.Normal, "")
+    if text and ret:
+        return text
+    else:
+        getPassword()
+
 def loadSQLData():
-    create_database('')
+    if fetchPassword() == "":
+        new_password = getPassword()
+        setPassword(new_password)
+
+    else:
+        print(fetchPassword())
 
 
 if __name__ == '__main__':
     # run the app
-    
     try:
         app = QApplication(sys.argv)
+        attempt = connect_to_database()
+        if attempt is None:
+            loadSQLData()
+        else:
+            attempt.close()
     except Exception as e:
         print(e)
     finally:
-        sys.exit(runApp())
+        print('finally')
+        #sys.exit(runApp())
