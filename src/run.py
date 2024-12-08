@@ -31,7 +31,7 @@ def runApp():
         app.exec_()
 
 def loadSQLData():
-    
+    create_database('')
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 import pymysql
+import sys
 
 def connect_to_database():
     try:
@@ -77,5 +78,17 @@ def fetchPassword():
     with open('data/sql_password.txt') as f:
         password = f.readline().strip('\n')
     return password
+
+def create_database(file_path):
+    connection = connect_to_database()
+    try:
+        with connection.cursor() as cursor:
+            for line in open(file_path):
+                cursor.execute(line)
+        connection.commit()
+
+    except Warning as warn:
+        print(warn)
+        sys.exit()
 
 user_password = fetchPassword()
