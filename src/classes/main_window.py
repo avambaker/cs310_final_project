@@ -9,7 +9,7 @@ from pathlib import Path
 import json
 
 from src.classes.tab import TabWidget
-from src.classes.sql_controller import query_data, attributes_and_datatypes
+from src.classes.sql_controller import query_data
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -250,21 +250,44 @@ class MainWindow(QMainWindow):
     
     def addToWatchlist(self, action):
         (watchlist_id, movie_id, watchlist_name, movie_name) = action.data()
-        rating_box = QSpinBox()
-        rating_box.setMinimum(0)
-        rating_box.setMaximum(5)
-        success, (rating, comment) = self.get_text_values("Write a comment and rating!", ["Rating", "Comment"], [rating_box, QTextEdit()], self, f"Add {movie_name} to {watchlist_name}")
-        if success:
-            # check if they added a comment
-            if comment == "": comment = "NA"
-            # add entry to sql table
-            query = "INSERT INTO watchlist_entries (movie_id, watchlist_id, rating, comment) VALUES (%s, %s, %s, %s);"
-            query_data(query, params=(movie_id, watchlist_id, rating, comment))
-            # locate watchlist in stacked_widget and update
-            for i in range(1, self.stacked_widget.count()):
-                if self.stacked_widget.widget(i).tab.name == watchlist_name:
-                    entries_info = query_data("CALL get_watchlist_entries(%s);", params=watchlist_id)
-                    self.stacked_widget.widget(i).tab.setFilter(entries_info)
+        row_index = -1
+        widget_index = -1
+        for i in range(1, self.stacked_widget.count()):
+            if self.stacked_widget.widget(i).id == watchlist_id:
+                row_index, col_index = self.stacked_widget.widget(i).tab.model.getRowIndexFromVal(movie_id, "movie_id")
+                widget_index = i
+        if row_index == -1:
+            rating_box = QSpinBox()
+            rating_box.setMinimum(0)
+            rating_box.setMaximum(5)
+            success, (rating, comment) = self.get_text_values("Write a comment and rating!", ["Rating", "Comment"], [rating_box, QTextEdit()], self, f"Add {movie_name} to {watchlist_name}")
+            if success:
+                # check if they added a comment
+                if comment == "": comment = "NA"
+                # add entry to sql table
+                query = "INSERT INTO watchlist_entries (movie_id, watchlist_id, rating, comment) VALUES (%s, %s, %s, %s);"
+                query_data(query, params=(movie_id, watchlist_id, rating, comment))
+                # locate watchlist in stacked_widget and update
+                for i in range(1, self.stacked_widget.count()):
+                    if self.stacked_widget.widget(i).tab.name == watchlist_name:
+                        entries_info = query_data("CALL get_watchlist_entries(%s);", params=watchlist_id)
+                        self.stacked_widget.widget(i).tab.setFilter(entries_info)
+        else:
+            find_entry = QMessageBox()
+            find_entry.setIcon(QMessageBox.Information)
+            find_entry.setText(f"{movie_name} is already in {watchlist_name}. Would you like to go to it?")
+            find_entry.setWindowTitle("Already exists")
+            find_entry.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            #find_entry.buttonClicked.connect(self.openEntry)
+            ret_val = find_entry.exec()
+            if ret_val == QMessageBox.Ok:
+                self.stacked_widget.setCurrentIndex(widget_index)
+                self.search_bar.clear()
+                self.search_bar.textChanged.connect(self.stacked_widget.currentWidget().tab.proxy.setFilterFixedString)
+                self.menubar.actions()[2].setVisible(False)
+                self.setColumnsMenu()
+                view_index = self.stacked_widget.currentWidget().tab.getRowFromModel(row_index, col_index)
+                self.stacked_widget.currentWidget().tab.view.selectRow(view_index.row())
     
     def get_text_values(self, label, arg_names, editors, parent=None, title=""):
         dialog = QInputDialog()
@@ -298,6 +321,7 @@ class MainWindow(QMainWindow):
         self.side_bar.addAction(temp)
         entries_info = query_data("CALL get_watchlist_entries(%s);", params=watchlist_id)
         watchlist_widget = QWidget()
+        watchlist_widget.id = watchlist_id
         layout = QVBoxLayout()
         layout.addWidget(QLabel(name + ": " + description))
         watchlist_widget.tab = TabWidget(watchlist_widget, entries_info, name)

@@ -32,10 +32,11 @@ class MySQLModel(QAbstractTableModel):
     def getColumnNames(self):
         return self._headers
     
-    def getRowIndexFromVal(self, val, col):
+    def getRowIndexFromVal(self, val, col_name):
         for i, row in enumerate(self._data):
-            if row[col] == val:
-                return (i, list(row.keys()).index(col))
+            if row[col_name] == val:
+                return (i, list(row.keys()).index(col_name))
+        return (i, list(row.keys()).index(col_name))
     
     def removeRow(self, index):
         del self._data[index]

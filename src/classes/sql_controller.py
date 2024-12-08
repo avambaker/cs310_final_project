@@ -1,10 +1,11 @@
 import pymysql
+
 def connect_to_database():
     try:
         connection = pymysql.connect(
             host='localhost',
             user='root',
-            password='r00tPassword#',
+            password=user_password,
             database='testmoviedb',
             cursorclass=pymysql.cursors.DictCursor
         )
@@ -19,7 +20,7 @@ def tuple_connect_to_database():
         connection = pymysql.connect(
             host='localhost',
             user='root',
-            password='r00tPassword#',
+            password=user_password,
             database='testmoviedb',
         )
         if connection:
@@ -72,6 +73,9 @@ def callProcedure(procedure_name, params=None):
     finally:
         connection.close()
 
+def fetchPassword():
+    with open('data/sql_password.txt') as f:
+        password = f.readline().strip('\n')
+    return password
 
-attributes_and_datatypes = "SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';"
-attributes = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'testmoviedb' AND TABLE_NAME = '%s';"
+user_password = fetchPassword()

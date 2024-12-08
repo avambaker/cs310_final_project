@@ -5,11 +5,12 @@ from PyQt5.QtWidgets import QApplication
 from pathlib import Path
 import socket
 from random import randrange
+from src.classes.sql_controller import *
 
 # create a unique app id for exec file
 try:
     from ctypes import windll  # Only exists on Windows.
-    myappid = 'ise.it_database.pc_and_laptops'
+    myappid = 'moviedatabase'
     windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 except ImportError:
     pass
@@ -29,9 +30,13 @@ def runApp():
         window = MainWindow()
         app.exec_()
 
+def loadSQLData():
+    
+
 
 if __name__ == '__main__':
     # run the app
+    
     try:
         app = QApplication(sys.argv)
     except Exception as e:
