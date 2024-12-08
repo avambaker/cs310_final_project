@@ -9,7 +9,7 @@ def connect_to_database():
         connection = pymysql.connect(
             host='localhost',
             user='root',
-            password=fetchPassword(),
+            password=fetchPassword()[0].strip(),
             database='moviedb',
             cursorclass=pymysql.cursors.DictCursor
         )
@@ -24,7 +24,7 @@ def tuple_connect_to_database():
         connection = pymysql.connect(
             host='localhost',
             user='root',
-            password=fetchPassword(),
+            password=fetchPassword()[0].strip(),
             database='moviedb',
         )
         if connection:
@@ -86,13 +86,11 @@ def callProcedure(procedure_name, params=None):
 
 def fetchPassword():
     with open('data/sql_password.txt') as f:
-        password = f.readline().strip('\n').strip()
-    return password
+        return f.readlines()
 
 def setPassword(s):
     with open('data/sql_password.txt', 'w') as f:
         f.write(s)
-    user_password = s
 
 def create_database(file_path):
     with open(file_path, "r") as file:
@@ -101,7 +99,7 @@ def create_database(file_path):
         connection = pymysql.connect(
             host='localhost',
             user='root',
-            password=fetchPassword(),
+            password=fetchPassword()[0].strip(),
             database='mysql',
             cursorclass=pymysql.cursors.DictCursor
         )
@@ -202,6 +200,5 @@ def loop_csv(csv_dir):
         except Exception as e:
             print(f"Failed to process {csv_path}: {e}")
 
-user_password = fetchPassword()
 order = ['actor.csv', 'production_company.csv', 'awards.csv', 'genre.csv', 'country.csv', 'director.csv', 'language.csv', 'movie.csv', 
          'movie_genre.csv', 'movie_awards.csv', 'movie_audio.csv', 'movie_cast.csv', 'movie_company.csv', 'movie_country.csv', 'movie_subtitle.csv']

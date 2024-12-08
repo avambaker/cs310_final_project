@@ -347,11 +347,13 @@ class MainWindow(QMainWindow):
         text, ret = QInputDialog.getText(None, "SQL Password","Please enter your SQL password below. Double check it, as you cannot change it later.", QLineEdit.Normal, "")
         if text and ret:
             return text
+        elif ret:
+            return ""
         else:
             self.getPassword()
     
     def loadSQLData(self):
-        if fetchPassword() == "":
+        if len(fetchPassword()) <= 1:
             new_password = self.getPassword()
             setPassword(new_password)
         success = create_database('database_files/movie_ddl.sql')
@@ -359,6 +361,8 @@ class MainWindow(QMainWindow):
         try:
             loop_csv("database_files/parent_tables")
             loop_csv("database_files/dependent_tables")
+            with open('data/sql_password.txt', 'a') as f:
+                f.write("\nReady")
             return True
         except Exception as e:
             print(e)
