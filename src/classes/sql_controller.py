@@ -5,14 +5,17 @@ import os
 import re
 
 def connect_to_database():
+    connection_args = {
+            "host": "localhost",
+            "user": "root",
+            "database": "moviedb",
+            "cursorclass": pymysql.cursors.DictCursor
+        }
+    password = fetchPassword()
+    if password:
+        connection_args["password"] = password
     try:
-        connection = pymysql.connect(
-            host='localhost',
-            user='root',
-            password=fetchPassword()[0].strip(),
-            database='moviedb',
-            cursorclass=pymysql.cursors.DictCursor
-        )
+        connection = pymysql.connect(**connection_args)
         if connection:
             return connection
     except Exception as err:
@@ -21,12 +24,15 @@ def connect_to_database():
 
 def tuple_connect_to_database():
     try:
-        connection = pymysql.connect(
-            host='localhost',
-            user='root',
-            password=fetchPassword()[0].strip(),
-            database='moviedb',
-        )
+        connection_args = {
+            "host": "localhost",
+            "user": "root",
+            "database": "moviedb",
+        }
+        password = fetchPassword()
+        if password:
+            connection_args["password"] = password
+        connection = pymysql.connect(**connection_args)
         if connection:
             return connection
     except Exception as err:
@@ -86,7 +92,11 @@ def callProcedure(procedure_name, params=None):
 
 def fetchPassword():
     with open('data/sql_password.txt') as f:
-        return f.readlines()
+        lines = f.readlines()
+    if lines:
+        return lines[0].strip()
+    else:
+        return ""
 
 def setPassword(s):
     with open('data/sql_password.txt', 'w') as f:
@@ -96,13 +106,16 @@ def create_database(file_path):
     with open(file_path, "r") as file:
         sql_script = file.read()
     try:
-        connection = pymysql.connect(
-            host='localhost',
-            user='root',
-            password=fetchPassword()[0].strip(),
-            database='mysql',
-            cursorclass=pymysql.cursors.DictCursor
-        )
+        connection_args = {
+            "host": "localhost",
+            "user": "root",
+            "database": "moviedb",
+            "cursorclass": pymysql.cursors.DictCursor
+        }
+        password = fetchPassword()
+        if password:
+            connection_args["password"] = password
+        connection = pymysql.connect(**connection_args)
     except Exception as err:
         print(f"Error: {err}")
         return False

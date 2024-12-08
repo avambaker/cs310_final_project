@@ -353,7 +353,9 @@ class MainWindow(QMainWindow):
             self.getPassword()
     
     def loadSQLData(self):
-        if len(fetchPassword()) <= 1:
+        with open('data/sql_password.txt') as f:
+            n = len(f.readlines())
+        if n <= 1:
             new_password = self.getPassword()
             setPassword(new_password)
         success = create_database('database_files/movie_ddl.sql')
